@@ -1,0 +1,776 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    transition: all 1s;
+}
+
+body {
+    background-color: rgb(39, 40, 52);
+}
+
+/* ****************************************************** Menyu ************************************************** */
+.menyu {
+    background-color: rgb(67, 68, 92);
+    display: flex;
+    justify-content: space-around;
+}
+
+.ul-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    list-style: none;
+    width: 83%;
+    padding-left: 5px;
+}
+
+.ul-2 {
+    width: 17%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    list-style: none;
+    padding-right: 5px;
+}
+
+.menyu ul li {
+    padding: 20px 0px;
+    color: rgb(138, 154, 153);
+    font-size: 20px;
+    cursor: pointer;
+}
+.menyu ul li:hover {
+    background-color: rgb(110, 121, 120);
+}
+.menyu ul li a{
+    text-decoration: none;
+    padding: 20px;
+    color: rgb(138, 154, 153);
+}
+
+/* ****************************************************** Header ************************************************** */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.logo {
+    width: 100px;
+    padding: 35px 0px;
+    text-align: center;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 0px 20px;
+}
+.nameKomp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contact {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+.contact1 {
+    text-align: right;
+}
+.contact2 {
+    /* outline: 2px solid rgb(0, 255, 136); */
+}
+.serch {
+    display: flex;
+    gap: 5px;
+}
+.serch2 {
+    display: flex;
+    gap: 5px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+    display: none;
+}
+.nameKomp a{
+    text-decoration: none;
+    color: white;
+}
+.nameKomp h1{
+    color: white;
+    font-size: 1.8vw;
+}
+
+.serchInput {
+    background-color: rgb(39, 40, 52);
+    outline: 1px solid rgb(67, 68, 97);
+    padding: 10px;
+    width: 70%;
+    border: 0px;
+    font-size: 1.5vw;
+    color: white;
+}
+.serchInput:hover {
+    outline: 1px solid rgb(66, 122, 161);
+}
+
+.serchButton {
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 1vw;
+    background-color: rgb(66, 122, 161);
+    color: white;
+    border: 0px;
+    cursor: pointer;
+}
+.serchButton:hover {
+    background-color: rgb(117, 190, 246);
+}
+
+
+.contact1 h4 {
+    font-size: 1.5vw;
+}
+
+
+.contact2 button {
+    padding: 10px 30px;
+    font-size: 1.1vw;
+    background-color: green;
+    border: 2px solid green;
+    border-radius: 10px;
+    color: white;
+}
+
+.contact2 button:hover {
+    background-color: white;
+    color: green;
+    border: 2px solid green;
+}
+
+.insta {
+    width: 50px;
+}
+
+h4 {
+    color: white;
+}
+@media screen and (max-width:1490px){
+    .serch2{
+        display: block;
+    }
+    .serch{
+        display: none;
+    }
+}
+
+/* ****************************************************** Content bar slide ************************************************** */
+.content-box {
+    display: flex;
+}
+
+/* ****************************************************** bar ************************************************** */
+.sidebar {
+    width: 15%;
+    height: 960px;
+    position: sticky;
+    top: 0px;
+    border-right: 2px solid grey;
+}
+
+.sidebar ul {
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+}
+
+.sidebar ul li {
+    font-size: 20px;
+    border-bottom: 1px solid rgb(67, 68, 92);
+    cursor: pointer;
+}
+.sidebar ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+}
+.sidebar ul li:hover {
+    color: rgb(66, 122, 161);
+    transition: all 0.2s;
+}
+
+/******************************************************* Right-Content ***************************************************/
+.right-content {
+    width: 85%;
+    background-color: rgb(67, 68, 92);
+}
+
+/******************************************************* Carousel ***************************************************/
+.slide {
+    width: 100%;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    background-color: rgb(67, 68, 92);
+}
+
+.mySlides {
+    width: 100%;
+    display: none;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 50px;
+    right: 150px;
+    border-radius: 30px;
+    width: 30%;
+    height: 200px;
+    text-align: center;
+    /* outline: 2px solid red; */
+    background-color: rgb(176, 176, 176,0.5);
+}
+.text:hover {
+    background-color: rgb(176, 176, 176,1);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* ****************************************************** Content ************************************************** */
+.content {
+    padding: 30px 0px;
+    background-color: rgb(67, 68, 92);
+}
+
+.content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contBox {
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.box {
+    background-color: rgb(39, 40, 52);
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    margin: 10px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.img {
+    background-size: 100% 100%;
+    border-radius: 20px;
+    height: 300px;
+    margin-bottom: 5px;
+}
+.i1{
+    background-image: url(../img/Olson15.jpg);
+}
+.i2{
+    background-image: url(../img/unnamed.jpg);
+}
+.i3{
+    background-image: url(../img/stainless-steel-kitchen-countertop-image.jpg);
+}
+.i4{
+    background-image: url(../img/photo_2024-08-08_22-09-03.jpg);
+}
+.i5{
+    background-image: url(../img/photo_2024-08-08_22-09-50.jpg);
+}
+.i6{
+    background-image: url(../img/photo_2024-08-08_22-09-35.jpg);
+}
+.i1:hover  {
+    background-image: url(../img/img_5633.jpeg);
+}
+.i2:hover  {
+    background-image: url(../img/img_5129.jpeg);
+}
+.i3:hover  {
+    background-image: url(../img/img_5654.jpeg);
+}
+.i4:hover  {
+    background-image: url(../img/photo_2024-08-08_22-09-25.jpg);
+}
+.i5:hover  {
+    background-image: url(../img/photo_2024-08-08_22-10-04.jpg);
+}
+.i6:hover  {
+    background-image: url(../img/photo_2024-08-08_22-09-40.jpg);
+}
+
+.btnBox {
+    text-align: center;
+}
+
+.box p {
+    color: grey;
+    margin-top: 5px;
+}
+
+/* ****************************************************** Content1 ************************************************** */
+.content1{
+    padding: 30px 0px;
+}
+.content1 h1{text-align: center; color: white; margin-bottom: 20px;}
+.contBox1{
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+}
+.box1{
+    width: 400px;
+    height: 600px;
+    border-radius: 20px;
+    margin: 10px;
+    font-size: 30px;
+    color: white;
+    background-color: rgb(39, 40, 52);
+    padding: 20px;
+}
+.img1{
+    border-radius: 20px;
+    height: 300px;
+    margin-bottom: 5px;
+    background-size: 100%;
+    
+}
+.box1 h5{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.box1 b{
+    font-size: 22px;
+}
+.korzBox{
+    display: flex;
+    justify-content: space-between;
+}
+.korzBox .col-1{
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.schot{
+    border: 2px solid grey;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.schot button{
+    font-size: 25px;
+    padding: 0px 15px;
+    border: 0px;
+    background-color: rgb(39, 40, 52);
+    color: white;
+    cursor: pointer;
+}
+.korzBox .col-2{
+    width: 45%;
+    text-align: center;
+}
+.korzBox .col-2 button{
+    padding: 20px;
+    background-color: green;
+    border: 0px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+.korzBox .col-2 button i{
+    font-size: 20px;
+}
+.btn2{
+    padding: 10px 20px;
+    font-size: 25px;
+    background-color: #ff4f81;
+    color: white;
+    border: 2px solid #ff4f81;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.btn2:hover{
+    background-color: black;
+}
+/* ****************************************************** Content2 ************************************************** */
+.content2{padding: 30px 0px;}
+.contBox2{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.box2{
+    width: 50%;
+    border-radius: 20px;
+    margin: 10px;
+    font-size: 30px;
+    color: white;
+    outline: 2px solid #ff4f81;
+    background-color: rgb(39, 40, 52);
+    padding: 20px;
+}
+.box2_img{
+    border-radius: 20px;
+    width: 50%;
+}
+.box2_img img{
+    border-radius: 20px;
+}
+.box2 h1{
+    color: white;
+    font-size: 50px;
+}
+.box2 p{
+    color: gray;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.box2 a{
+    text-decoration: none;
+    font-size: 25px;
+
+}
+/* ****************************************************** Content3 ************************************************** */
+.content3{
+    
+    padding: 30px 0px;
+}
+.content3 h1{
+    text-align: center; 
+    margin-bottom: 20px;
+    color: white;
+}
+.contBox3{
+    /* outline: 2px solid red; */
+    width: 99%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+.box3{
+    /* outline: 2px solid blue; */
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+.imgBox1{
+    /* outline: 2px solid red; */
+    height: 700px;
+    width: 50%;
+}
+.imgBox2{
+    /* outline: 2px solid blue; */
+    height: 700px;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.img3{
+    /* outline: 2px solid green; */
+    height: 345px;
+    width: 100%;
+}
+.btn3{
+    padding: 10px 20px;
+    font-size: 25px;
+    background-color: #ff4f81;
+    color: white;
+    border: 2px solid #ff4f81;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.btn3:hover{
+    background-color: black;
+}
+/* ****************************************************** Content4 ************************************************** */
+.content4{
+    background-color: #dadada;
+}
+.contBox4{
+    display: flex;
+}
+.linkBox{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+.box4_1{width: 40%;padding: 30px;}
+.box4_1 h1{
+    margin-bottom: 30px;
+}
+.box4_2{width: 59%; padding: 30px;}
+.dr{
+    padding: 20px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+.dw{
+    padding: 15px;
+    transition: all 0s;
+    background-color: rgb(39, 40, 52);
+    color: white;
+}
+.dw p{
+    font-size: 18px;
+}
+/* ****************************************************** Content5 ************************************************** */
+.content5{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0px;
+    background-color: rgb(39, 40, 52);
+}
+.contBox5{
+    padding: 20px;
+    width: 30%;
+    outline: 2px solid #ff4f81;
+}
+.contBox5 h3{
+    margin-bottom: 15px;
+    color: white;
+}
+.contBox5 p{
+    color: grey;
+}
+/* ****************************************************** Content6 ************************************************** */
+.content6{
+    padding: 20px;
+    margin-top: 20px;
+    /* height: 800px; */
+    background-color: rgb(39, 40, 52);
+    border-bottom: 1px solid gray;
+}
+.mt-30{
+    margin-top: 30px
+}
+.mt-5{
+    margin-top: 5px
+}
+.content6 h1{
+    color: white;
+}
+.content6 p{
+    color: grey;
+}
+.content6 ul{
+    margin-top: 20px;
+    padding-left: 30px;
+    color: grey;
+}
+.content6 li{
+    margin-top: 5px;
+    color: grey;
+}
+/* ****************************************************** Footer ************************************************** */
+footer{
+    background-color: rgb(39, 40, 52);
+    /* height: 610px; */
+    padding-top: 50px;
+    display: flex;
+}
+footer div{
+    height: 500px;
+    width: 33%;
+}
+footer div h2{
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+}
+footer div h3{
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+footer div a{
+    text-align: center;
+    margin-top: 20px;
+    color: gray;
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+}
+footer div p{
+    text-align: center;
+    margin-top: 25px;
+    color: gray;
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+}
+/* ****************************************************** colbak ************************************************** */
+.colbak{
+    /* outline: 2px solid red; */
+    position: absolute;
+    top: 100px;
+    width: 500px;
+    margin: auto;
+    width: 100%;
+    display: none;
+}
+.colbakFlex{
+    background-color: rgb(39, 40, 52,0.8);
+    margin: auto;
+    padding-bottom: 20px;
+    width: 600px;
+    border-radius: 40px 0px 40px 40px;
+    height: 450px;
+    outline: 2px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* align-content: center; */
+}
+.colbakFlex:hover{
+    background-color: rgb(39, 40, 52,1);
+}
+.colbakFlex h2{
+    width: 60%;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+}
+.colbakFlex input{
+    width: 60%;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.colbakFlex button{
+    margin-top: 30px;
+    width: 50%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: green;
+    color: white;
+    border: 0px;
+    border-radius: 20px;
+}
+.colbakFlex button:hover{
+    background-color: white;
+    color: green;
+}
+.colbakFlex div{
+    padding-right: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    border-radius: 40px 0px 0px 0px;
+}
+.colbakFlex h1{
+    padding: 5px 10px;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+}
+.colbakFlex h1:hover{
+    background-color: red;
+    color: white;
+}

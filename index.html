@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="boot/jquery.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <title>Decoroom</title>
+</head>
+
+<body>
+    <div class="cont">
+        <!------------------------------------------ Menyu --------------------------------->
+        <div class="menyu">
+            <ul class="ul-1">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="page/1okomp.html">О компании</a></li>
+                <li><a href="page/2aksi.html">Акции и бонусы</a></li>
+                <li><a href="page/3oplata.html">Оплата</a></li>
+                <li><a href="page/4dostavka.html">Доставка</a></li>
+                <li><a href="page/5kontakt.html">Контакты</a></li>
+            </ul>
+            <ul class="ul-2">
+                <li><i class="fa fa-shopping-cart" aria-hidden="true"></i> Корзина</li>
+            </ul>
+        </div>
+        <!------------------------------------------ Header --------------------------------->
+        <div class="header">
+            <div class="nameKomp">
+                <div class="logo">LOGO</div>
+                <div>
+                    <h1><a href="index.html"><b style="color: rgb(42, 183, 217);">Название</b> компании</a></h1>
+                    <p style="color: rgb(138, 154, 153);">Магазин нержавейка</p>
+                </div>
+            </div>
+            <div class="serch">
+                <input class="serchInput" type="text" placeholder="что ищем ?">
+                <button class="serchButton">Найти</button>
+            </div>
+            <div class="contact">
+                <a href="">
+                    <img src="img/telegram.png" alt="Error">
+                </a>
+                <a href="">
+                    <img class="insta" src="img/instagram.png" alt="Error">
+                </a>
+                <a href="">
+                    <img src="img/email.png" alt="Error">
+                </a>
+            </div>
+            <div class="contact1">
+                <h4>+(998)91 409-34-74</h4>
+                <h4>+(998)91 829-76-37</h4>
+            </div>
+            <div class="contact2">
+                <button onclick="document.getElementById('colbak').style.display = 'block'"><i class="fa fa-phone"
+                        aria-hidden="true"></i><br> Заказать звонок</button>
+            </div>
+        </div>
+        <div class="serch2">
+            <input class="serchInput" type="text" placeholder="что ищем ?">
+            <button class="serchButton">Найти</button>
+        </div>
+        <!------------------------------------------ Content bar slide --------------------------------->
+        <div class="content-box">
+            <!------------------------------------------ bar --------------------------------->
+            <div class="sidebar">
+                <ul>
+                    <li style="border-top: 1px solid rgb(67, 68, 92);"><a href="page/tovar/plastina.html">Дверная
+                            пластина</a></li>
+                    <li><a href="page/tovar/uglovaya.html">Угловая защита</a></li>
+                    <li><a href="">Name</a></li>
+                    <li><a href="">Name</a></li>
+                    <li><a href="">Name</a></li>
+                    <li><a href="">Name</a></li>
+                    <li><a href="">Name</a></li>
+                    <li><a href="">Name</a></li>
+                    <li><a href="">Name</a></li>
+                    <li><a href="">Name</a></li>
+                    <li><a href="">Name</a></li>
+                </ul>
+            </div>
+            <!------------------------------------------ right-content --------------------------------->
+            <div class="right-content">
+                <!------------------------------------------ slide --------------------------------->
+                <div class="slide">
+                    <div class="slideshow-container">
+                        <div class="mySlides fade" style="background-image: url(img/2.jpg);">
+                            <div class="numbertext">1 / 3</div>
+                            <!-- <img src="slide_1.jpg" style="width:100%"> -->
+                            <div class="text">Caption Text</div>
+                        </div>
+
+                        <div class="mySlides fade"
+                            style="background-image: url(img/ac1db3c5388192c7aac922d6ebf6f05c.jpg);">
+                            <div class="numbertext">2 / 3</div>
+                            <!-- <img src="slide_2.jpg" style="width:100%"> -->
+                            <div class="text">Caption Two</div>
+                        </div>
+
+                        <div class="mySlides fade" style="background-image: url(img/maxresdefault.jpg);">
+                            <div class="numbertext">3 / 3</div>
+                            <!-- <img src="slide_3.jpg" style="width:100%"> -->
+                            <div class="text">Caption Three</div>
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+                    <div style="text-align:center;">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+                <!----------------------------------------------------- Content --------------------------------------------------------->
+                <div class="content">
+                    <h1>Популярные товары</h1>
+                    <div class="contBox">
+                        <div class="box">
+                            <div class="img i1"></div>
+                            <h3>Угловая защита стены из нержавеющей стали</h3>
+                            <p>
+                                Угловое ограждение стены, калибр № 4, матовое — стандартные и изготовленные на заказ
+                                угловые ограждения защищают зоны с интенсивным движением людей.
+                                Нержавеющая сталь 304 легко вписывается в любое пространство, сохраняя при этом углы.
+                                Угловые ограждения, изготовленные по индивидуальному заказу, быстрая установка и
+                                простота обслуживания.
+                            </p>
+                        </div>
+                        <div class="box">
+                            <div class="img i2"></div>
+                            <h3>Дверная пластина из нержавеющей стали</h3>
+                            <p>
+                                Шагните в царство повышенной прочности и вневременной эстетической привлекательности для
+                                ваших дверей с нашей необычной дверной пластиной из нержавеющей стали.
+                                Тщательно спроектированная с предельной точностью, эта исключительная пластина
+                                изготовлена ​​из коммерческой нержавеющей стали 304.
+                                Ее цель выходит за рамки простого визуального улучшения, она служит внушительным
+                                барьером, который обеспечивает непревзойденную защиту,
+                            </p>
+                        </div>
+                        <div class="box">
+                            <div class="img i3"></div>
+                            <h3>Столешница из нержавеющей стали | Металл коммерческого класса</h3>
+                            <p>
+                                Изготовлен из нержавеющей стали 304 калибра 16 № 4, обеспечивающей исключительную
+                                долговечность и устойчивость к коррозии.
+                                Прочная конструкция и основа из МДФ гарантируют долгосрочную инвестицию, идеально
+                                подходят для мест с высокой проходимостью.
+                                Легкоочищаемая поверхность сохраняет блеск и качество даже при ежедневном использовании.
+                            </p>
+                        </div>
+                        <div class="box">
+                            <div class="img i4"></div>
+                            <h3>Sarlavha</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid temporibus libero
+                                officiis totam cum tempora, fuga ipsum quae repellendus corporis, tenetur dolores
+                                beatae, assumenda suscipit blanditiis illum praesentium eaque? Possimus.
+                            </p>
+                        </div>
+                        <div class="box">
+                            <div class="img i5"></div>
+                            <h3>Sarlavha</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid temporibus libero
+                                officiis totam cum tempora, fuga ipsum quae repellendus corporis, tenetur dolores
+                                beatae, assumenda suscipit blanditiis illum praesentium eaque? Possimus.
+                            </p>
+                        </div>
+                        <div class="box">
+                            <div class="img i6"></div>
+                            <h3>Sarlavha</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid temporibus libero
+                                officiis totam cum tempora, fuga ipsum quae repellendus corporis, tenetur dolores
+                                beatae, assumenda suscipit blanditiis illum praesentium eaque? Possimus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="btnBox">
+                        <button class="btn2">Все товары</button>
+                    </div>
+                </div>
+                <!------------------------------------------ Content1 --------------------------------->
+                <div class="content1">
+                    <h1>Новинки</h1>
+                    <div class="contBox1">
+                        <div class="box1">
+                            <div class="img1" style="background-image: url(img/slide_1.jpg);"></div>
+                            <h6>Транспортные услуги</h6>
+                            <h5>500 0000 <b>sum</b></h5>
+                            <div class="korzBox">
+                                <div class="col-1">
+                                    <div class="schot">
+                                        <button>-</button>
+                                        <b>1</b>
+                                        <button>+</button>
+                                    </div>
+                                </div>
+                                <div class="col-2"><button>В <br> корзину <i class="fa fa-shopping-cart"
+                                            aria-hidden="true"></i></button></div>
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <div class="img1" style="background-image: url(img/slide_2.jpg);"></div>
+                            <h6>Таможенное оформление</h6>
+                            <h5>500 0000 <b>sum</b></h5>
+                            <div class="korzBox">
+                                <div class="col-1">
+                                    <div class="schot">
+                                        <button>-</button>
+                                        <b>1</b>
+                                        <button>+</button>
+                                    </div>
+                                </div>
+                                <div class="col-2"><button>В <br> корзину <i class="fa fa-shopping-cart"
+                                            aria-hidden="true"></i></button></div>
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <div class="img1" style="background-image: url(img/slide_3.jpg);"></div>
+                            <h6>Согласование маршрута</h6>
+                            <h5>500 0000 <b>sum</b></h5>
+                            <div class="korzBox">
+                                <div class="col-1">
+                                    <div class="schot">
+                                        <button>-</button>
+                                        <b>1</b>
+                                        <button>+</button>
+                                    </div>
+                                </div>
+                                <div class="col-2"><button>В <br> корзину <i class="fa fa-shopping-cart"
+                                            aria-hidden="true"></i></button></div>
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <div class="img1" style="background-image: url(img/slide_2.jpg);"></div>
+                            <h6>Страхование грузов</h6>
+                            <h5>500 0000 <b>sum</b></h5>
+                            <div class="korzBox">
+                                <div class="col-1">
+                                    <div class="schot">
+                                        <button>-</button>
+                                        <b>1</b>
+                                        <button>+</button>
+                                    </div>
+                                </div>
+                                <div class="col-2"><button>В <br> корзину <i class="fa fa-shopping-cart"
+                                            aria-hidden="true"></i></button></div>
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <div class="img1" style="background-image: url(img/slide_3.jpg); background-color: white;">
+                            </div>
+                            <h6>Хранение грузов</h6>
+                            <h5>500 0000 <b>sum</b></h5>
+                            <div class="korzBox">
+                                <div class="col-1">
+                                    <div class="schot">
+                                        <button>-</button>
+                                        <b>1</b>
+                                        <button>+</button>
+                                    </div>
+                                </div>
+                                <div class="col-2"><button>В <br> корзину <i class="fa fa-shopping-cart"
+                                            aria-hidden="true"></i></button></div>
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <div class="img1" style="background-image: url(img/slide_1.jpg);background-color: white;">
+                            </div>
+                            <h6>Упаковка грузов</h6>
+                            <h5>500 0000 <b>sum</b></h5>
+                            <div class="korzBox">
+                                <div class="col-1">
+                                    <div class="schot">
+                                        <button>-</button>
+                                        <b>1</b>
+                                        <button>+</button>
+                                    </div>
+                                </div>
+                                <div class="col-2"><button>В <br> корзину <i class="fa fa-shopping-cart"
+                                            aria-hidden="true"></i></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btnBox">
+                        <button class="btn2">Все товары</button>
+                    </div>
+                </div>
+                <!-------------------------------------------------------------- Content2 -------------------------------------------------------------->
+                <div class="content2">
+                    <div class="contBox2">
+                        <div class="box2">
+                            <h1>О компании</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, ut voluptas
+                                voluptatem enim
+                                tempora exercitationem
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis ullam rem
+                                nostrum qui
+                                neque tempore architecto possimus at adipisci labore officiis accusantium asperiores
+                                voluptate
+                                dicta quos. Accusamus, voluptatum sequi.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deleniti numquam
+                                eum
+                                quisquam ipsa ipsam doloribus provident necessitatibus odio! Quam perspiciatis beatae
+                                magnam, a
+                                ea voluptate sequi corrupti corporis debitis.
+                            </p>
+                            <br>
+                            <a href="page/okomp.html">Подробнее</a>
+                        </div>
+                        <div class="box2_img">
+                            <img src="img/o.jpg" style="width: 100%;" alt="Error">
+                        </div>
+                    </div>
+                </div>
+                <!------------------------------------------ Content3 --------------------------------->
+                <div class="content3">
+                    <h1>Идеи интерьеров</h1>
+                    <div class="contBox3">
+                        <div class="box3">
+                            <div class="imgBox1" style="background-image: url(img/slide_1.jpg);"></div>
+                            <div class="imgBox2">
+                                <div class="img3" style="background-image: url(img/slide_2.jpg);"></div>
+                                <div class="img3" style="background-image: url(img/slide_3.jpg);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btnBox">
+                        <button class="btn3">Все Идеи</button>
+                    </div>
+                </div>
+                <!------------------------------------------ Content4 --------------------------------->
+                <div class="content4">
+                    <div class="contBox4">
+                        <div class="box4_1">
+                            <h1>Отвечаем, опережая ваши вопросы</h1>
+                            <div class="linkBox">
+                                <div>
+                                    <h2>+(998)91 409-34-74</h2>
+                                    <h2>+(998)91 829-76-37</h2>
+                                </div>
+                                <div>
+                                    <a href="">
+                                        <img src="img/telegram.png" alt="Error">
+                                    </a>
+                                    <a href="">
+                                        <img class="insta" src="img/instagram.png" alt="Error">
+                                    </a>
+                                    <a href="">
+                                        <img src="img/email.png" alt="Error">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="btnBox">
+                                <h4>или задайте вопрос на сайте и мы Вам перезвоним</h4>
+                                <button class="btn3">Задать вопрос</button>
+                            </div>
+                        </div>
+                        <div class="box4_2">
+                            <div class="dr drop">Какие данные нужны для расчета стоимости перевозки?</div>
+                            <div class="dw down">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
+                                    mollitia
+                                    ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
+                                    voluptate
+                                    beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                            </div>
+                            <div class="dr drop-1">Как рассчитать объем груза?</div>
+                            <div class="dw down-1">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
+                                    mollitia
+                                    ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
+                                    voluptate
+                                    beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                            </div>
+                            <div class="dr drop-2">Как и когда осуществляется оплата?</div>
+                            <div class="dw down-2">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
+                                    mollitia
+                                    ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
+                                    voluptate
+                                    beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                            </div>
+                            <div class="dr drop-3">Можем ли мы получить разовую консультацию?</div>
+                            <div class="dw down-3">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
+                                    mollitia
+                                    ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
+                                    voluptate
+                                    beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                            </div>
+                            <div class="dr drop-4">Какие документы требуются для таможенного оформления?</div>
+                            <div class="dw down-4">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
+                                    mollitia
+                                    ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
+                                    voluptate
+                                    beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                            </div>
+                            <div class="dr drop-5">Есть ли у вас собственные склады консолидации?</div>
+                            <div class="dw down-5">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
+                                    mollitia
+                                    ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
+                                    voluptate
+                                    beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                            </div>
+                            <div class="dr drop-6"></div>
+                        </div>
+                    </div>
+                </div>
+                <!---------------------------------------------------- Content5 ------------------------------------------------>
+                <div class="content5">
+                    <div class="contBox5">
+                        <h3>Ассортимент</h3>
+                        <p>Более 10 000 товаров и 100 брендов</p>
+                    </div>
+                    <div class="contBox5">
+                        <h3>Клиентский сервис</h3>
+                        <p>оперативно отвечаем на вопросы покупателей</p>
+                    </div>
+                    <div class="contBox5">
+                        <h3>Качественные материалы</h3>
+                        <p>Сответствует требованиям и мировым стандартам</p>
+                    </div>
+                </div>
+                <!---------------------------------------------------- Content6 ------------------------------------------------>
+                <div class="content6">
+                    <h1>Интернет магазин Нержавейки</h1>
+                    <p class="mt-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur
+                        ratione laudantium,</p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
+                            laudantium,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
+                            laudantium,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
+                            laudantium,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
+                            laudantium,</li>
+                    </ul>
+                    <p class="mt-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur
+                        ratione laudantium,</p>
+                    <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
+                        laudantium,</p>
+                    <p class="mt-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur
+                        ratione laudantium,</p>
+                    <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
+                        laudantium,</p>
+                    <p class="mt-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur
+                        ratione laudantium,</p>
+                </div>
+                <footer>
+                    <div class="col-1">
+                        <h2>О магазине</h2>
+                        <a href="">Частые вопросы</a>
+                        <a href="">Возврат и обмен</a>
+                        <a href="">Карта сайта</a>
+                        <a href="">Поиск по сайту</a>
+                    </div>
+                    <div class="col-2">
+                        <h2>Информация</h2>
+                        <a href="">Оплата</a>
+                        <a href="">Доставка</a>
+                        <a href="">Возврат и обмен</a>
+                        <a href="">Мои заказы</a>
+                    </div>
+                    <div class="col-3">
+                        <h2>Контакты</h2>
+                        <a href="">г. Москва, ул. Ленинская, дом 0, корп 0, офис 0</a>
+                        <a href="">Доставка</a>
+                        <a href="">Возврат и обмен</a>
+                        <a href="">Мои заказы</a>
+                        <h3>+998(94)320 94 99</h3>
+                        <h3>+998(94)320 94 99</h3>
+                        <a style="text-decoration: underline; color: blue;" href="">molsi1994@mail.ru</a>
+                        <p>Без выходных с 09:00-22:00</p>
+                        <p>Мы в соцсетях:</p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <div class="colbak" id="colbak">
+        <div class="colbakFlex">
+            <div>
+                <h1 onclick="document.getElementById('colbak').style.display = 'none'">X</h1>
+            </div>
+            <h2>Ism</h2>
+            <input placeholder="Ismingizni kiriting" type="text">
+            <h2>Familiya</h2>
+            <input placeholder="Familiyangizni kiriting" type="text">
+            <h2>Telefon nomer</h2>
+            <input placeholder="Telefon nomerizni kiriting" type="text">
+            <button>Yuborish</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".down").hide();
+            $(".drop").click(function () {
+                $(".down").slideToggle(1000);
+            });
+            $(".down-1").hide();
+            $(".drop-1").click(function () {
+                $(".down-1").slideToggle(1000);
+            });
+            $(".down-2").hide();
+            $(".drop-2").click(function () {
+                $(".down-2").slideToggle(1000);
+            });
+            $(".down-3").hide();
+            $(".drop-3").click(function () {
+                $(".down-3").slideToggle(1000);
+            });
+            $(".down-4").hide();
+            $(".drop-4").click(function () {
+                $(".down-4").slideToggle(1000);
+            });
+            $(".down-5").hide();
+            $(".drop-5").click(function () {
+                $(".down-5").slideToggle(1000);
+            });
+        });
+    </script>
+</body>
+
+</html>
