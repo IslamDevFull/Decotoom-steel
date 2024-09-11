@@ -23,7 +23,7 @@
                 <li><a href="page/5kontakt.html">Контакты</a></li>
             </ul>
             <ul class="ul-2">
-                <li><i class="fa fa-shopping-cart" aria-hidden="true"></i> Корзина</li>
+                <li class="shopping-cart row jcc aic js-cart-icon js-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Корзина</li>
             </ul>
         </div>
         <!------------------------------------------ Header --------------------------------->
@@ -89,20 +89,17 @@
                     <div class="slideshow-container">
                         <div class="mySlides fade" style="background-image: url(img/2.jpg);">
                             <div class="numbertext">1 / 3</div>
-                            <!-- <img src="slide_1.jpg" style="width:100%"> -->
                             <div class="text">Caption Text</div>
                         </div>
 
                         <div class="mySlides fade"
                             style="background-image: url(img/ac1db3c5388192c7aac922d6ebf6f05c.jpg);">
                             <div class="numbertext">2 / 3</div>
-                            <!-- <img src="slide_2.jpg" style="width:100%"> -->
                             <div class="text">Caption Two</div>
                         </div>
 
                         <div class="mySlides fade" style="background-image: url(img/maxresdefault.jpg);">
                             <div class="numbertext">3 / 3</div>
-                            <!-- <img src="slide_3.jpg" style="width:100%"> -->
                             <div class="text">Caption Three</div>
                         </div>
 
@@ -116,7 +113,7 @@
                         <span class="dot" onclick="currentSlide(3)"></span>
                     </div>
                 </div>
-                <!----------------------------------------------------- Content --------------------------------------------------------->
+                <!----------------------------------------------------- Популярные товары --------------------------------------------------------->
                 <div class="content">
                     <h1>Популярные товары</h1>
                     <div class="contBox">
@@ -186,7 +183,7 @@
                         <button class="btn2">Все товары</button>
                     </div>
                 </div>
-                <!------------------------------------------ Content1 --------------------------------->
+                <!------------------------------------------ Новинки --------------------------------->
                 <div class="content1">
                     <h1>Новинки</h1>
                     <div class="contBox1">
@@ -197,12 +194,12 @@
                             <div class="korzBox">
                                 <div class="col-1">
                                     <div class="schot">
-                                        <button>-</button>
-                                        <b>1</b>
-                                        <button>+</button>
+                                        <button data-id="steel1" class="minus"id="minus1">-</button>
+                                        <b id="colvo1">1</b>
+                                        <button data-id="steel1" class="plus" id="plus1">+</button>
                                     </div>
                                 </div>
-                                <div class="col-2"><button>В <br> корзину <i class="fa fa-shopping-cart"
+                                <div class="col-2"><button id="card1">В корзину <i class="fa fa-shopping-cart"
                                             aria-hidden="true"></i></button></div>
                             </div>
                         </div>
@@ -293,7 +290,7 @@
                         <button class="btn2">Все товары</button>
                     </div>
                 </div>
-                <!-------------------------------------------------------------- Content2 -------------------------------------------------------------->
+                <!-------------------------------------------------------------- О компании -------------------------------------------------------------->
                 <div class="content2">
                     <div class="contBox2">
                         <div class="box2">
@@ -323,7 +320,7 @@
                         </div>
                     </div>
                 </div>
-                <!------------------------------------------ Content3 --------------------------------->
+                <!------------------------------------------ Идеи интерьеров --------------------------------->
                 <div class="content3">
                     <h1>Идеи интерьеров</h1>
                     <div class="contBox3">
@@ -339,7 +336,7 @@
                         <button class="btn3">Все Идеи</button>
                     </div>
                 </div>
-                <!------------------------------------------ Content4 --------------------------------->
+                <!------------------------------------------ Отвечаем, опережая ваши вопросы --------------------------------->
                 <div class="content4">
                     <div class="contBox4">
                         <div class="box4_1">
@@ -419,7 +416,7 @@
                         </div>
                     </div>
                 </div>
-                <!---------------------------------------------------- Content5 ------------------------------------------------>
+                <!---------------------------------------------------- Ассортимент ------------------------------------------------>
                 <div class="content5">
                     <div class="contBox5">
                         <h3>Ассортимент</h3>
@@ -434,7 +431,7 @@
                         <p>Сответствует требованиям и мировым стандартам</p>
                     </div>
                 </div>
-                <!---------------------------------------------------- Content6 ------------------------------------------------>
+                <!-- -------------------------------------------------- Интернет магазин ------------------------------------------------>
                 <div class="content6">
                     <h1>Интернет магазин Нержавейки</h1>
                     <p class="mt-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur
@@ -491,20 +488,6 @@
             </div>
         </div>
     </div>
-    <div class="colbak" id="colbak">
-        <div class="colbakFlex">
-            <div>
-                <h1 onclick="document.getElementById('colbak').style.display = 'none'">X</h1>
-            </div>
-            <h2>Ism</h2>
-            <input placeholder="Ismingizni kiriting" type="text">
-            <h2>Familiya</h2>
-            <input placeholder="Familiyangizni kiriting" type="text">
-            <h2>Telefon nomer</h2>
-            <input placeholder="Telefon nomerizni kiriting" type="text">
-            <button>Yuborish</button>
-        </div>
-    </div>
     <script src="js/script.js"></script>
     <script>
         $(document).ready(function () {
@@ -534,6 +517,7 @@
             });
         });
     </script>
+    <script type="module" src=""></script>
 </body>
 
 </html>
