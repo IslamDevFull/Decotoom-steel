@@ -7,13 +7,13 @@
     --color-second: #000;
     --color-third: #fff;
 }
-     
+
 
 body {
     font-family: 'Roboto';
     background-color: rgb(39, 40, 52);
-    
 }
+
 .page {
     display: none;
     opacity: 0;
@@ -27,6 +27,7 @@ body {
     box-sizing: border-box;
     user-select: none;
 }
+
 /* ****************************************************** Menyu ************************************************** */
 .menyu {
     background-color: rgb(67, 68, 92);
@@ -55,22 +56,33 @@ body {
     list-style: none;
     padding-right: 5px;
 }
-.ul-2 li{
+
+.ul-2 li button{
     display: flex;
 }
 
 .menyu ul li {
+    color: rgb(138, 154, 153);
+}
+.menyu ul li button{
     padding: 20px;
     color: rgb(138, 154, 153);
     font-size: 20px;
     cursor: pointer;
+    border: 0px;
+    background-color: initial;
 }
-.menyu ul li:hover {
-    background-color: rgb(110, 121, 120);
+
+.menyu ul li button:hover {
+    color: rgb(117, 190, 246);
 }
-.ul-2 .search-bar button svg {
+.menyu ul li button:focus {
+    color: rgb(117, 190, 246);
+}
+
+/* .ul-2 .search-bar button svg {
     color: var(--color-main-medium);
-}
+} */
 
 
 .ul-2 .shopping-cart {
@@ -78,9 +90,14 @@ body {
     height: 24px;
     cursor: pointer;
     position: relative;
-    margin-right: 40px;
+    margin-right: 10px;
 }
-.ul-2 .shopping-cart .counter {
+
+.ul-2 .shopping-cart svg {
+    fill: rgb(117, 190, 246);
+}
+
+/* .ul-2 .shopping-cart .counter {
     user-select: none;
     position: absolute;
     top: -6px;
@@ -91,7 +108,7 @@ body {
     height: 18px;
     font-size: 12px;
     border-radius: 50%;
-}
+} */
 /* ****************************************************** Menyu ************************************************** */
 /* ****************************************************** Header ************************************************** */
 header {
@@ -104,19 +121,24 @@ header {
 }
 
 .logo {
-    width: 100px;
-    padding: 35px 0px;
+    width: 80px;
+    height: 80px;
     text-align: center;
     background-color: gray;
+    background-image: url(../img/Logo.png);
+    background-size: 170% 170%;
+    background-position: -25px -25px;
     border-radius: 50%;
     margin: 0px 20px;
 }
+
 .nameKomp {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
+
 .contact {
     display: flex;
     justify-content: space-evenly;
@@ -127,6 +149,7 @@ header {
     display: flex;
     gap: 5px;
 }
+
 .serch2 {
     display: flex;
     gap: 5px;
@@ -135,11 +158,13 @@ header {
     margin-bottom: 10px;
     display: none;
 }
-.nameKomp a{
+
+.nameKomp a {
     text-decoration: none;
     color: white;
 }
-.nameKomp h1{
+
+.nameKomp h1 {
     color: white;
     font-size: 1.8vw;
 }
@@ -153,6 +178,7 @@ header {
     font-size: 1.5vw;
     color: white;
 }
+
 .serchInput:hover {
     outline: 1px solid rgb(66, 122, 161);
 }
@@ -166,6 +192,7 @@ header {
     border: 0px;
     cursor: pointer;
 }
+
 .serchButton:hover {
     background-color: rgb(117, 190, 246);
 }
@@ -173,6 +200,16 @@ header {
 
 .contact1 h4 {
     font-size: 25px;
+    margin-top: 10px;
+}
+
+.contact1 h4 a {
+    cursor: pointer;
+    color: white;
+}
+
+.contact1 h4 a:hover {
+    color: rgb(117, 190, 246);
 }
 
 
@@ -183,6 +220,7 @@ header {
     border: 2px solid green;
     border-radius: 10px;
     color: white;
+    cursor: pointer;
 }
 
 .contact2 button:hover {
@@ -198,20 +236,24 @@ header {
 h4 {
     color: white;
 }
-@media screen and (max-width:1490px){
-    .serch2{
+
+@media screen and (max-width:1490px) {
+    .serch2 {
         display: block;
     }
-    .serch{
+
+    .serch {
         display: none;
     }
 }
+
 /* ****************************************************** Header ************************************************** */
 /* ****************************************************** Content bar slide ************************************************** */
 .content-box {
     display: flex;
     /* border: 2px solid blue; */
 }
+
 /* ****************************************************** Content bar slide ************************************************** */
 /* ****************************************************** bar ************************************************** */
 .sidebar {
@@ -219,7 +261,7 @@ h4 {
     height: 960px;
     position: sticky;
     top: 65px;
-    border-right: 2px solid grey;
+    border-right: 1px solid rgb(67, 68, 92);
 }
 
 .sidebar ul {
@@ -228,17 +270,27 @@ h4 {
     text-align: center;
 }
 
-.sidebar ul li {
-    font-size: 20px;
-    border-bottom: 1px solid rgb(67, 68, 92);
-    cursor: pointer;
-    padding: 10px;
+.sidebar ul li button {
+    border: 0px;
     color: white;
-}
-.sidebar ul li:hover {
-    color: rgb(66, 122, 161);
+    background-color: initial;
+    width: 100%;
+    font-size: 20px;
+    padding: 15px;
+    cursor: pointer;
     transition: all 0.2s;
+    border-bottom: 1px solid rgb(67, 68, 92);
 }
+
+.sidebar ul li button:hover {
+    color: rgb(117, 190, 246);
+}
+.sidebar ul li button:focus {
+    color: rgb(117, 190, 246);
+    border-top: 1px solid rgb(117, 190, 246);
+    border-bottom: 1px solid rgb(117, 190, 246);
+}
+
 /* ****************************************************** bar ************************************************** */
 /******************************************************* Right-Content ***************************************************/
 .right-content {
@@ -246,6 +298,7 @@ h4 {
     background-color: rgb(67, 68, 92);
     /* border: 2px solid red; */
 }
+
 /******************************************************* Right-Content ***************************************************/
 /******************************************************* Carousel ***************************************************/
 .slide {
@@ -264,7 +317,7 @@ h4 {
     display: none;
     height: 600px;
     background-repeat: no-repeat;
-    background-size: 100% 100% ;
+    background-size: 100% 100%;
 }
 
 .prev,
@@ -294,22 +347,42 @@ h4 {
 }
 
 .text {
-    color: #f2f2f2;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 8px 12px;
+    padding: 30px 20px;
     position: absolute;
     bottom: 50px;
     right: 150px;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     width: 30%;
-    height: 200px;
-    text-align: center;
-    /* outline: 2px solid red; */
-    background-color: rgb(176, 176, 176,0.5);
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all 1s;
 }
+.text h5{
+    margin-bottom: 5px;
+    color: rgb(90, 191, 112);
+}
+.text h2{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.text p{
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.text button{
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    background-color: rgb(85, 149, 194);
+    border: 0px;
+}
+.text button:hover{
+    background-color: rgb(117, 190, 246);
+}
+
 .text:hover {
-    background-color: rgb(176, 176, 176,1);
+    background-color: rgb(255, 255, 255, 1);
 }
 
 .numbertext {
@@ -350,6 +423,7 @@ h4 {
         opacity: 1
     }
 }
+
 /******************************************************* Carousel ***************************************************/
 /* ****************************************************** Популярные товары ************************************************** */
 .content {
@@ -382,47 +456,59 @@ h4 {
     color: white;
     cursor: pointer;
 }
- 
+
 .content .img {
     background-size: 100% 100%;
     border-radius: 20px;
     height: 300px;
     margin-bottom: 5px;
 }
-.i1{
+
+.i1 {
     background-image: url(../img/Olson15.jpg);
 }
-.i2{
+
+.i2 {
     background-image: url(../img/unnamed.jpg);
 }
-.i3{
+
+.i3 {
     background-image: url(../img/stainless-steel-kitchen-countertop-image.jpg);
 }
-.i4{
+
+.i4 {
     background-image: url(../img/photo_2024-08-08_22-09-03.jpg);
 }
-.i5{
+
+.i5 {
     background-image: url(../img/photo_2024-08-08_22-09-50.jpg);
 }
-.i6{
+
+.i6 {
     background-image: url(../img/photo_2024-08-08_22-09-35.jpg);
 }
-.i1:hover  {
+
+.i1:hover {
     background-image: url(../img/img_5633.jpeg);
 }
-.i2:hover  {
+
+.i2:hover {
     background-image: url(../img/img_5129.jpeg);
 }
-.i3:hover  {
+
+.i3:hover {
     background-image: url(../img/img_5654.jpeg);
 }
-.i4:hover  {
+
+.i4:hover {
     background-image: url(../img/photo_2024-08-08_22-09-25.jpg);
 }
-.i5:hover  {
+
+.i5:hover {
     background-image: url(../img/photo_2024-08-08_22-10-04.jpg);
 }
-.i6:hover  {
+
+.i6:hover {
     background-image: url(../img/photo_2024-08-08_22-09-40.jpg);
 }
 
@@ -434,11 +520,13 @@ h4 {
     color: grey;
     margin-top: 5px;
 }
+
 /* ****************************************************** Популярные товары ************************************************** */
 
 ul {
     list-style-type: none;
 }
+
 a {
     text-decoration: none;
 }
@@ -454,18 +542,23 @@ a {
     display: flex;
     flex-direction: column;
 }
+
 .jcc {
     justify-content: center;
 }
+
 .jcsb {
     justify-content: space-between;
 }
+
 .jcsa {
     justify-content: space-around;
 }
+
 .jcfs {
     justify-content: flex-start;
 }
+
 .jcfe {
     justify-content: flex-end;
 }
@@ -473,9 +566,11 @@ a {
 .aic {
     align-items: center;
 }
+
 .aifs {
     align-items: flex-start;
 }
+
 .aife {
     align-items: flex-end;
 }
@@ -496,7 +591,9 @@ a {
     cursor: pointer;
     z-index: 110;
 }
-.close::before, .close::after {
+
+.close::before,
+.close::after {
     content: '';
     position: absolute;
     top: 5px;
@@ -504,9 +601,11 @@ a {
     width: 2px;
     background-color: var(--color-main-dark);
 }
-.close::before{
+
+.close::before {
     transform: rotate(45deg);
 }
+
 .close::after {
     transform: rotate(-45deg);
 }
@@ -517,18 +616,20 @@ a {
     position: relative;
     /* border: 2px solid red; */
 }
+
 .main .container {
     width: 100%;
-    margin: 50px auto; 
+    margin: 50px auto;
     /* border: 2px solid red;  */
     background-color: rgb(67, 68, 92);
 }
 
-.products { 
+.products {
     flex-wrap: wrap;
-    margin-top: 0px;   
+    margin-top: 0px;
     /* border: 2px solid blue;  */
 }
+
 .products .product {
     margin: 20px 10px 0;
     background: var(--color-third);
@@ -543,9 +644,11 @@ a {
     background-color: rgb(39, 40, 52);
     padding: 15px;
 }
+
 .products .product:hover {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
 }
+
 .products .product .favorites {
     width: 22px;
     position: absolute;
@@ -554,23 +657,26 @@ a {
     z-index: 20;
 }
 
-.product  .heart-lined {
+.product .heart-lined {
     opacity: 0;
     transition: opacity .2s ease-in-out;
 }
+
 .product:hover .heart-lined {
     opacity: 1;
     opacity: 0;
     transition: opacity .2s ease-in-out;
 }
 
-.product .heart-lined  svg  {
+.product .heart-lined svg {
     fill: var(--color-second);
 }
-.product .newImg{
+
+.product .newImg {
     background-color: white;
 }
-.newNew{
+
+.newNew {
     /* border: 2px solid red; */
     width: 30%;
     height: 30px;
@@ -581,6 +687,7 @@ a {
     align-items: center;
     color: white;
 }
+
 .products .product .image {
     width: 300px;
     height: 300px
@@ -593,15 +700,18 @@ a {
     color: white;
     margin: 10px 0px;
 }
+
 .products .product-price {
     /* font-weight: 700;
     color: var(--color-second); */
     color: white;
     margin-bottom: 20px;
 }
+
 .products .product-price .price {
     margin-right: 5px;
 }
+
 .products .product .buy-button {
     /* background: var(--color-third); */
     /* border: 1px solid var(--color-second); */
@@ -617,27 +727,33 @@ a {
     text-transform: uppercase;
     margin-bottom: 25px;
     cursor: pointer;
-    
+
 }
+
 .products .product .buy-button:hover {
     /* background-color: var(--color-second);
     border-color: var(--color-second);
     color: var(--color-third); */
     background-color: rgb(117, 190, 246);
 }
+
 .products .product .buy-button:active {
     transform: translateY(5px);
 }
 
 /* ****************************************************** О компании ************************************************** */
-.content2{padding: 30px 0px;}
-.contBox2{
+.content2 {
+    padding: 30px 0px;
+}
+
+.contBox2 {
     width: 95%;
     margin: auto;
     display: flex;
     justify-content: space-evenly;
 }
-.box2{
+
+.box2 {
     width: 50%;
     border-radius: 20px;
     margin: 10px;
@@ -647,39 +763,47 @@ a {
     background-color: rgb(39, 40, 52);
     padding: 20px;
 }
-.box2_img{
+
+.box2_img {
     border-radius: 20px;
     width: 50%;
 }
-.box2_img img{
+
+.box2_img img {
     border-radius: 20px;
 }
-.box2 h1{
+
+.box2 h1 {
     color: white;
     font-size: 50px;
 }
-.box2 p{
+
+.box2 p {
     color: gray;
     font-size: 20px;
     margin-top: 20px;
 }
-.box2 a{
+
+.box2 a {
     text-decoration: none;
     font-size: 25px;
 
 }
+
 /* ****************************************************** О компании ************************************************** */
 /* ****************************************************** Идеи интерьеров ************************************************** */
-.content3{
-    
+.content3 {
+
     padding: 30px 0px;
 }
-.content3 h1{
-    text-align: center; 
+
+.content3 h1 {
+    text-align: center;
     margin-bottom: 20px;
     color: white;
 }
-.contBox3{
+
+.contBox3 {
     /* outline: 2px solid red; */
     width: 99%;
     margin: auto;
@@ -688,7 +812,8 @@ a {
     align-content: space-around;
     flex-wrap: wrap;
 }
-.box3{
+
+.box3 {
     /* outline: 2px solid blue; */
     width: 100%;
     margin-top: 10px;
@@ -696,12 +821,14 @@ a {
     display: flex;
     gap: 10px;
 }
-.imgBox1{
+
+.imgBox1 {
     /* outline: 2px solid red; */
     height: 700px;
     width: 50%;
 }
-.imgBox2{
+
+.imgBox2 {
     /* outline: 2px solid blue; */
     height: 700px;
     width: 50%;
@@ -709,12 +836,14 @@ a {
     flex-wrap: wrap;
     gap: 10px;
 }
-.img3{
+
+.img3 {
     /* outline: 2px solid green; */
     height: 345px;
     width: 100%;
 }
-.btn3{
+
+.btn3 {
     padding: 10px 20px;
     font-size: 25px;
     background-color: #ff4f81;
@@ -723,116 +852,148 @@ a {
     border-radius: 10px;
     margin-top: 20px;
 }
-.btn3:hover{
+
+.btn3:hover {
     background-color: black;
 }
+
 /* ****************************************************** Идеи интерьеров ************************************************** */
 /* ****************************************************** Отвечаем, опережая ваши вопросы ************************************************** */
-.content4{
+.content4 {
     background-color: #dadada;
 }
-.contBox4{
+
+.contBox4 {
     display: flex;
 }
-.linkBox{
+
+.linkBox {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 30px;
 }
-.box4_1{width: 40%;padding: 30px;}
-.box4_1 h1{
+
+.box4_1 {
+    width: 40%;
+    padding: 30px;
+}
+
+.box4_1 h1 {
     margin-bottom: 30px;
 }
-.box4_2{width: 59%; padding: 30px;}
-.dr{
+
+.box4_2 {
+    width: 59%;
+    padding: 30px;
+}
+
+.dr {
     padding: 20px;
     background-color: white;
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
 }
-.dw{
+
+.dw {
     padding: 15px;
     transition: all 0s;
     background-color: rgb(39, 40, 52);
     color: white;
 }
-.dw p{
+
+.dw p {
     font-size: 18px;
 }
+
 /* ****************************************************** Отвечаем, опережая ваши вопросы ************************************************** */
 /* ****************************************************** Ассортимент ************************************************** */
-.content5{
+.content5 {
     display: flex;
     justify-content: space-evenly;
     padding: 20px 0px;
     background-color: rgb(39, 40, 52);
 }
-.contBox5{
+
+.contBox5 {
     padding: 20px;
     width: 30%;
     outline: 2px solid #ff4f81;
 }
-.contBox5 h3{
+
+.contBox5 h3 {
     margin-bottom: 15px;
     color: white;
 }
-.contBox5 p{
+
+.contBox5 p {
     color: grey;
 }
+
 /* ****************************************************** Ассортимент ************************************************** */
 /* ****************************************************** Интернет магазин ************************************************** */
-.content6{
+.content6 {
     padding: 20px;
     margin-top: 20px;
     /* height: 800px; */
     background-color: rgb(39, 40, 52);
     border-bottom: 1px solid gray;
 }
-.mt-30{
+
+.mt-30 {
     margin-top: 30px
 }
-.mt-5{
+
+.mt-5 {
     margin-top: 5px
 }
-.content6 h1{
+
+.content6 h1 {
     color: white;
 }
-.content6 p{
+
+.content6 p {
     color: grey;
 }
-.content6 ul{
+
+.content6 ul {
     margin-top: 20px;
     padding-left: 30px;
     color: grey;
 }
-.content6 li{
+
+.content6 li {
     margin-top: 5px;
     color: grey;
 }
+
 /* ****************************************************** Интернет магазин ************************************************** */
 /* ****************************************************** Footer ************************************************** */
-footer{
+footer {
     background-color: rgb(39, 40, 52);
     /* height: 610px; */
     padding-top: 50px;
     display: flex;
 }
-footer div{
+
+footer div {
     height: 500px;
     width: 33%;
 }
-footer div h2{
+
+footer div h2 {
     text-align: center;
     margin-top: 50px;
     color: white;
 }
-footer div h3{
+
+footer div h3 {
     text-align: center;
     margin-top: 10px;
     color: white;
 }
-footer div a{
+
+footer div a {
     text-align: center;
     margin-top: 20px;
     color: gray;
@@ -840,7 +1001,8 @@ footer div a{
     text-decoration: none;
     font-size: 20px;
 }
-footer div p{
+
+footer div p {
     text-align: center;
     margin-top: 25px;
     color: gray;
@@ -848,6 +1010,7 @@ footer div p{
     text-decoration: none;
     font-size: 20px;
 }
+
 /* ****************************************************** Footer ************************************************** */
 /* CART */
 
@@ -861,7 +1024,7 @@ main .overlay {
     z-index: 95;
     display: none;
     transition: background-color .2s;
-  
+
 }
 
 main .overlay.active {
@@ -880,11 +1043,12 @@ main .overlay.active {
     background-color: var(--color-third);
     transition: right .2s ease-in-out;
     z-index: 95;
-    overflow-y: auto; 
+    overflow-y: auto;
 
 }
+
 .cart.active {
-    right: 0; 
+    right: 0;
     transition: right .2s ease-in-out;
 }
 
@@ -892,31 +1056,41 @@ main .overlay.active {
 .cart .cart-container {
     padding: 50px 0;
 }
-.cart .cart-empty-container, .cart .cart-order-container {
-    width: 350px; 
+
+.cart .cart-empty-container,
+.cart .cart-order-container {
+    width: 350px;
 }
+
 .cart .cart-empty-container {
     min-height: calc(100vh - 100px);
 }
-.cart .cart-empty, .cart .cart-order {
+
+.cart .cart-empty,
+.cart .cart-order {
     font-size: 28px;
     font-weight: 700;
 }
+
 .cart .cart-empty-container .cart-empty {
     margin-bottom: 30px;
     color: var(--color-main-medium);
 }
+
 .cart .cart-empty-container .icon {
-    fill:var(--color-main-medium);
+    fill: var(--color-main-medium);
 }
+
 .cart .cart-order {
     margin-bottom: 30px;
 }
+
 .cart .cart-item {
     position: relative;
 }
 
-.cart .cart-item .close::before, .cart .cart-item  .close::after {
+.cart .cart-item .close::before,
+.cart .cart-item .close::after {
     content: '';
     position: absolute;
     top: 5px;
@@ -929,20 +1103,24 @@ main .overlay.active {
     width: 350px;
     margin-bottom: 20px;
 }
+
 .cart .cart-image-container {
     width: 120px;
     overflow: hidden;
     margin-right: 10px;
 }
+
 .cart .cart-img {
     width: 100%;
     transform: translateY(-15px);
 }
+
 .cart .cart-model {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 20px;
 }
+
 .cart .control {
     width: 32px;
     height: 32px;
@@ -953,40 +1131,50 @@ main .overlay.active {
     cursor: pointer;
     border: none;
 }
+
 .cart .minus.disabled {
     color: var(--color-main-medium);
 }
+
 .cart .current-items {
     margin: 0 10px;
     min-width: 20px;
 }
+
 .cart .cart-price {
     margin-right: 5px;
     font-size: 16px;
     font-weight: 700;
     min-width: 90px;
 }
+
 .cart .rouble {
     font-size: 16px;
-    font-weight: 700; 
+    font-weight: 700;
 }
+
 .cart .cart-total-container {
     width: 350px;
     margin-bottom: 30px;
 }
+
 .cart .cart-total-container .title {
     font-size: 20px;
 }
+
 .cart .cart-total-container .total-price {
     font-size: 20px;
-    font-weight: 700; 
+    font-weight: 700;
 }
+
 .cart .cart-total-container .rouble {
     font-size: 20px;
 }
+
 .cart .cart-btn {
     width: 350px;
 }
+
 .cart .cart-btn .btn-order {
     background-color: var(--color-second);
     letter-spacing: 1px;
@@ -999,65 +1187,117 @@ main .overlay.active {
     text-transform: uppercase;
     margin-bottom: 25px;
     cursor: pointer;
-    border: none;    
+    border: none;
 }
 
 /* CART */
 /* ****************************************************** BTN ************************************************** */
-.vanaBtn{
+.vanaBtn {
     /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
     margin: 100px 0px 0px;
     padding: 0px 20px;
     width: 100%;
-} 
-.vanaBtn button{
+}
+
+.vanaBtn button {
     font-size: 20px;
     border: 0px;
     padding: 15px 50px;
     background-color: rgb(66, 122, 161);
     color: white;
-} 
-.vanaBtn button:active{
+}
+
+.vanaBtn button:active {
     transform: translateY(5px);
 }
-.vanaBtn button:hover{
+
+.vanaBtn button:hover {
     background-color: rgb(117, 190, 246);
 }
+
 .vanaBtn button .fa-angle-left {
     font-weight: bold;
     transform: translateX(-20px);
 }
+
 .vanaBtn button .fa-angle-right {
     font-weight: bold;
     transform: translateX(20px);
 }
+
 /* ****************************************************** BTN ************************************************** */
-.vrap{
+.vrap {
     flex-wrap: wrap;
 }
-.newH1{
+
+.newH1 {
     width: 100%;
     text-align: center;
     color: white;
 }
 
-#vana{
+#vana {
     border-top: 1px solid rgb(67, 68, 92);
 }
-.vana{display: none;}
-.veshilka{display: none;}
-.plita{display: none;}
-.zont{display: none;}
-.kreslo{display: none;}
-.lesnitsa{display: none;}
-.marmit{display: none;}
-.perila{display: none;}
-.skameyka{display: none;}
-.stelaji{display: none;}
-.stoyka{display: none;}
-.stol_steklo{display: none;}
-.stol{display: none;}
-.telejki{display: none;}
-.shkaf{display: none;}
+
+.vana {
+    display: none;
+}
+
+.veshilka {
+    display: none;
+}
+
+.plita {
+    display: none;
+}
+
+.zont {
+    display: none;
+}
+
+.kreslo {
+    display: none;
+}
+
+.lesnitsa {
+    display: none;
+}
+
+.marmit {
+    display: none;
+}
+
+.perila {
+    display: none;
+}
+
+.skameyka {
+    display: none;
+}
+
+.stelaji {
+    display: none;
+}
+
+.stoyka {
+    display: none;
+}
+
+.stol_steklo {
+    display: none;
+}
+
+.stol {
+    display: none;
+}
+
+.telejki {
+    display: none;
+}
+
+.shkaf {
+    display: none;
+}

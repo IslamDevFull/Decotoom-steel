@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,34 +14,40 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="jquery.js"></script>
 </head>
+
 <body>
     <!------------------------------------------ Menyu --------------------------------->
     <div class="menyu">
         <ul class="ul-1">
-            <li id="uy">Главная</li>
-            <li>О компании</li>
-            <li>Акции и бонусы</li>
-            <li>Оплата</li>
-            <li>Доставка</li>
-            <li>Контакты</li>
+            <li id="uy"><button>Главная</button></li>
+            <li><button>О компании</button></li>
+            <li><button>Акции и бонусы</button></li>
+            <li><button>Оплата</button></li>
+            <li><button>Доставка</button></li>
+            <li><button>Контакты</button></li>
         </ul>
         <ul class="ul-2">
-            <li class="js-cart-btn"><span class="shopping-cart">
-                    <!-- <span class="counter row jcc aic js-cart-current-count">1</span> -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 20">
-                        <path
-                            d="M4.258 0c.45 0 .842.31.944.738l.749 2.649h15.132a.972.972 0 01.945 1.207L20.21 11.94a.973.973 0 01-.945.74H7.643a.973.973 0 01-.947-.748l.005.017L3.503 1.947H.973A.973.973 0 01.973 0h3.285zM19.84 5.334H6.497l1.895 5.398h10.113l1.335-5.398zM8.857 13.699a2.719 2.719 0 012.715 2.717 2.719 2.719 0 01-2.715 2.716 2.719 2.719 0 01-2.716-2.716 2.719 2.719 0 012.716-2.717zm0 1.491a1.225 1.225 0 100 2.45 1.225 1.225 0 000-2.45zM17.901 13.699a2.719 2.719 0 012.715 2.717 2.719 2.719 0 01-2.715 2.716 2.719 2.719 0 01-2.715-2.716 2.719 2.719 0 012.715-2.717zm0 1.491a1.225 1.225 0 100 2.45 1.225 1.225 0 000-2.45z" />
-                    </svg>
-                </span> Корзина</li>
+            <li class="js-cart-btn">
+                <button>
+                    <span class="shopping-cart">
+                        <!-- <span class="counter row jcc aic js-cart-current-count">1</span> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 20">
+                            <path
+                                d="M4.258 0c.45 0 .842.31.944.738l.749 2.649h15.132a.972.972 0 01.945 1.207L20.21 11.94a.973.973 0 01-.945.74H7.643a.973.973 0 01-.947-.748l.005.017L3.503 1.947H.973A.973.973 0 01.973 0h3.285zM19.84 5.334H6.497l1.895 5.398h10.113l1.335-5.398zM8.857 13.699a2.719 2.719 0 012.715 2.717 2.719 2.719 0 01-2.715 2.716 2.719 2.719 0 01-2.716-2.716 2.719 2.719 0 012.716-2.717zm0 1.491a1.225 1.225 0 100 2.45 1.225 1.225 0 000-2.45zM17.901 13.699a2.719 2.719 0 012.715 2.717 2.719 2.719 0 01-2.715 2.716 2.719 2.719 0 01-2.715-2.716 2.719 2.719 0 012.715-2.717zm0 1.491a1.225 1.225 0 100 2.45 1.225 1.225 0 000-2.45z" />
+                        </svg>
+                    </span>
+                    Корзина
+                </button>
+            </li>
         </ul>
     </div>
     <!------------------------------------------ Menyu --------------------------------->
     <!------------------------------------------ Header --------------------------------->
     <header>
         <div class="nameKomp">
-            <div class="logo">LOGO</div>
+            <div class="logo"></div>
             <div>
-                <h1><a href="index.html"><b style="color: rgb(42, 183, 217);">Название</b> компании</a></h1>
+                <h1><b style="color: rgb(42, 183, 217);">Decoroom</b> Steel</h1>
                 <p style="color: rgb(138, 154, 153);">Магазин нержавейка</p>
             </div>
         </div>
@@ -60,8 +67,8 @@
             </a>
         </div> -->
         <div class="contact1">
-            <h4>+(998)91 409-34-74</h4>
-            <h4>+(998)91 829-76-37</h4>
+            <h4><a href="tel: +998973001331">+998(97) 300-13-31</a></h4>
+            <h4><a href="tel: +998882243000">+998(88) 224-30-00</a></h4>
         </div>
         <div class="contact2">
             <button onclick="document.getElementById('colbak').style.display = 'block'"><i class="fa fa-phone"
@@ -73,21 +80,21 @@
     <div class="content-box">
         <div class="sidebar">
             <ul>
-                <li id="vana">Ванна моечная</li>
-                <li id="veshilka">Вешалка</li>
-                <li id="plita">Газовая плита</li>
-                <li id="zont">Кухонная Вытяжка</li>
-                <li id="kreslo">Кресло</li>
-                <li id="lesnitsa">Лестницы</li>
-                <li id="marmit">Мармит</li>
-                <li id="perila">Перила</li>
-                <li id="skameyka">Скамейка</li>
-                <li id="stelaji">Стеллажи кухонные</li>
-                <li id="stoyka">Стойка для приборов</li>
-                <li id="stol_steklo">Стеклянный стол</li>
-                <li id="stol">Столы производственные</li>
-                <li id="telejki">Тележки</li>
-                <li id="shkaf">Шкаф</li>
+                <li class="blu1" id="vana"><button>Ванна моечная</button></li>
+                <li class="blu2" id="veshilka"><button>Вешалка</button></li>
+                <li class="blu3" id="plita"><button>Газовая плита</button></li>
+                <li class="blu4" id="zont"><button>Кухонная Вытяжка</button></li>
+                <li class="blu5" id="kreslo"><button>Кресло</button></li>
+                <li class="blu6" id="lesnitsa"><button>Лестницы</button></li>
+                <li class="blu7" id="marmit"><button>Мармит</button></li>
+                <li class="blu8" id="perila"><button>Перила</button></li>
+                <li class="blu9" id="skameyka"><button>Скамейка</button></li>
+                <li class="blu10" id="stelaji"><button>Стеллажи кухонные</button></li>
+                <li class="blu11" id="stoyka"><button>Стойка для приборов</button></li>
+                <li class="blu12" id="stol_steklo"><button>Стеклянный стол</button></li>
+                <li class="blu13" id="stol"><button>Столы производственные</button></li>
+                <li class="blu14" id="telejki"><button>Тележки</button></li>
+                <li class="blu15" id="shkaf"><button>Шкаф</button></li>
             </ul>
         </div>
         <!------------------------------------------ Bar --------------------------------->
@@ -99,7 +106,14 @@
                 <div class="slideshow-container">
                     <div class="mySlides fade" style="background-image: url(img/2.jpg);">
                         <div class="numbertext">1 / 3</div>
-                        <div class="text">Caption Text</div>
+                        <div class="text">
+                            <h5>НОВИНКА</h5>
+                            <h2>Перила для лестницы:</h2>
+                            <p>
+                                Любая лестница в целях безопасности должна быть ограждена !
+                            </p>
+                            <button id="perila">Узнать больше!</button>
+                        </div>
                     </div>
 
                     <div class="mySlides fade" style="background-image: url(img/ac1db3c5388192c7aac922d6ebf6f05c.jpg);">
@@ -461,7 +475,8 @@
                                 <button type="button" class="buy-button js-buy-button">В корзину</button>
                             </li>
                             <div class="vanaBtn" style="justify-content: end;">
-                                <button>Вешалка<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                <button id="veshilka">Вешалка<i class="fa fa-angle-right"
+                                        aria-hidden="true"></i></button>
                             </div>
                         </div>
                         <div class="veshilka row vrap">
@@ -525,8 +540,10 @@
                                 <button type="button" class="buy-button js-buy-button">В корзину</button>
                             </li>
                             <div class="vanaBtn">
-                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Ванна моечная</button>
-                                <button>Газовая плита<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                <button id="vana"><i class="fa fa-angle-left" aria-hidden="true"></i>Ванна
+                                    моечная</button>
+                                <button id="plita">Газовая плита<i class="fa fa-angle-right"
+                                        aria-hidden="true"></i></button>
                             </div>
                         </div>
                         <div class="plita row vrap">
@@ -617,8 +634,10 @@
                                 <button type="button" class="buy-button js-buy-button">В корзину</button>
                             </li>
                             <div class="vanaBtn">
-                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Вешалка</button>
-                                <button>Кухонная Вытяжка <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                <button id="veshilka"> <i class="fa fa-angle-left"
+                                        aria-hidden="true"></i>Вешалка</button>
+                                <button id="zont">Кухонная Вытяжка <i class="fa fa-angle-right"
+                                        aria-hidden="true"></i></button>
                             </div>
                         </div>
                         <div class="zont row vrap">
@@ -694,8 +713,9 @@
                                 <button type="button" class="buy-button js-buy-button">В корзину</button>
                             </li>
                             <div class="vanaBtn">
-                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Газовая плита</button>
-                                <button>Кресло<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                <button id="plita"> <i class="fa fa-angle-left" aria-hidden="true"></i>Газовая
+                                    плита</button>
+                                <button id="kreslo">Кресло<i class="fa fa-angle-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                         <div class="kreslo row vrap">
@@ -772,8 +792,10 @@
                                 <button type="button" class="buy-button js-buy-button">В корзину</button>
                             </li>
                             <div class="vanaBtn">
-                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Кухонная Вытяжка</button>
-                                <button>Лестницы<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                <button id="zont"> <i class="fa fa-angle-left" aria-hidden="true"></i>Кухонная
+                                    Вытяжка</button>
+                                <button id="lesnitsa">Лестницы<i class="fa fa-angle-right"
+                                        aria-hidden="true"></i></button>
                             </div>
                         </div>
                         <div class="lesnitsa row vrap">
@@ -894,8 +916,8 @@
                                 <button type="button" class="buy-button js-buy-button">В корзину</button>
                             </li>
                             <div class="vanaBtn">
-                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Кресло</button>
-                                <button>Мармит<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                <button id="kreslo"> <i class="fa fa-angle-left" aria-hidden="true"></i>Кресло</button>
+                                <button id="marmit">Мармит<i class="fa fa-angle-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                         <div class="marmit row vrap">
@@ -986,8 +1008,9 @@
                                 <button type="button" class="buy-button js-buy-button">В корзину</button>
                             </li>
                             <div class="vanaBtn">
-                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Лестницы</button>
-                                <button>Перила<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                <button id="lesnitsa"> <i class="fa fa-angle-left"
+                                        aria-hidden="true"></i>Лестницы</button>
+                                <button id="perila">Перила<i class="fa fa-angle-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                         <div class="perila row vrap">
@@ -1122,8 +1145,9 @@
                                 <button type="button" class="buy-button js-buy-button">В корзину</button>
                             </li>
                             <div class="vanaBtn">
-                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Мармит</button>
-                                <button>Скамейка<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                <button id="marmit"> <i class="fa fa-angle-left" aria-hidden="true"></i>Мармит</button>
+                                <button id="skameyka">Скамейка<i class="fa fa-angle-right"
+                                        aria-hidden="true"></i></button>
                             </div>
                         </div>
                         <div class="skameyka row vrap">
@@ -1186,8 +1210,9 @@
                                 <button type="button" class="buy-button js-buy-button">В корзину</button>
                             </li>
                             <div class="vanaBtn">
-                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Перила</button>
-                                <button>Стеллажи кухонные<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                <button id="perila"> <i class="fa fa-angle-left" aria-hidden="true"></i>Перила</button>
+                                <button id="stelaji">Стеллажи кухонные<i class="fa fa-angle-right"
+                                        aria-hidden="true"></i></button>
                             </div>
                         </div>
                         <div class="stelaji row vrap">
@@ -1295,8 +1320,10 @@
                                 <button type="button" class="buy-button js-buy-button">В корзину</button>
                             </li>
                             <div class="vanaBtn">
-                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Скамейка</button>
-                                <button>Стойка для приборов<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                <button id="skameyka"> <i class="fa fa-angle-left"
+                                        aria-hidden="true"></i>Скамейка</button>
+                                <button id="stoyka">Стойка для приборов<i class="fa fa-angle-right"
+                                        aria-hidden="true"></i></button>
                             </div>
                         </div>
                         <div class="stoyka row vrap">
@@ -1344,8 +1371,10 @@
                                 <button type="button" class="buy-button js-buy-button">В корзину</button>
                             </li>
                             <div class="vanaBtn">
-                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Стеллажи кухонные</button>
-                                <button>Стеклянный стол<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                <button id="stelaji"> <i class="fa fa-angle-left" aria-hidden="true"></i>Стеллажи
+                                    кухонные</button>
+                                <button id="stol_steklo">Стеклянный стол<i class="fa fa-angle-right"
+                                        aria-hidden="true"></i></button>
                             </div>
                         </div>
                         <div class="stol_steklo row vrap">
@@ -1353,7 +1382,8 @@
                             <li class="product column aic js-product">
                                 <a id="stol_steklo1" class="link column aic js-link-card">
                                     <div class="newImg">
-                                        <img src="img/12_stol_steklo/stol_steklo1.jpg" alt="Error" class="image js-image-card">
+                                        <img src="img/12_stol_steklo/stol_steklo1.jpg" alt="Error"
+                                            class="image js-image-card">
                                     </div>
                                     <div>
                                         <h3 class="title js-title-card">Современные Настольные Стеклянный стол</h3>
@@ -1367,7 +1397,8 @@
                             <li class="product column aic js-product">
                                 <a id="stol_steklo2" class="link column aic js-link-card">
                                     <div class="newImg">
-                                        <img src="img/12_stol_steklo/stol_steklo2.jpg" alt="Error" class="image js-image-card">
+                                        <img src="img/12_stol_steklo/stol_steklo2.jpg" alt="Error"
+                                            class="image js-image-card">
                                     </div>
                                     <div>
                                         <h3 class="title js-title-card">Журнальный столик</h3>
@@ -1381,7 +1412,8 @@
                             <li class="product column aic js-product">
                                 <a id="stol_steklo3" class="link column aic js-link-card">
                                     <div class="newImg">
-                                        <img src="img/12_stol_steklo/stol_steklo3.jpg" alt="Error" class="image js-image-card">
+                                        <img src="img/12_stol_steklo/stol_steklo3.jpg" alt="Error"
+                                            class="image js-image-card">
                                     </div>
                                     <div>
                                         <h3 class="title js-title-card">Стол круглый</h3>
@@ -1395,7 +1427,8 @@
                             <li class="product column aic js-product">
                                 <a id="stol_steklo4" class="link column aic js-link-card">
                                     <div class="newImg">
-                                        <img src="img/12_stol_steklo/stol_steklo4.jpg" alt="Error" class="image js-image-card">
+                                        <img src="img/12_stol_steklo/stol_steklo4.jpg" alt="Error"
+                                            class="image js-image-card">
                                     </div>
                                     <div>
                                         <h3 class="title js-title-card">Белый стеклянный журнальный столик</h3>
@@ -1409,7 +1442,8 @@
                             <li class="product column aic js-product">
                                 <a id="stol_steklo5" class="link column aic js-link-card">
                                     <div class="newImg">
-                                        <img src="img/12_stol_steklo/stol_steklo5.jpeg" alt="Error" class="image js-image-card">
+                                        <img src="img/12_stol_steklo/stol_steklo5.jpeg" alt="Error"
+                                            class="image js-image-card">
                                     </div>
                                     <div>
                                         <h3 class="title js-title-card">Зеркальный стол серебристый</h3>
@@ -1423,7 +1457,8 @@
                             <li class="product column aic js-product">
                                 <a id="stol_steklo6" class="link column aic js-link-card">
                                     <div class="newImg">
-                                        <img src="img/12_stol_steklo/stol_steklo6.webp" alt="Error" class="image js-image-card">
+                                        <img src="img/12_stol_steklo/stol_steklo6.webp" alt="Error"
+                                            class="image js-image-card">
                                     </div>
                                     <div>
                                         <h3 class="title js-title-card">Зеркальный стол</h3>
@@ -1435,8 +1470,10 @@
                                 <button type="button" class="buy-button js-buy-button">В корзину</button>
                             </li>
                             <div class="vanaBtn">
-                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Стойка для приборов</button>
-                                <button>Столы производственные<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                <button id="stoyka"> <i class="fa fa-angle-left" aria-hidden="true"></i>Стойка для
+                                    приборов</button>
+                                <button id="stol">Столы производственные<i class="fa fa-angle-right"
+                                        aria-hidden="true"></i></button>
                             </div>
                         </div>
                         <div class="stol row vrap">
@@ -1517,7 +1554,8 @@
                                         <img src="img/13_stol/stol6.jpg" alt="Error" class="image js-image-card">
                                     </div>
                                     <div>
-                                        <h3 class="title js-title-card">Столы производственные без борта с низу полка решетка</h3>
+                                        <h3 class="title js-title-card">Столы производственные без борта с низу полка
+                                            решетка</h3>
                                     </div>
                                     <div class="product-price">
                                         <span class="price js-price-card">150 000</span><span>sum</span>
@@ -1582,8 +1620,10 @@
                                 <button type="button" class="buy-button js-buy-button">В корзину</button>
                             </li>
                             <div class="vanaBtn">
-                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Стеклянный стол</button>
-                                <button>Тележки<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                <button id="stol_steklo"> <i class="fa fa-angle-left" aria-hidden="true"></i>Стеклянный
+                                    стол</button>
+                                <button id="telejki">Тележки<i class="fa fa-angle-right"
+                                        aria-hidden="true"></i></button>
                             </div>
                         </div>
                         <div class="telejki row vrap">
@@ -1594,7 +1634,7 @@
                                         <img src="img/14_telejki/telejki1.jpg" alt="Error" class="image js-image-card">
                                     </div>
                                     <div>
-                                        <h3 class="title js-title-card">Кухонная Тележка очистки  3 яруса кружевных</h3>
+                                        <h3 class="title js-title-card">Кухонная Тележка очистки 3 яруса кружевных</h3>
                                     </div>
                                     <div class="product-price">
                                         <span class="price js-price-card">150 000</span><span>sum</span>
@@ -1678,7 +1718,8 @@
                                         <img src="img/14_telejki/telejki7.png" alt="Error" class="image js-image-card">
                                     </div>
                                     <div>
-                                        <h3 class="title js-title-card">Тележка для подносов для профессиональной кухни</h3>
+                                        <h3 class="title js-title-card">Тележка для подносов для профессиональной кухни
+                                        </h3>
                                     </div>
                                     <div class="product-price">
                                         <span class="price js-price-card">150 000</span><span>sum</span>
@@ -1715,8 +1756,9 @@
                                 <button type="button" class="buy-button js-buy-button">В корзину</button>
                             </li>
                             <div class="vanaBtn">
-                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Столы производственные</button>
-                                <button>Шкаф<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                <button id="stol"> <i class="fa fa-angle-left" aria-hidden="true"></i>Столы
+                                    производственные</button>
+                                <button id="shkaf">Шкаф<i class="fa fa-angle-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                         <div class="shkaf row vrap">
@@ -1834,7 +1876,8 @@
                                 <button type="button" class="buy-button js-buy-button">В корзину</button>
                             </li>
                             <div class="vanaBtn" style="justify-content: start;">
-                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Тележки</button>
+                                <button id="telejki"> <i class="fa fa-angle-left"
+                                        aria-hidden="true"></i>Тележки</button>
                             </div>
                         </div>
                     </ul>
@@ -2082,6 +2125,38 @@
     <script type="module" src="js/main.js"></script>
     <script src="js/script.js"></script>
     <script>
+        let blu1 = document.querySelector('.blu1');
+        let blu2 = document.querySelector('.blu2');
+        let blu3 = document.querySelector('.blu3');
+        let blu4 = document.querySelector('.blu4');
+        let blu5 = document.querySelector('.blu5');
+        let blu6 = document.querySelector('.blu6');
+        let blu7 = document.querySelector('.blu7');
+        let blu8 = document.querySelector('.blu8');
+        let blu9 = document.querySelector('.blu9');
+        let blu10 = document.querySelector('.blu10');
+        let blu11 = document.querySelector('.blu11');
+        let blu12 = document.querySelector('.blu12');
+        let blu13 = document.querySelector('.blu13');
+        let blu14 = document.querySelector('.blu14');
+        let blu15 = document.querySelector('.blu15');
+
+        let vana = document.querySelectorAll('#vana');
+        let veshilka = document.querySelectorAll('#veshilka');
+        let plita = document.querySelectorAll('#plita');
+        let zont = document.querySelectorAll('#zont');
+        let kreslo = document.querySelectorAll('#kreslo');
+        let lesnitsa = document.querySelectorAll('#lesnitsa');
+        let marmit = document.querySelectorAll('#marmit');
+        let perila = document.querySelectorAll('#perila');
+        let skameyka = document.querySelectorAll('#skameyka');
+        let stelaji = document.querySelectorAll('#stelaji');
+        let stoyka = document.querySelectorAll('#stoyka');
+        let stol_steklo = document.querySelectorAll('#stol_steklo');
+        let stol = document.querySelectorAll('#stol');
+        let telejki = document.querySelectorAll('#telejki');
+        let shkaf = document.querySelectorAll('#shkaf');
+
         document.getElementById('uy').addEventListener('click', () => {
             let newElement = document.querySelectorAll('.new');
             for (let i = 0; i < newElement.length; i++) {
@@ -2102,323 +2177,358 @@
             document.querySelector('.stol').style.display = 'none';
             document.querySelector('.telejki').style.display = 'none';
             document.querySelector('.shkaf').style.display = 'none';
-            
+
         });
-        document.getElementById('vana').addEventListener('click', () => {
-            let newElement = document.querySelectorAll('.new');
-            for (let i = 0; i < newElement.length; i++) {
-                newElement[i].style.display = 'none';
-            };
-            document.querySelector('.vana').style.display = 'flex';
-            document.querySelector('.veshilka').style.display = 'none';
-            document.querySelector('.plita').style.display = 'none';
-            document.querySelector('.zont').style.display = 'none';
-            document.querySelector('.kreslo').style.display = 'none';
-            document.querySelector('.lesnitsa').style.display = 'none';
-            document.querySelector('.marmit').style.display = 'none';
-            document.querySelector('.perila').style.display = 'none';
-            document.querySelector('.skameyka').style.display = 'none';
-            document.querySelector('.stelaji').style.display = 'none';
-            document.querySelector('.stoyka').style.display = 'none';
-            document.querySelector('.stol_steklo').style.display = 'none';
-            document.querySelector('.stol').style.display = 'none';
-            document.querySelector('.telejki').style.display = 'none';
-            document.querySelector('.shkaf').style.display = 'none';
-        });
-        document.getElementById('veshilka').addEventListener('click', () => {
-            let newElement = document.querySelectorAll('.new');
-            for (let i = 0; i < newElement.length; i++) {
-                newElement[i].style.display = 'none';
-            };
-            document.querySelector('.vana').style.display = 'none';
-            document.querySelector('.veshilka').style.display = 'flex';
-            document.querySelector('.plita').style.display = 'none';
-            document.querySelector('.zont').style.display = 'none';
-            document.querySelector('.kreslo').style.display = 'none';
-            document.querySelector('.lesnitsa').style.display = 'none';
-            document.querySelector('.marmit').style.display = 'none';
-            document.querySelector('.perila').style.display = 'none';
-            document.querySelector('.skameyka').style.display = 'none';
-            document.querySelector('.stelaji').style.display = 'none';
-            document.querySelector('.stoyka').style.display = 'none';
-            document.querySelector('.stol_steklo').style.display = 'none';
-            document.querySelector('.stol').style.display = 'none';
-            document.querySelector('.telejki').style.display = 'none';
-            document.querySelector('.shkaf').style.display = 'none';
-        });
-        document.getElementById('plita').addEventListener('click', () => {
-            let newElement = document.querySelectorAll('.new');
-            for (let i = 0; i < newElement.length; i++) {
-                newElement[i].style.display = 'none';
-            };
-            document.querySelector('.vana').style.display = 'none';
-            document.querySelector('.veshilka').style.display = 'none';
-            document.querySelector('.plita').style.display = 'flex';
-            document.querySelector('.zont').style.display = 'none';
-            document.querySelector('.kreslo').style.display = 'none';
-            document.querySelector('.lesnitsa').style.display = 'none';
-            document.querySelector('.marmit').style.display = 'none';
-            document.querySelector('.perila').style.display = 'none';
-            document.querySelector('.skameyka').style.display = 'none';
-            document.querySelector('.stelaji').style.display = 'none';
-            document.querySelector('.stoyka').style.display = 'none';
-            document.querySelector('.stol_steklo').style.display = 'none';
-            document.querySelector('.stol').style.display = 'none';
-            document.querySelector('.telejki').style.display = 'none';
-            document.querySelector('.shkaf').style.display = 'none';
-        });
-        document.getElementById('zont').addEventListener('click', () => {
-            let newElement = document.querySelectorAll('.new');
-            for (let i = 0; i < newElement.length; i++) {
-                newElement[i].style.display = 'none';
-            };
-            document.querySelector('.vana').style.display = 'none';
-            document.querySelector('.veshilka').style.display = 'none';
-            document.querySelector('.plita').style.display = 'none';
-            document.querySelector('.zont').style.display = 'flex';
-            document.querySelector('.kreslo').style.display = 'none';
-            document.querySelector('.lesnitsa').style.display = 'none';
-            document.querySelector('.marmit').style.display = 'none';
-            document.querySelector('.perila').style.display = 'none';
-            document.querySelector('.skameyka').style.display = 'none';
-            document.querySelector('.stelaji').style.display = 'none';
-            document.querySelector('.stoyka').style.display = 'none';
-            document.querySelector('.stol_steklo').style.display = 'none';
-            document.querySelector('.stol').style.display = 'none';
-            document.querySelector('.telejki').style.display = 'none';
-            document.querySelector('.shkaf').style.display = 'none';
-        });
-        document.getElementById('kreslo').addEventListener('click', () => {
-            let newElement = document.querySelectorAll('.new');
-            for (let i = 0; i < newElement.length; i++) {
-                newElement[i].style.display = 'none';
-            };
-            document.querySelector('.vana').style.display = 'none';
-            document.querySelector('.veshilka').style.display = 'none';
-            document.querySelector('.plita').style.display = 'none';
-            document.querySelector('.zont').style.display = 'none';
-            document.querySelector('.kreslo').style.display = 'flex';
-            document.querySelector('.lesnitsa').style.display = 'none';
-            document.querySelector('.marmit').style.display = 'none';
-            document.querySelector('.perila').style.display = 'none';
-            document.querySelector('.skameyka').style.display = 'none';
-            document.querySelector('.stelaji').style.display = 'none';
-            document.querySelector('.stoyka').style.display = 'none';
-            document.querySelector('.stol_steklo').style.display = 'none';
-            document.querySelector('.stol').style.display = 'none';
-            document.querySelector('.telejki').style.display = 'none';
-            document.querySelector('.shkaf').style.display = 'none';
-        });
-        document.getElementById('lesnitsa').addEventListener('click', () => {
-            let newElement = document.querySelectorAll('.new');
-            for (let i = 0; i < newElement.length; i++) {
-                newElement[i].style.display = 'none';
-            };
-            document.querySelector('.vana').style.display = 'none';
-            document.querySelector('.veshilka').style.display = 'none';
-            document.querySelector('.plita').style.display = 'none';
-            document.querySelector('.zont').style.display = 'none';
-            document.querySelector('.kreslo').style.display = 'none';
-            document.querySelector('.lesnitsa').style.display = 'flex';
-            document.querySelector('.marmit').style.display = 'none';
-            document.querySelector('.perila').style.display = 'none';
-            document.querySelector('.skameyka').style.display = 'none';
-            document.querySelector('.stelaji').style.display = 'none';
-            document.querySelector('.stoyka').style.display = 'none';
-            document.querySelector('.stol_steklo').style.display = 'none';
-            document.querySelector('.stol').style.display = 'none';
-            document.querySelector('.telejki').style.display = 'none';
-            document.querySelector('.shkaf').style.display = 'none';
-        });
-        document.getElementById('marmit').addEventListener('click', () => {
-            let newElement = document.querySelectorAll('.new');
-            for (let i = 0; i < newElement.length; i++) {
-                newElement[i].style.display = 'none';
-            };
-            document.querySelector('.vana').style.display = 'none';
-            document.querySelector('.veshilka').style.display = 'none';
-            document.querySelector('.plita').style.display = 'none';
-            document.querySelector('.zont').style.display = 'none';
-            document.querySelector('.kreslo').style.display = 'none';
-            document.querySelector('.lesnitsa').style.display = 'none';
-            document.querySelector('.marmit').style.display = 'flex';
-            document.querySelector('.perila').style.display = 'none';
-            document.querySelector('.skameyka').style.display = 'none';
-            document.querySelector('.stelaji').style.display = 'none';
-            document.querySelector('.stoyka').style.display = 'none';
-            document.querySelector('.stol_steklo').style.display = 'none';
-            document.querySelector('.stol').style.display = 'none';
-            document.querySelector('.telejki').style.display = 'none';
-            document.querySelector('.shkaf').style.display = 'none';
-        });
-        document.getElementById('perila').addEventListener('click', () => {
-            let newElement = document.querySelectorAll('.new');
-            for (let i = 0; i < newElement.length; i++) {
-                newElement[i].style.display = 'none';
-            };
-            document.querySelector('.vana').style.display = 'none';
-            document.querySelector('.veshilka').style.display = 'none';
-            document.querySelector('.plita').style.display = 'none';
-            document.querySelector('.zont').style.display = 'none';
-            document.querySelector('.kreslo').style.display = 'none';
-            document.querySelector('.lesnitsa').style.display = 'none';
-            document.querySelector('.marmit').style.display = 'none';
-            document.querySelector('.perila').style.display = 'flex';
-            document.querySelector('.skameyka').style.display = 'none';
-            document.querySelector('.stelaji').style.display = 'none';
-            document.querySelector('.stoyka').style.display = 'none';
-            document.querySelector('.stol_steklo').style.display = 'none';
-            document.querySelector('.stol').style.display = 'none';
-            document.querySelector('.telejki').style.display = 'none';
-            document.querySelector('.shkaf').style.display = 'none';
-        });
-        document.getElementById('skameyka').addEventListener('click', () => {
-            let newElement = document.querySelectorAll('.new');
-            for (let i = 0; i < newElement.length; i++) {
-                newElement[i].style.display = 'none';
-            };
-            document.querySelector('.vana').style.display = 'none';
-            document.querySelector('.veshilka').style.display = 'none';
-            document.querySelector('.plita').style.display = 'none';
-            document.querySelector('.zont').style.display = 'none';
-            document.querySelector('.kreslo').style.display = 'none';
-            document.querySelector('.lesnitsa').style.display = 'none';
-            document.querySelector('.marmit').style.display = 'none';
-            document.querySelector('.perila').style.display = 'none';
-            document.querySelector('.skameyka').style.display = 'flex';
-            document.querySelector('.stelaji').style.display = 'none';
-            document.querySelector('.stoyka').style.display = 'none';
-            document.querySelector('.stol_steklo').style.display = 'none';
-            document.querySelector('.stol').style.display = 'none';
-            document.querySelector('.telejki').style.display = 'none';
-            document.querySelector('.shkaf').style.display = 'none';
-        });
-        document.getElementById('stelaji').addEventListener('click', () => {
-            let newElement = document.querySelectorAll('.new');
-            for (let i = 0; i < newElement.length; i++) {
-                newElement[i].style.display = 'none';
-            };
-            document.querySelector('.vana').style.display = 'none';
-            document.querySelector('.veshilka').style.display = 'none';
-            document.querySelector('.plita').style.display = 'none';
-            document.querySelector('.zont').style.display = 'none';
-            document.querySelector('.kreslo').style.display = 'none';
-            document.querySelector('.lesnitsa').style.display = 'none';
-            document.querySelector('.marmit').style.display = 'none';
-            document.querySelector('.perila').style.display = 'none';
-            document.querySelector('.skameyka').style.display = 'none';
-            document.querySelector('.stelaji').style.display = 'flex';
-            document.querySelector('.stoyka').style.display = 'none';
-            document.querySelector('.stol_steklo').style.display = 'none';
-            document.querySelector('.stol').style.display = 'none';
-            document.querySelector('.telejki').style.display = 'none';
-            document.querySelector('.shkaf').style.display = 'none';
-        });
-        document.getElementById('stoyka').addEventListener('click', () => {
-            let newElement = document.querySelectorAll('.new');
-            for (let i = 0; i < newElement.length; i++) {
-                newElement[i].style.display = 'none';
-            };
-            document.querySelector('.vana').style.display = 'none';
-            document.querySelector('.veshilka').style.display = 'none';
-            document.querySelector('.plita').style.display = 'none';
-            document.querySelector('.zont').style.display = 'none';
-            document.querySelector('.kreslo').style.display = 'none';
-            document.querySelector('.lesnitsa').style.display = 'none';
-            document.querySelector('.marmit').style.display = 'none';
-            document.querySelector('.perila').style.display = 'none';
-            document.querySelector('.skameyka').style.display = 'none';
-            document.querySelector('.stelaji').style.display = 'none';
-            document.querySelector('.stoyka').style.display = 'flex';
-            document.querySelector('.stol_steklo').style.display = 'none';
-            document.querySelector('.stol').style.display = 'none';
-            document.querySelector('.telejki').style.display = 'none';
-            document.querySelector('.shkaf').style.display = 'none';
-        });
-        document.getElementById('stol_steklo').addEventListener('click', () => {
-            let newElement = document.querySelectorAll('.new');
-            for (let i = 0; i < newElement.length; i++) {
-                newElement[i].style.display = 'none';
-            };
-            document.querySelector('.vana').style.display = 'none';
-            document.querySelector('.veshilka').style.display = 'none';
-            document.querySelector('.plita').style.display = 'none';
-            document.querySelector('.zont').style.display = 'none';
-            document.querySelector('.kreslo').style.display = 'none';
-            document.querySelector('.lesnitsa').style.display = 'none';
-            document.querySelector('.marmit').style.display = 'none';
-            document.querySelector('.perila').style.display = 'none';
-            document.querySelector('.skameyka').style.display = 'none';
-            document.querySelector('.stelaji').style.display = 'none';
-            document.querySelector('.stoyka').style.display = 'none';
-            document.querySelector('.stol_steklo').style.display = 'flex';
-            document.querySelector('.stol').style.display = 'none';
-            document.querySelector('.telejki').style.display = 'none';
-            document.querySelector('.shkaf').style.display = 'none';
-        });
-        document.getElementById('stol').addEventListener('click', () => {
-            let newElement = document.querySelectorAll('.new');
-            for (let i = 0; i < newElement.length; i++) {
-                newElement[i].style.display = 'none';
-            };
-            document.querySelector('.vana').style.display = 'none';
-            document.querySelector('.veshilka').style.display = 'none';
-            document.querySelector('.plita').style.display = 'none';
-            document.querySelector('.zont').style.display = 'none';
-            document.querySelector('.kreslo').style.display = 'none';
-            document.querySelector('.lesnitsa').style.display = 'none';
-            document.querySelector('.marmit').style.display = 'none';
-            document.querySelector('.perila').style.display = 'none';
-            document.querySelector('.skameyka').style.display = 'none';
-            document.querySelector('.stelaji').style.display = 'none';
-            document.querySelector('.stoyka').style.display = 'none';
-            document.querySelector('.stol_steklo').style.display = 'none';
-            document.querySelector('.stol').style.display = 'flex';
-            document.querySelector('.telejki').style.display = 'none';
-            document.querySelector('.shkaf').style.display = 'none';
-        });
-        document.getElementById('telejki').addEventListener('click', () => {
-            let newElement = document.querySelectorAll('.new');
-            for (let i = 0; i < newElement.length; i++) {
-                newElement[i].style.display = 'none';
-            };
-            document.querySelector('.vana').style.display = 'none';
-            document.querySelector('.veshilka').style.display = 'none';
-            document.querySelector('.plita').style.display = 'none';
-            document.querySelector('.zont').style.display = 'none';
-            document.querySelector('.kreslo').style.display = 'none';
-            document.querySelector('.lesnitsa').style.display = 'none';
-            document.querySelector('.marmit').style.display = 'none';
-            document.querySelector('.perila').style.display = 'none';
-            document.querySelector('.skameyka').style.display = 'none';
-            document.querySelector('.stelaji').style.display = 'none';
-            document.querySelector('.stoyka').style.display = 'none';
-            document.querySelector('.stol_steklo').style.display = 'none';
-            document.querySelector('.stol').style.display = 'none';
-            document.querySelector('.telejki').style.display = 'flex';
-            document.querySelector('.shkaf').style.display = 'none';
-        });
-        document.getElementById('shkaf').addEventListener('click', () => {
-            let newElement = document.querySelectorAll('.new');
-            for (let i = 0; i < newElement.length; i++) {
-                newElement[i].style.display = 'none';
-            };
-            document.querySelector('.vana').style.display = 'none';
-            document.querySelector('.veshilka').style.display = 'none';
-            document.querySelector('.plita').style.display = 'none';
-            document.querySelector('.zont').style.display = 'none';
-            document.querySelector('.kreslo').style.display = 'none';
-            document.querySelector('.lesnitsa').style.display = 'none';
-            document.querySelector('.marmit').style.display = 'none';
-            document.querySelector('.perila').style.display = 'none';
-            document.querySelector('.skameyka').style.display = 'none';
-            document.querySelector('.stelaji').style.display = 'none';
-            document.querySelector('.stoyka').style.display = 'none';
-            document.querySelector('.stol_steklo').style.display = 'none';
-            document.querySelector('.stol').style.display = 'none';
-            document.querySelector('.telejki').style.display = 'none';
-            document.querySelector('.shkaf').style.display = 'flex';
-        });
+
+        for (let i = 0; i < vana.length; i++) {
+            vana[i].addEventListener('click', () => {
+                let newElement = document.querySelectorAll('.new');
+                for (let i = 0; i < newElement.length; i++) {
+                    newElement[i].style.display = 'none';
+                };
+                document.querySelector('.vana').style.display = 'flex';
+                document.querySelector('.veshilka').style.display = 'none';
+                document.querySelector('.plita').style.display = 'none';
+                document.querySelector('.zont').style.display = 'none';
+                document.querySelector('.kreslo').style.display = 'none';
+                document.querySelector('.lesnitsa').style.display = 'none';
+                document.querySelector('.marmit').style.display = 'none';
+                document.querySelector('.perila').style.display = 'none';
+                document.querySelector('.skameyka').style.display = 'none';
+                document.querySelector('.stelaji').style.display = 'none';
+                document.querySelector('.stoyka').style.display = 'none';
+                document.querySelector('.stol_steklo').style.display = 'none';
+                document.querySelector('.stol').style.display = 'none';
+                document.querySelector('.telejki').style.display = 'none';
+                document.querySelector('.shkaf').style.display = 'none';
+
+            });
+        };
+        for (let i = 0; i < veshilka.length; i++) {
+            veshilka[i].addEventListener('click', () => {
+                let newElement = document.querySelectorAll('.new');
+                for (let i = 0; i < newElement.length; i++) {
+                    newElement[i].style.display = 'none';
+                };
+                document.querySelector('.vana').style.display = 'none';
+                document.querySelector('.veshilka').style.display = 'flex';
+                document.querySelector('.plita').style.display = 'none';
+                document.querySelector('.zont').style.display = 'none';
+                document.querySelector('.kreslo').style.display = 'none';
+                document.querySelector('.lesnitsa').style.display = 'none';
+                document.querySelector('.marmit').style.display = 'none';
+                document.querySelector('.perila').style.display = 'none';
+                document.querySelector('.skameyka').style.display = 'none';
+                document.querySelector('.stelaji').style.display = 'none';
+                document.querySelector('.stoyka').style.display = 'none';
+                document.querySelector('.stol_steklo').style.display = 'none';
+                document.querySelector('.stol').style.display = 'none';
+                document.querySelector('.telejki').style.display = 'none';
+                document.querySelector('.shkaf').style.display = 'none';
+            });
+        };
+        for (let i = 0; i < plita.length; i++) {
+            plita[i].addEventListener('click', () => {
+                let newElement = document.querySelectorAll('.new');
+                for (let i = 0; i < newElement.length; i++) {
+                    newElement[i].style.display = 'none';
+                };
+                document.querySelector('.vana').style.display = 'none';
+                document.querySelector('.veshilka').style.display = 'none';
+                document.querySelector('.plita').style.display = 'flex';
+                document.querySelector('.zont').style.display = 'none';
+                document.querySelector('.kreslo').style.display = 'none';
+                document.querySelector('.lesnitsa').style.display = 'none';
+                document.querySelector('.marmit').style.display = 'none';
+                document.querySelector('.perila').style.display = 'none';
+                document.querySelector('.skameyka').style.display = 'none';
+                document.querySelector('.stelaji').style.display = 'none';
+                document.querySelector('.stoyka').style.display = 'none';
+                document.querySelector('.stol_steklo').style.display = 'none';
+                document.querySelector('.stol').style.display = 'none';
+                document.querySelector('.telejki').style.display = 'none';
+                document.querySelector('.shkaf').style.display = 'none';
+            });
+        };
+        for (let i = 0; i < zont.length; i++) {
+            zont[i].addEventListener('click', () => {
+                let newElement = document.querySelectorAll('.new');
+                for (let i = 0; i < newElement.length; i++) {
+                    newElement[i].style.display = 'none';
+                };
+                document.querySelector('.vana').style.display = 'none';
+                document.querySelector('.veshilka').style.display = 'none';
+                document.querySelector('.plita').style.display = 'none';
+                document.querySelector('.zont').style.display = 'flex';
+                document.querySelector('.kreslo').style.display = 'none';
+                document.querySelector('.lesnitsa').style.display = 'none';
+                document.querySelector('.marmit').style.display = 'none';
+                document.querySelector('.perila').style.display = 'none';
+                document.querySelector('.skameyka').style.display = 'none';
+                document.querySelector('.stelaji').style.display = 'none';
+                document.querySelector('.stoyka').style.display = 'none';
+                document.querySelector('.stol_steklo').style.display = 'none';
+                document.querySelector('.stol').style.display = 'none';
+                document.querySelector('.telejki').style.display = 'none';
+                document.querySelector('.shkaf').style.display = 'none';
+            });
+        };
+        for (let i = 0; i < kreslo.length; i++) {
+            kreslo[i].addEventListener('click', () => {
+                let newElement = document.querySelectorAll('.new');
+                for (let i = 0; i < newElement.length; i++) {
+                    newElement[i].style.display = 'none';
+                };
+                document.querySelector('.vana').style.display = 'none';
+                document.querySelector('.veshilka').style.display = 'none';
+                document.querySelector('.plita').style.display = 'none';
+                document.querySelector('.zont').style.display = 'none';
+                document.querySelector('.kreslo').style.display = 'flex';
+                document.querySelector('.lesnitsa').style.display = 'none';
+                document.querySelector('.marmit').style.display = 'none';
+                document.querySelector('.perila').style.display = 'none';
+                document.querySelector('.skameyka').style.display = 'none';
+                document.querySelector('.stelaji').style.display = 'none';
+                document.querySelector('.stoyka').style.display = 'none';
+                document.querySelector('.stol_steklo').style.display = 'none';
+                document.querySelector('.stol').style.display = 'none';
+                document.querySelector('.telejki').style.display = 'none';
+                document.querySelector('.shkaf').style.display = 'none';
+            });
+        };
+        for (let i = 0; i < lesnitsa.length; i++) {
+            lesnitsa[i].addEventListener('click', () => {
+                let newElement = document.querySelectorAll('.new');
+                for (let i = 0; i < newElement.length; i++) {
+                    newElement[i].style.display = 'none';
+                };
+                document.querySelector('.vana').style.display = 'none';
+                document.querySelector('.veshilka').style.display = 'none';
+                document.querySelector('.plita').style.display = 'none';
+                document.querySelector('.zont').style.display = 'none';
+                document.querySelector('.kreslo').style.display = 'none';
+                document.querySelector('.lesnitsa').style.display = 'flex';
+                document.querySelector('.marmit').style.display = 'none';
+                document.querySelector('.perila').style.display = 'none';
+                document.querySelector('.skameyka').style.display = 'none';
+                document.querySelector('.stelaji').style.display = 'none';
+                document.querySelector('.stoyka').style.display = 'none';
+                document.querySelector('.stol_steklo').style.display = 'none';
+                document.querySelector('.stol').style.display = 'none';
+                document.querySelector('.telejki').style.display = 'none';
+                document.querySelector('.shkaf').style.display = 'none';
+            });
+        };
+        for (let i = 0; i < marmit.length; i++) {
+            marmit[i].addEventListener('click', () => {
+                let newElement = document.querySelectorAll('.new');
+                for (let i = 0; i < newElement.length; i++) {
+                    newElement[i].style.display = 'none';
+                };
+                document.querySelector('.vana').style.display = 'none';
+                document.querySelector('.veshilka').style.display = 'none';
+                document.querySelector('.plita').style.display = 'none';
+                document.querySelector('.zont').style.display = 'none';
+                document.querySelector('.kreslo').style.display = 'none';
+                document.querySelector('.lesnitsa').style.display = 'none';
+                document.querySelector('.marmit').style.display = 'flex';
+                document.querySelector('.perila').style.display = 'none';
+                document.querySelector('.skameyka').style.display = 'none';
+                document.querySelector('.stelaji').style.display = 'none';
+                document.querySelector('.stoyka').style.display = 'none';
+                document.querySelector('.stol_steklo').style.display = 'none';
+                document.querySelector('.stol').style.display = 'none';
+                document.querySelector('.telejki').style.display = 'none';
+                document.querySelector('.shkaf').style.display = 'none';
+            });
+        };
+        for (let i = 0; i < perila.length; i++) {
+            perila[i].addEventListener('click', () => {
+                let newElement = document.querySelectorAll('.new');
+                for (let i = 0; i < newElement.length; i++) {
+                    newElement[i].style.display = 'none';
+                };
+                document.querySelector('.vana').style.display = 'none';
+                document.querySelector('.veshilka').style.display = 'none';
+                document.querySelector('.plita').style.display = 'none';
+                document.querySelector('.zont').style.display = 'none';
+                document.querySelector('.kreslo').style.display = 'none';
+                document.querySelector('.lesnitsa').style.display = 'none';
+                document.querySelector('.marmit').style.display = 'none';
+                document.querySelector('.perila').style.display = 'flex';
+                document.querySelector('.skameyka').style.display = 'none';
+                document.querySelector('.stelaji').style.display = 'none';
+                document.querySelector('.stoyka').style.display = 'none';
+                document.querySelector('.stol_steklo').style.display = 'none';
+                document.querySelector('.stol').style.display = 'none';
+                document.querySelector('.telejki').style.display = 'none';
+                document.querySelector('.shkaf').style.display = 'none';
+            });
+        };
+        for (let i = 0; i < skameyka.length; i++) {
+            skameyka[i].addEventListener('click', () => {
+                let newElement = document.querySelectorAll('.new');
+                for (let i = 0; i < newElement.length; i++) {
+                    newElement[i].style.display = 'none';
+                };
+                document.querySelector('.vana').style.display = 'none';
+                document.querySelector('.veshilka').style.display = 'none';
+                document.querySelector('.plita').style.display = 'none';
+                document.querySelector('.zont').style.display = 'none';
+                document.querySelector('.kreslo').style.display = 'none';
+                document.querySelector('.lesnitsa').style.display = 'none';
+                document.querySelector('.marmit').style.display = 'none';
+                document.querySelector('.perila').style.display = 'none';
+                document.querySelector('.skameyka').style.display = 'flex';
+                document.querySelector('.stelaji').style.display = 'none';
+                document.querySelector('.stoyka').style.display = 'none';
+                document.querySelector('.stol_steklo').style.display = 'none';
+                document.querySelector('.stol').style.display = 'none';
+                document.querySelector('.telejki').style.display = 'none';
+                document.querySelector('.shkaf').style.display = 'none';
+            });
+        };
+        for (let i = 0; i < stelaji.length; i++) {
+            stelaji[i].addEventListener('click', () => {
+                let newElement = document.querySelectorAll('.new');
+                for (let i = 0; i < newElement.length; i++) {
+                    newElement[i].style.display = 'none';
+                };
+                document.querySelector('.vana').style.display = 'none';
+                document.querySelector('.veshilka').style.display = 'none';
+                document.querySelector('.plita').style.display = 'none';
+                document.querySelector('.zont').style.display = 'none';
+                document.querySelector('.kreslo').style.display = 'none';
+                document.querySelector('.lesnitsa').style.display = 'none';
+                document.querySelector('.marmit').style.display = 'none';
+                document.querySelector('.perila').style.display = 'none';
+                document.querySelector('.skameyka').style.display = 'none';
+                document.querySelector('.stelaji').style.display = 'flex';
+                document.querySelector('.stoyka').style.display = 'none';
+                document.querySelector('.stol_steklo').style.display = 'none';
+                document.querySelector('.stol').style.display = 'none';
+                document.querySelector('.telejki').style.display = 'none';
+                document.querySelector('.shkaf').style.display = 'none';
+            });
+        };
+        for (let i = 0; i < stoyka.length; i++) {
+            stoyka[i].addEventListener('click', () => {
+                let newElement = document.querySelectorAll('.new');
+                for (let i = 0; i < newElement.length; i++) {
+                    newElement[i].style.display = 'none';
+                };
+                document.querySelector('.vana').style.display = 'none';
+                document.querySelector('.veshilka').style.display = 'none';
+                document.querySelector('.plita').style.display = 'none';
+                document.querySelector('.zont').style.display = 'none';
+                document.querySelector('.kreslo').style.display = 'none';
+                document.querySelector('.lesnitsa').style.display = 'none';
+                document.querySelector('.marmit').style.display = 'none';
+                document.querySelector('.perila').style.display = 'none';
+                document.querySelector('.skameyka').style.display = 'none';
+                document.querySelector('.stelaji').style.display = 'none';
+                document.querySelector('.stoyka').style.display = 'flex';
+                document.querySelector('.stol_steklo').style.display = 'none';
+                document.querySelector('.stol').style.display = 'none';
+                document.querySelector('.telejki').style.display = 'none';
+                document.querySelector('.shkaf').style.display = 'none';
+            });
+        };
+        for (let i = 0; i < stol_steklo.length; i++) {
+            stol_steklo[i].addEventListener('click', () => {
+                let newElement = document.querySelectorAll('.new');
+                for (let i = 0; i < newElement.length; i++) {
+                    newElement[i].style.display = 'none';
+                };
+                document.querySelector('.vana').style.display = 'none';
+                document.querySelector('.veshilka').style.display = 'none';
+                document.querySelector('.plita').style.display = 'none';
+                document.querySelector('.zont').style.display = 'none';
+                document.querySelector('.kreslo').style.display = 'none';
+                document.querySelector('.lesnitsa').style.display = 'none';
+                document.querySelector('.marmit').style.display = 'none';
+                document.querySelector('.perila').style.display = 'none';
+                document.querySelector('.skameyka').style.display = 'none';
+                document.querySelector('.stelaji').style.display = 'none';
+                document.querySelector('.stoyka').style.display = 'none';
+                document.querySelector('.stol_steklo').style.display = 'flex';
+                document.querySelector('.stol').style.display = 'none';
+                document.querySelector('.telejki').style.display = 'none';
+                document.querySelector('.shkaf').style.display = 'none';
+            });
+        };
+        for (let i = 0; i < stol.length; i++) {
+            stol[i].addEventListener('click', () => {
+                let newElement = document.querySelectorAll('.new');
+                for (let i = 0; i < newElement.length; i++) {
+                    newElement[i].style.display = 'none';
+                };
+                document.querySelector('.vana').style.display = 'none';
+                document.querySelector('.veshilka').style.display = 'none';
+                document.querySelector('.plita').style.display = 'none';
+                document.querySelector('.zont').style.display = 'none';
+                document.querySelector('.kreslo').style.display = 'none';
+                document.querySelector('.lesnitsa').style.display = 'none';
+                document.querySelector('.marmit').style.display = 'none';
+                document.querySelector('.perila').style.display = 'none';
+                document.querySelector('.skameyka').style.display = 'none';
+                document.querySelector('.stelaji').style.display = 'none';
+                document.querySelector('.stoyka').style.display = 'none';
+                document.querySelector('.stol_steklo').style.display = 'none';
+                document.querySelector('.stol').style.display = 'flex';
+                document.querySelector('.telejki').style.display = 'none';
+                document.querySelector('.shkaf').style.display = 'none';
+            });
+        };
+        for (let i = 0; i < telejki.length; i++) {
+            telejki[i].addEventListener('click', () => {
+                let newElement = document.querySelectorAll('.new');
+                for (let i = 0; i < newElement.length; i++) {
+                    newElement[i].style.display = 'none';
+                };
+                document.querySelector('.vana').style.display = 'none';
+                document.querySelector('.veshilka').style.display = 'none';
+                document.querySelector('.plita').style.display = 'none';
+                document.querySelector('.zont').style.display = 'none';
+                document.querySelector('.kreslo').style.display = 'none';
+                document.querySelector('.lesnitsa').style.display = 'none';
+                document.querySelector('.marmit').style.display = 'none';
+                document.querySelector('.perila').style.display = 'none';
+                document.querySelector('.skameyka').style.display = 'none';
+                document.querySelector('.stelaji').style.display = 'none';
+                document.querySelector('.stoyka').style.display = 'none';
+                document.querySelector('.stol_steklo').style.display = 'none';
+                document.querySelector('.stol').style.display = 'none';
+                document.querySelector('.telejki').style.display = 'flex';
+                document.querySelector('.shkaf').style.display = 'none';
+            });
+        };
+        for (let i = 0; i < shkaf.length; i++) {
+            shkaf[i].addEventListener('click', () => {
+                let newElement = document.querySelectorAll('.new');
+                for (let i = 0; i < newElement.length; i++) {
+                    newElement[i].style.display = 'none';
+                };
+                document.querySelector('.vana').style.display = 'none';
+                document.querySelector('.veshilka').style.display = 'none';
+                document.querySelector('.plita').style.display = 'none';
+                document.querySelector('.zont').style.display = 'none';
+                document.querySelector('.kreslo').style.display = 'none';
+                document.querySelector('.lesnitsa').style.display = 'none';
+                document.querySelector('.marmit').style.display = 'none';
+                document.querySelector('.perila').style.display = 'none';
+                document.querySelector('.skameyka').style.display = 'none';
+                document.querySelector('.stelaji').style.display = 'none';
+                document.querySelector('.stoyka').style.display = 'none';
+                document.querySelector('.stol_steklo').style.display = 'none';
+                document.querySelector('.stol').style.display = 'none';
+                document.querySelector('.telejki').style.display = 'none';
+                document.querySelector('.shkaf').style.display = 'flex';
+            });
+        };
+
+
+
     </script>
 </body>
 
