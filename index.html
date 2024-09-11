@@ -1,494 +1,2056 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="boot/jquery.js"></script>
+    <title>Decoroom Steel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
-    <title>Decoroom</title>
+    <script src="jquery.js"></script>
 </head>
-
 <body>
-    <div class="cont">
-        <!------------------------------------------ Menyu --------------------------------->
-        <div class="menyu">
-            <ul class="ul-1">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="page/1okomp.html">О компании</a></li>
-                <li><a href="page/2aksi.html">Акции и бонусы</a></li>
-                <li><a href="page/3oplata.html">Оплата</a></li>
-                <li><a href="page/4dostavka.html">Доставка</a></li>
-                <li><a href="page/5kontakt.html">Контакты</a></li>
-            </ul>
-            <ul class="ul-2">
-                <li class="shopping-cart row jcc aic js-cart-icon js-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Корзина</li>
-            </ul>
-        </div>
-        <!------------------------------------------ Header --------------------------------->
-        <div class="header">
-            <div class="nameKomp">
-                <div class="logo">LOGO</div>
-                <div>
-                    <h1><a href="index.html"><b style="color: rgb(42, 183, 217);">Название</b> компании</a></h1>
-                    <p style="color: rgb(138, 154, 153);">Магазин нержавейка</p>
-                </div>
-            </div>
-            <div class="serch">
-                <input class="serchInput" type="text" placeholder="что ищем ?">
-                <button class="serchButton">Найти</button>
-            </div>
-            <div class="contact">
-                <a href="">
-                    <img src="img/telegram.png" alt="Error">
-                </a>
-                <a href="">
-                    <img class="insta" src="img/instagram.png" alt="Error">
-                </a>
-                <a href="">
-                    <img src="img/email.png" alt="Error">
-                </a>
-            </div>
-            <div class="contact1">
-                <h4>+(998)91 409-34-74</h4>
-                <h4>+(998)91 829-76-37</h4>
-            </div>
-            <div class="contact2">
-                <button onclick="document.getElementById('colbak').style.display = 'block'"><i class="fa fa-phone"
-                        aria-hidden="true"></i><br> Заказать звонок</button>
+    <!------------------------------------------ Menyu --------------------------------->
+    <div class="menyu">
+        <ul class="ul-1">
+            <li id="uy">Главная</li>
+            <li>О компании</li>
+            <li>Акции и бонусы</li>
+            <li>Оплата</li>
+            <li>Доставка</li>
+            <li>Контакты</li>
+        </ul>
+        <ul class="ul-2">
+            <li class="js-cart-btn"><span class="shopping-cart">
+                    <!-- <span class="counter row jcc aic js-cart-current-count">1</span> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 20">
+                        <path
+                            d="M4.258 0c.45 0 .842.31.944.738l.749 2.649h15.132a.972.972 0 01.945 1.207L20.21 11.94a.973.973 0 01-.945.74H7.643a.973.973 0 01-.947-.748l.005.017L3.503 1.947H.973A.973.973 0 01.973 0h3.285zM19.84 5.334H6.497l1.895 5.398h10.113l1.335-5.398zM8.857 13.699a2.719 2.719 0 012.715 2.717 2.719 2.719 0 01-2.715 2.716 2.719 2.719 0 01-2.716-2.716 2.719 2.719 0 012.716-2.717zm0 1.491a1.225 1.225 0 100 2.45 1.225 1.225 0 000-2.45zM17.901 13.699a2.719 2.719 0 012.715 2.717 2.719 2.719 0 01-2.715 2.716 2.719 2.719 0 01-2.715-2.716 2.719 2.719 0 012.715-2.717zm0 1.491a1.225 1.225 0 100 2.45 1.225 1.225 0 000-2.45z" />
+                    </svg>
+                </span> Корзина</li>
+        </ul>
+    </div>
+    <!------------------------------------------ Menyu --------------------------------->
+    <!------------------------------------------ Header --------------------------------->
+    <header>
+        <div class="nameKomp">
+            <div class="logo">LOGO</div>
+            <div>
+                <h1><a href="index.html"><b style="color: rgb(42, 183, 217);">Название</b> компании</a></h1>
+                <p style="color: rgb(138, 154, 153);">Магазин нержавейка</p>
             </div>
         </div>
-        <div class="serch2">
+        <div class="serch">
             <input class="serchInput" type="text" placeholder="что ищем ?">
             <button class="serchButton">Найти</button>
         </div>
-        <!------------------------------------------ Content bar slide --------------------------------->
-        <div class="content-box">
-            <!------------------------------------------ bar --------------------------------->
-            <div class="sidebar">
-                <ul>
-                    <li style="border-top: 1px solid rgb(67, 68, 92);"><a href="page/tovar/plastina.html">Дверная
-                            пластина</a></li>
-                    <li><a href="page/tovar/uglovaya.html">Угловая защита</a></li>
-                    <li><a href="">Name</a></li>
-                    <li><a href="">Name</a></li>
-                    <li><a href="">Name</a></li>
-                    <li><a href="">Name</a></li>
-                    <li><a href="">Name</a></li>
-                    <li><a href="">Name</a></li>
-                    <li><a href="">Name</a></li>
-                    <li><a href="">Name</a></li>
-                    <li><a href="">Name</a></li>
-                </ul>
+        <!-- <div class="contact">
+            <a href="">
+                <img src="img/telegram.png" alt="Error">
+            </a>
+            <a href="">
+                <img class="insta" src="img/instagram.png" alt="Error">
+            </a>
+            <a href="">
+                <img src="img/email.png" alt="Error">
+            </a>
+        </div> -->
+        <div class="contact1">
+            <h4>+(998)91 409-34-74</h4>
+            <h4>+(998)91 829-76-37</h4>
+        </div>
+        <div class="contact2">
+            <button onclick="document.getElementById('colbak').style.display = 'block'"><i class="fa fa-phone"
+                    aria-hidden="true"></i> Заказать звонок</button>
+        </div>
+    </header>
+    <!------------------------------------------ Header --------------------------------->
+    <!------------------------------------------ Bar --------------------------------->
+    <div class="content-box">
+        <div class="sidebar">
+            <ul>
+                <li id="vana">Ванна моечная</li>
+                <li id="veshilka">Вешалка</li>
+                <li id="plita">Газовая плита</li>
+                <li id="zont">Кухонная Вытяжка</li>
+                <li id="kreslo">Кресло</li>
+                <li id="lesnitsa">Лестницы</li>
+                <li id="marmit">Мармит</li>
+                <li id="perila">Перила</li>
+                <li id="skameyka">Скамейка</li>
+                <li id="stelaji">Стеллажи кухонные</li>
+                <li id="stoyka">Стойка для приборов</li>
+                <li id="stol_steklo">Стеклянный стол</li>
+                <li id="stol">Столы производственные</li>
+                <li id="telejki">Тележки</li>
+                <li id="shkaf">Шкаф</li>
+            </ul>
+        </div>
+        <!------------------------------------------ Bar --------------------------------->
+        <!------------------------------------------ right-content --------------------------------->
+        <div class="right-content">
+            <!-- <div class="hiden"> -->
+            <!------------------------------------------ slide --------------------------------->
+            <div class="slide new">
+                <div class="slideshow-container">
+                    <div class="mySlides fade" style="background-image: url(img/2.jpg);">
+                        <div class="numbertext">1 / 3</div>
+                        <div class="text">Caption Text</div>
+                    </div>
+
+                    <div class="mySlides fade" style="background-image: url(img/ac1db3c5388192c7aac922d6ebf6f05c.jpg);">
+                        <div class="numbertext">2 / 3</div>
+                        <div class="text">Caption Two</div>
+                    </div>
+
+                    <div class="mySlides fade" style="background-image: url(img/maxresdefault.jpg);">
+                        <div class="numbertext">3 / 3</div>
+                        <div class="text">Caption Three</div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <div style="text-align:center;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
             </div>
-            <!------------------------------------------ right-content --------------------------------->
-            <div class="right-content">
-                <!------------------------------------------ slide --------------------------------->
-                <div class="slide">
-                    <div class="slideshow-container">
-                        <div class="mySlides fade" style="background-image: url(img/2.jpg);">
-                            <div class="numbertext">1 / 3</div>
-                            <div class="text">Caption Text</div>
+            <!------------------------------------------ slide --------------------------------->
+            <!----------------------------------------------------- Популярные товары --------------------------------------------------------->
+            <div class="content new">
+                <h1>Популярные категории</h1>
+                <div class="contBox">
+                    <div class="box">
+                        <div class="img i1"></div>
+                        <h3>Угловая защита стены из нержавеющей стали</h3>
+                        <p>
+                            Угловое ограждение стены, калибр № 4, матовое — стандартные и изготовленные на заказ
+                            угловые ограждения защищают зоны с интенсивным движением людей.
+                            Нержавеющая сталь 304 легко вписывается в любое пространство, сохраняя при этом углы.
+                            Угловые ограждения, изготовленные по индивидуальному заказу, быстрая установка и
+                            простота обслуживания.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <div class="img i2"></div>
+                        <h3>Дверная пластина из нержавеющей стали</h3>
+                        <p>
+                            Шагните в царство повышенной прочности и вневременной эстетической привлекательности для
+                            ваших дверей с нашей необычной дверной пластиной из нержавеющей стали.
+                            Тщательно спроектированная с предельной точностью, эта исключительная пластина
+                            изготовлена ​​из коммерческой нержавеющей стали 304.
+                            Ее цель выходит за рамки простого визуального улучшения, она служит внушительным
+                            барьером, который обеспечивает непревзойденную защиту,
+                        </p>
+                    </div>
+                    <div class="box">
+                        <div class="img i3"></div>
+                        <h3>Столешница из нержавеющей стали | Металл коммерческого класса</h3>
+                        <p>
+                            Изготовлен из нержавеющей стали 304 калибра 16 № 4, обеспечивающей исключительную
+                            долговечность и устойчивость к коррозии.
+                            Прочная конструкция и основа из МДФ гарантируют долгосрочную инвестицию, идеально
+                            подходят для мест с высокой проходимостью.
+                            Легкоочищаемая поверхность сохраняет блеск и качество даже при ежедневном использовании.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <div class="img i4"></div>
+                        <h3>Sarlavha</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid temporibus libero
+                            officiis totam cum tempora, fuga ipsum quae repellendus corporis, tenetur dolores
+                            beatae, assumenda suscipit blanditiis illum praesentium eaque? Possimus.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <div class="img i5"></div>
+                        <h3>Sarlavha</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid temporibus libero
+                            officiis totam cum tempora, fuga ipsum quae repellendus corporis, tenetur dolores
+                            beatae, assumenda suscipit blanditiis illum praesentium eaque? Possimus.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <div class="img i6"></div>
+                        <h3>Sarlavha</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid temporibus libero
+                            officiis totam cum tempora, fuga ipsum quae repellendus corporis, tenetur dolores
+                            beatae, assumenda suscipit blanditiis illum praesentium eaque? Possimus.
+                        </p>
+                    </div>
+                </div>
+                <div class="btnBox">
+                    <button class="btn2">Все товары</button>
+                </div>
+            </div>
+            <!----------------------------------------------------- Популярные товары --------------------------------------------------------->
+            <!------------------------------------------ Новинки --------------------------------->
+            <main class="main column aic jcfs">
+                <div class="overlay js-overlay js-close-cart">
+
+                </div>
+                <div class="cart js-cart">
+                    <span class="close js-close-modal js-close-cart"></span>
+                    <div class="cart-container column aic">
+                        <div class="cart-empty-container column jcc aic js-cart-empty-container">
+                            <div class="cart-empty">Ваша корзина пуста</div>
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+                                    <path
+                                        d="M24 3l-.743 2h-1.929l-3.474 12h-13.239l-4.615-11h16.812l-.564 2h-13.24l2.937 7h10.428l3.432-12h4.195zm-15.5 15c-.828 0-1.5.672-1.5 1.5 0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm6.9-7-1.9 7c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5z" />
+                                </svg>
+                            </div>
                         </div>
 
-                        <div class="mySlides fade"
-                            style="background-image: url(img/ac1db3c5388192c7aac922d6ebf6f05c.jpg);">
-                            <div class="numbertext">2 / 3</div>
-                            <div class="text">Caption Two</div>
+                        <div class="cart-order-container    column js-cart-order-container">
+                            <div class="cart-order  row jcfs aic">Ваш заказ</div>
+                            <form action="server.php" method="POST" class="column aic">
+                                <ul class="cart-list column jcc aic js-cart-list">
+                                    <!-- Cart drop-->
+                                </ul>
+                                <div class="cart-total-container row jcsb aic">
+                                    <h3 class="title">Итого</h3>
+                                    <div>
+                                        <span class="total-price js-cart-total-price">14 000</span>
+                                        <span class="rouble">sum</span>
+                                    </div>
+                                </div>
+                                <div class="cart-btn row jcfs">
+                                    <button type="submit" class="btn-order">Оформить заказ</button>
+                                </div>
+                            </form>
                         </div>
+                    </div>
+                </div>
+                <div class="container column aic">
+                    <!-- Card -->
+                    <ul class="products list js-products-list row jcfs ">
+                        <div class="new row vrap">
+                            <h1 class="newH1">Новинки</h1>
+                            <li class="product column aic js-product">
+                                <a id="new4" class="link column aic js-link-card">
 
-                        <div class="mySlides fade" style="background-image: url(img/maxresdefault.jpg);">
-                            <div class="numbertext">3 / 3</div>
-                            <div class="text">Caption Three</div>
-                        </div>
+                                    <div class="newImg">
+                                        <div class="newNew">Новинка</div>
+                                        <img src="img/new/new4.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Консольные кресло с положениями</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">1 239 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="new5" class="link column aic js-link-card">
 
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                    </div>
-                    <br>
-                    <div style="text-align:center;">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                    </div>
-                </div>
-                <!----------------------------------------------------- Популярные товары --------------------------------------------------------->
-                <div class="content">
-                    <h1>Популярные товары</h1>
-                    <div class="contBox">
-                        <div class="box">
-                            <div class="img i1"></div>
-                            <h3>Угловая защита стены из нержавеющей стали</h3>
-                            <p>
-                                Угловое ограждение стены, калибр № 4, матовое — стандартные и изготовленные на заказ
-                                угловые ограждения защищают зоны с интенсивным движением людей.
-                                Нержавеющая сталь 304 легко вписывается в любое пространство, сохраняя при этом углы.
-                                Угловые ограждения, изготовленные по индивидуальному заказу, быстрая установка и
-                                простота обслуживания.
-                            </p>
-                        </div>
-                        <div class="box">
-                            <div class="img i2"></div>
-                            <h3>Дверная пластина из нержавеющей стали</h3>
-                            <p>
-                                Шагните в царство повышенной прочности и вневременной эстетической привлекательности для
-                                ваших дверей с нашей необычной дверной пластиной из нержавеющей стали.
-                                Тщательно спроектированная с предельной точностью, эта исключительная пластина
-                                изготовлена ​​из коммерческой нержавеющей стали 304.
-                                Ее цель выходит за рамки простого визуального улучшения, она служит внушительным
-                                барьером, который обеспечивает непревзойденную защиту,
-                            </p>
-                        </div>
-                        <div class="box">
-                            <div class="img i3"></div>
-                            <h3>Столешница из нержавеющей стали | Металл коммерческого класса</h3>
-                            <p>
-                                Изготовлен из нержавеющей стали 304 калибра 16 № 4, обеспечивающей исключительную
-                                долговечность и устойчивость к коррозии.
-                                Прочная конструкция и основа из МДФ гарантируют долгосрочную инвестицию, идеально
-                                подходят для мест с высокой проходимостью.
-                                Легкоочищаемая поверхность сохраняет блеск и качество даже при ежедневном использовании.
-                            </p>
-                        </div>
-                        <div class="box">
-                            <div class="img i4"></div>
-                            <h3>Sarlavha</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid temporibus libero
-                                officiis totam cum tempora, fuga ipsum quae repellendus corporis, tenetur dolores
-                                beatae, assumenda suscipit blanditiis illum praesentium eaque? Possimus.
-                            </p>
-                        </div>
-                        <div class="box">
-                            <div class="img i5"></div>
-                            <h3>Sarlavha</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid temporibus libero
-                                officiis totam cum tempora, fuga ipsum quae repellendus corporis, tenetur dolores
-                                beatae, assumenda suscipit blanditiis illum praesentium eaque? Possimus.
-                            </p>
-                        </div>
-                        <div class="box">
-                            <div class="img i6"></div>
-                            <h3>Sarlavha</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid temporibus libero
-                                officiis totam cum tempora, fuga ipsum quae repellendus corporis, tenetur dolores
-                                beatae, assumenda suscipit blanditiis illum praesentium eaque? Possimus.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="btnBox">
-                        <button class="btn2">Все товары</button>
-                    </div>
-                </div>
-                <!------------------------------------------ Новинки --------------------------------->
-                <div class="content1">
-                    <h1>Новинки</h1>
-                    <div class="contBox1">
-                        <div class="box1">
-                            <div class="img1" style="background-image: url(img/slide_1.jpg);"></div>
-                            <h6>Транспортные услуги</h6>
-                            <h5>500 0000 <b>sum</b></h5>
-                            <div class="korzBox">
-                                <div class="col-1">
-                                    <div class="schot">
-                                        <button data-id="steel1" class="minus"id="minus1">-</button>
-                                        <b id="colvo1">1</b>
-                                        <button data-id="steel1" class="plus" id="plus1">+</button>
+                                    <div class="newImg">
+                                        <div class="newNew">Новинка</div>
+                                        <img src="img/new/new5.jpg" alt="Error" class="image js-image-card">
                                     </div>
-                                </div>
-                                <div class="col-2"><button id="card1">В корзину <i class="fa fa-shopping-cart"
-                                            aria-hidden="true"></i></button></div>
-                            </div>
-                        </div>
-                        <div class="box1">
-                            <div class="img1" style="background-image: url(img/slide_2.jpg);"></div>
-                            <h6>Таможенное оформление</h6>
-                            <h5>500 0000 <b>sum</b></h5>
-                            <div class="korzBox">
-                                <div class="col-1">
-                                    <div class="schot">
-                                        <button>-</button>
-                                        <b>1</b>
-                                        <button>+</button>
+                                    <div>
+                                        <h3 class="title js-title-card">Кухонная Вытяжка Перегородка С Фильтром</h3>
                                     </div>
-                                </div>
-                                <div class="col-2"><button>В <br> корзину <i class="fa fa-shopping-cart"
-                                            aria-hidden="true"></i></button></div>
-                            </div>
-                        </div>
-                        <div class="box1">
-                            <div class="img1" style="background-image: url(img/slide_3.jpg);"></div>
-                            <h6>Согласование маршрута</h6>
-                            <h5>500 0000 <b>sum</b></h5>
-                            <div class="korzBox">
-                                <div class="col-1">
-                                    <div class="schot">
-                                        <button>-</button>
-                                        <b>1</b>
-                                        <button>+</button>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">825 000</span><span>sum</span>
                                     </div>
-                                </div>
-                                <div class="col-2"><button>В <br> корзину <i class="fa fa-shopping-cart"
-                                            aria-hidden="true"></i></button></div>
-                            </div>
-                        </div>
-                        <div class="box1">
-                            <div class="img1" style="background-image: url(img/slide_2.jpg);"></div>
-                            <h6>Страхование грузов</h6>
-                            <h5>500 0000 <b>sum</b></h5>
-                            <div class="korzBox">
-                                <div class="col-1">
-                                    <div class="schot">
-                                        <button>-</button>
-                                        <b>1</b>
-                                        <button>+</button>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="new8" class="link column aic js-link-card">
+
+                                    <div class="newImg">
+                                        <div class="newNew">Новинка</div>
+                                        <img src="img/new/new8.jpg" alt="Error" class="image js-image-card">
                                     </div>
-                                </div>
-                                <div class="col-2"><button>В <br> корзину <i class="fa fa-shopping-cart"
-                                            aria-hidden="true"></i></button></div>
-                            </div>
-                        </div>
-                        <div class="box1">
-                            <div class="img1" style="background-image: url(img/slide_3.jpg); background-color: white;">
-                            </div>
-                            <h6>Хранение грузов</h6>
-                            <h5>500 0000 <b>sum</b></h5>
-                            <div class="korzBox">
-                                <div class="col-1">
-                                    <div class="schot">
-                                        <button>-</button>
-                                        <b>1</b>
-                                        <button>+</button>
+                                    <div>
+                                        <h3 class="title js-title-card">Эскалаторная лестница для бассейна</h3>
                                     </div>
-                                </div>
-                                <div class="col-2"><button>В <br> корзину <i class="fa fa-shopping-cart"
-                                            aria-hidden="true"></i></button></div>
-                            </div>
-                        </div>
-                        <div class="box1">
-                            <div class="img1" style="background-image: url(img/slide_1.jpg);background-color: white;">
-                            </div>
-                            <h6>Упаковка грузов</h6>
-                            <h5>500 0000 <b>sum</b></h5>
-                            <div class="korzBox">
-                                <div class="col-1">
-                                    <div class="schot">
-                                        <button>-</button>
-                                        <b>1</b>
-                                        <button>+</button>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">35 000</span><span>sum</span>
                                     </div>
-                                </div>
-                                <div class="col-2"><button>В <br> корзину <i class="fa fa-shopping-cart"
-                                            aria-hidden="true"></i></button></div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="new1" class="link column aic js-link-card">
+
+                                    <div class="newImg">
+                                        <div class="newNew">Новинка</div>
+                                        <img src="img/new/new1.png" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Балконные ограждения с вертикальным заполнением.
+                                        </h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">362 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="new3" class="link column aic js-link-card">
+
+                                    <div class="newImg">
+                                        <div class="newNew">Новинка</div>
+                                        <img src="img/new/new3.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Вешалка Для Одежды Из Профильной Трубы</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">49 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="new6" class="link column aic js-link-card">
+
+                                    <div class="newImg">
+                                        <div class="newNew">Новинка</div>
+                                        <img src="img/new/new6.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Мармит 1-х блюд</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">936 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="new7" class="link column aic js-link-card">
+
+                                    <div class="newImg">
+                                        <div class="newNew">Новинка</div>
+                                        <img src="img/new/new7.png" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Перила для лестницы</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">56 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="new8" class="link column aic js-link-card">
+
+                                    <div class="newImg">
+                                        <div class="newNew">Новинка</div>
+                                        <img src="img/new/new2.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Ванна моечная трехсекционная</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">129 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                        </div>
+                        <div class="vana row vrap">
+                            <h1 class="newH1">Ванна моечная</h1>
+                            <li class="product column aic js-product">
+                                <a id="vana1" class="link column aic js-link-card">
+
+                                    <div class="newImg">
+                                        <img src="img/1_vana/vana1.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Ванна моечная с рабочей поверхностью с двух
+                                            сторон</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">362 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="vana2" class="link column aic js-link-card">
+
+                                    <div class="newImg">
+                                        <img src="img/1_vana/vana2.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Ванна моечная с рабочей поверхностью</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">129 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="vana3" class="link column aic js-link-card">
+
+                                    <div class="newImg">
+                                        <img src="img/1_vana/vana3.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Ванна моечная односекционная</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">49 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="vana4" class="link column aic js-link-card">
+
+                                    <div class="newImg">
+                                        <img src="img/1_vana/vana4.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Ванна моечная трехсекционная</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">1 239 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="vana5" class="link column aic js-link-card">
+
+                                    <div class="newImg">
+                                        <img src="img/1_vana/vana5.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Ванна моечная двухсекционная</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">825 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="vana6" class="link column aic js-link-card">
+
+                                    <div class="newImg">
+                                        <img src="img/1_vana/vana6.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Ванна котломоечная</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">936 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <div class="vanaBtn" style="justify-content: end;">
+                                <button>Вешалка<i class="fa fa-angle-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
-                    </div>
-                    <div class="btnBox">
-                        <button class="btn2">Все товары</button>
-                    </div>
-                </div>
-                <!-------------------------------------------------------------- О компании -------------------------------------------------------------->
-                <div class="content2">
-                    <div class="contBox2">
-                        <div class="box2">
-                            <h1>О компании</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, ut voluptas
-                                voluptatem enim
-                                tempora exercitationem
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis ullam rem
-                                nostrum qui
-                                neque tempore architecto possimus at adipisci labore officiis accusantium asperiores
-                                voluptate
-                                dicta quos. Accusamus, voluptatum sequi.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deleniti numquam
-                                eum
-                                quisquam ipsa ipsam doloribus provident necessitatibus odio! Quam perspiciatis beatae
-                                magnam, a
-                                ea voluptate sequi corrupti corporis debitis.
-                            </p>
-                            <br>
-                            <a href="page/okomp.html">Подробнее</a>
-                        </div>
-                        <div class="box2_img">
-                            <img src="img/o.jpg" style="width: 100%;" alt="Error">
-                        </div>
-                    </div>
-                </div>
-                <!------------------------------------------ Идеи интерьеров --------------------------------->
-                <div class="content3">
-                    <h1>Идеи интерьеров</h1>
-                    <div class="contBox3">
-                        <div class="box3">
-                            <div class="imgBox1" style="background-image: url(img/slide_1.jpg);"></div>
-                            <div class="imgBox2">
-                                <div class="img3" style="background-image: url(img/slide_2.jpg);"></div>
-                                <div class="img3" style="background-image: url(img/slide_3.jpg);"></div>
+                        <div class="veshilka row vrap">
+                            <h1 class="newH1">Вешалки</h1>
+                            <li class="product column aic js-product">
+                                <a id="veshilka1" class="link column aic js-link-card">
+
+                                    <div class="newImg">
+                                        <img src="img/2_veshilka/veshilka1.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Вешалка Для Одежды Из Профильной Трубы</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">400 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="veshilka2" class="link column aic js-link-card">
+
+                                    <div class="newImg">
+                                        <img src="img/2_veshilka/veshilka2.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Вешалка на колесах</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="veshilka3" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/2_veshilka/veshilka3.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Вешалка, стойка для одежды</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">70 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="veshilka4" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/2_veshilka/veshilka4.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Напольная вешалка</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">400 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <div class="vanaBtn">
+                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Ванна моечная</button>
+                                <button>Газовая плита<i class="fa fa-angle-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
-                    </div>
-                    <div class="btnBox">
-                        <button class="btn3">Все Идеи</button>
-                    </div>
-                </div>
-                <!------------------------------------------ Отвечаем, опережая ваши вопросы --------------------------------->
-                <div class="content4">
-                    <div class="contBox4">
-                        <div class="box4_1">
-                            <h1>Отвечаем, опережая ваши вопросы</h1>
-                            <div class="linkBox">
-                                <div>
-                                    <h2>+(998)91 409-34-74</h2>
-                                    <h2>+(998)91 829-76-37</h2>
-                                </div>
-                                <div>
-                                    <a href="">
-                                        <img src="img/telegram.png" alt="Error">
-                                    </a>
-                                    <a href="">
-                                        <img class="insta" src="img/instagram.png" alt="Error">
-                                    </a>
-                                    <a href="">
-                                        <img src="img/email.png" alt="Error">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="btnBox">
-                                <h4>или задайте вопрос на сайте и мы Вам перезвоним</h4>
-                                <button class="btn3">Задать вопрос</button>
+                        <div class="plita row vrap">
+                            <h1 class="newH1">Газовая плита</h1>
+                            <li class="product column aic js-product">
+                                <a id="plita1" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/3_gaz_plita/plita1.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Газовая плита 2-х конфорочная</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">400 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="plita2" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/3_gaz_plita/plita2.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Газовая плита 3-х конфорочная</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">500 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="plita3" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/3_gaz_plita/plita3.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Газовая плита 4-х конфорочная</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">600 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="plita4" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/3_gaz_plita/plita4.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Газовая плита 6-х конфорочная</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">700 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="plita5" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/3_gaz_plita/plita5.jpeg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Плита электрическая 4-х конфорочная</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">800 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="plita6" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/3_gaz_plita/plita6.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Плита электрическая 6-х конфорочная с ящиками
+                                        </h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">1 000 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <div class="vanaBtn">
+                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Вешалка</button>
+                                <button>Кухонная Вытяжка <i class="fa fa-angle-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
-                        <div class="box4_2">
-                            <div class="dr drop">Какие данные нужны для расчета стоимости перевозки?</div>
-                            <div class="dw down">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
-                                    mollitia
-                                    ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
-                                    voluptate
-                                    beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                        <div class="zont row vrap">
+                            <h1 class="newH1">Кухонная Вытяжка</h1>
+                            <li class="product column aic js-product">
+                                <a id="zont1" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/4_zont/zont1.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Кухонная Вытяжка Перегородка С Фильтром</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">450 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="zont2" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/4_zont/zont2.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Кухонная вытяжка</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">650 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="zont3" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/4_zont/zont3.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Зонт вытяжной пристенный</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">550 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="zont4" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/4_zont/zont4.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Зонт вентиляционный</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">500 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="zont5" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/4_zont/zont5.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Зонт приточно-вытяжной</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">500 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <div class="vanaBtn">
+                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Газовая плита</button>
+                                <button>Кресло<i class="fa fa-angle-right" aria-hidden="true"></i></button>
                             </div>
-                            <div class="dr drop-1">Как рассчитать объем груза?</div>
-                            <div class="dw down-1">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
-                                    mollitia
-                                    ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
-                                    voluptate
-                                    beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
-                            </div>
-                            <div class="dr drop-2">Как и когда осуществляется оплата?</div>
-                            <div class="dw down-2">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
-                                    mollitia
-                                    ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
-                                    voluptate
-                                    beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
-                            </div>
-                            <div class="dr drop-3">Можем ли мы получить разовую консультацию?</div>
-                            <div class="dw down-3">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
-                                    mollitia
-                                    ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
-                                    voluptate
-                                    beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
-                            </div>
-                            <div class="dr drop-4">Какие документы требуются для таможенного оформления?</div>
-                            <div class="dw down-4">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
-                                    mollitia
-                                    ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
-                                    voluptate
-                                    beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
-                            </div>
-                            <div class="dr drop-5">Есть ли у вас собственные склады консолидации?</div>
-                            <div class="dw down-5">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
-                                    mollitia
-                                    ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
-                                    voluptate
-                                    beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
-                            </div>
-                            <div class="dr drop-6"></div>
                         </div>
-                    </div>
-                </div>
-                <!---------------------------------------------------- Ассортимент ------------------------------------------------>
-                <div class="content5">
-                    <div class="contBox5">
-                        <h3>Ассортимент</h3>
-                        <p>Более 10 000 товаров и 100 брендов</p>
-                    </div>
-                    <div class="contBox5">
-                        <h3>Клиентский сервис</h3>
-                        <p>оперативно отвечаем на вопросы покупателей</p>
-                    </div>
-                    <div class="contBox5">
-                        <h3>Качественные материалы</h3>
-                        <p>Сответствует требованиям и мировым стандартам</p>
-                    </div>
-                </div>
-                <!-- -------------------------------------------------- Интернет магазин ------------------------------------------------>
-                <div class="content6">
-                    <h1>Интернет магазин Нержавейки</h1>
-                    <p class="mt-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur
-                        ratione laudantium,</p>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
-                            laudantium,</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
-                            laudantium,</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
-                            laudantium,</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
-                            laudantium,</li>
+                        <div class="kreslo row vrap">
+                            <h1 class="newH1">Кресло для интерьера</h1>
+                            <li class="product column aic js-product">
+                                <a id="kreslo1" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/5_kreslo/kreslo1.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Консольные кресло с положениями</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="kreslo2" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/5_kreslo/kreslo2.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Кресло для интерьера</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">120 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="kreslo3" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/5_kreslo/kreslo3.png" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Стул с железным основанием</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">100 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="kreslo4" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/5_kreslo/kreslo4.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Промышленные табуреты для лабораторий и чистых
+                                            помещений</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">70 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="kreslo5" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/5_kreslo/kreslo5.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Секции металлические перфорированные</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">200 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <div class="vanaBtn">
+                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Кухонная Вытяжка</button>
+                                <button>Лестницы<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="lesnitsa row vrap">
+                            <h1 class="newH1">Лестницы</h1>
+                            <li class="product column aic js-product">
+                                <a id="lesnitsa1" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/6_lesnitsa/lesnitsa1.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Винтовые лестницы современного дизайна с гнутым
+                                            стеклянным ограждением</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="lesnitsa2" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/6_lesnitsa/lesnitsa2.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Винтовая лестница со стеклянными ступенями</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="lesnitsa3" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/6_lesnitsa/lesnitsa3.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Винтовая лестница с двумя спиральными тетивами
+                                        </h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="lesnitsa4" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/6_lesnitsa/lesnitsa4.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Парящая лестница из металла</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="lesnitsa5" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/6_lesnitsa/lesnitsa5.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Ограждение лестницы</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="lesnitsa6" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/6_lesnitsa/lesnitsa6.png" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Лестница балюстрада</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="lesnitsa7" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/6_lesnitsa/lesnitsa7.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Эскалаторная лестница для бассейна</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="lesnitsa8" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/6_lesnitsa/lesnitsa8.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Специальная наземная лестница из нержавеющей
+                                            стали</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <div class="vanaBtn">
+                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Кресло</button>
+                                <button>Мармит<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="marmit row vrap">
+                            <h1 class="newH1">Мармит</h1>
+                            <li class="product column aic js-product">
+                                <a id="marmit1" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/7_marmit/marmit1.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Мармит 1-х блюд</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="marmit2" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/7_marmit/marmit2.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Прилавок холодильный</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="marmit3" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/7_marmit/marmit3.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Мармит 2-х блюд</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="marmit4" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/7_marmit/marmit4.png" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Витрины с крышкой охлаждаемые настольные</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="marmit5" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/7_marmit/marmit5.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Прилавок-витрина холодильный мармитный
+                                            универсальный</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="marmit6" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/7_marmit/marmit6.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Электрический мармит передвижной</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <div class="vanaBtn">
+                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Лестницы</button>
+                                <button>Перила<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="perila row vrap">
+                            <h1 class="newH1">Перила</h1>
+                            <li class="product column aic js-product">
+                                <a id="perila1" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/8_perila/perila1.png" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Перила для лестницы</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="perila2" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/8_perila/perila2.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Ограждение с вертикальным заполнением с двумя
+                                            поручнями</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="perila3" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/8_perila/perila3.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Ограждения из нержавеющей стали</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="perila4" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/8_perila/perila4.jpeg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Перила нержавейка</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="perila5" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/8_perila/perila5.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Ограждение для балкона</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="perila6" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/8_perila/perila6.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Поручни, перила </h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="perila7" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/8_perila/perila7.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Перила из нержавеющей стали </h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="perila8" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/8_perila/perila8.png" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Балконные ограждения с вертикальным заполнением
+                                        </h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="perila9" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/8_perila/perila9.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Стойки ограждений поручней из нержавеющей стали
+                                        </h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <div class="vanaBtn">
+                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Мармит</button>
+                                <button>Скамейка<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="skameyka row vrap">
+                            <h1 class="newH1">Скамейка</h1>
+                            <li class="product column aic js-product">
+                                <a id="skameyka1" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/9_skameyka/skameyka1.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Скамейка из нержавейки</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="skameyka2" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/9_skameyka/skameyka2.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Скамейка из нержавейки</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="skameyka3" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/9_skameyka/skameyka3.jpeg" alt="Error"
+                                            class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Сталь скамья</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="skameyka4" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/9_skameyka/skameyka4.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Скамейка из нержавеющей стали</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <div class="vanaBtn">
+                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Перила</button>
+                                <button>Стеллажи кухонные<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="stelaji row vrap">
+                            <h1 class="newH1">Стеллажи кухонные</h1>
+                            <li class="product column aic js-product">
+                                <a id="stelaji1" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/10_stelaji/stelaji1.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Стеллажи кухонные сварные с перфорированными
+                                            полками</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stelaji2" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/10_stelaji/stelaji2.png" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Стеллаж кухонный стойки из трубы сплошные полки
+                                        </h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stelaji3" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/10_stelaji/stelaji3.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Стеллаж для сушки тарелок 4 полки</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stelaji4" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/10_stelaji/stelaji4.jpeg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Стеллаж для сушки посуды для тарелок и стаканов
+                                        </h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stelaji5" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/10_stelaji/stelaji5.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Стеллаж для сушки посуды для тарелок и стаканов
+                                        </h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stelaji6" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/10_stelaji/stelaji6.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Полка настенная сплошная из стали 3 уровня</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stelaji7" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/10_stelaji/stelaji7.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Полка настенная сплошная из стали</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <div class="vanaBtn">
+                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Скамейка</button>
+                                <button>Стойка для приборов<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="stoyka row vrap">
+                            <h1 class="newH1">Стойка для приборов</h1>
+                            <li class="product column aic js-product">
+                                <a id="stoyka1" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/11_stoyka/stoyka1.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Стойка для приборов</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stoyka2" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/11_stoyka/stoyka2.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Стойка для приборов</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stoyka3" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/11_stoyka/stoyka3.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Посудомоечные оборудование</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <div class="vanaBtn">
+                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Стеллажи кухонные</button>
+                                <button>Стеклянный стол<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="stol_steklo row vrap">
+                            <h1 class="newH1">Стеклянный стол</h1>
+                            <li class="product column aic js-product">
+                                <a id="stol_steklo1" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/12_stol_steklo/stol_steklo1.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Современные Настольные Стеклянный стол</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stol_steklo2" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/12_stol_steklo/stol_steklo2.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Журнальный столик</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stol_steklo3" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/12_stol_steklo/stol_steklo3.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Стол круглый</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stol_steklo4" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/12_stol_steklo/stol_steklo4.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Белый стеклянный журнальный столик</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stol_steklo5" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/12_stol_steklo/stol_steklo5.jpeg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Зеркальный стол серебристый</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stol_steklo6" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/12_stol_steklo/stol_steklo6.webp" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Зеркальный стол</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <div class="vanaBtn">
+                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Стойка для приборов</button>
+                                <button>Столы производственные<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="stol row vrap">
+                            <h1 class="newH1">Столы производственные</h1>
+                            <li class="product column aic js-product">
+                                <a id="stol1" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/13_stol/stol1.jpeg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Столы производственные с бортом</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stol2" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/13_stol/stol2.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Стол производственный с полкой</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stol3" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/13_stol/stol3.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Столы производственные с бортом</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stol4" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/13_stol/stol4.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Производственный стол с мойкой</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stol5" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/13_stol/stol5.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Столы производственные без борта</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stol6" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/13_stol/stol6.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Столы производственные без борта с низу полка решетка</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stol7" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/13_stol/stol7.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Столы производственные без борта</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stol8" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/13_stol/stol8.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Столы производственные c бортом и ящиками</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stol9" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/13_stol/stol9.png" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Подставка под пароконвектомат</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="stol10" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/13_stol/stol10.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Стол класса</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <div class="vanaBtn">
+                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Стеклянный стол</button>
+                                <button>Тележки<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="telejki row vrap">
+                            <h1 class="newH1">Тележки</h1>
+                            <li class="product column aic js-product">
+                                <a id="telejki1" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/14_telejki/telejki1.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Кухонная Тележка очистки  3 яруса кружевных</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="telejki2" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/14_telejki/telejki2.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Сервировочная тележка</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="telejki3" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/14_telejki/telejki3.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Столик манипуляционный</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="telejki4" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/14_telejki/telejki4.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Тележка для сбора посуды</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="telejki5" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/14_telejki/telejki5.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Гастрономическая тележка</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="telejki6" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/14_telejki/telejki6.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Тележка для перевозки контейнеров двойная</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="telejki7" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/14_telejki/telejki7.png" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Тележка для подносов для профессиональной кухни</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="telejki8" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/14_telejki/telejki8.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Тележки для официантов</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="telejki9" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/14_telejki/telejki9.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Тележка-шпилька</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <div class="vanaBtn">
+                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Столы производственные</button>
+                                <button>Шкаф<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="shkaf row vrap">
+                            <h1 class="newH1">Шкаф</h1>
+                            <li class="product column aic js-product">
+                                <a id="shkaf1" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/15_shkaf/shkaf1.jpeg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Гардероб, шкафчик 8 отделений</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="shkaf2" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/15_shkaf/shkaf2.png" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Шкаф сушильный</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="shkaf3" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/15_shkaf/shkaf3.png" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Шкаф ШЗХЛ под лотки для хлеба</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="shkaf4" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/15_shkaf/shkaf4.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Шкаф раздевальный из нержавеющей стали</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="shkaf5" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/15_shkaf/shkaf5.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Шкаф кухонный</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="shkaf6" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/15_shkaf/shkaf6.jpeg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Шкаф для хлеба</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="shkaf7" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/15_shkaf/shkaf7.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Шкаф хозяйственный, 2 дв</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <li class="product column aic js-product">
+                                <a id="shkaf8" class="link column aic js-link-card">
+                                    <div class="newImg">
+                                        <img src="img/15_shkaf/shkaf8.jpg" alt="Error" class="image js-image-card">
+                                    </div>
+                                    <div>
+                                        <h3 class="title js-title-card">Шкаф круглый крутящийся</h3>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price js-price-card">150 000</span><span>sum</span>
+                                    </div>
+                                </a>
+                                <button type="button" class="buy-button js-buy-button">В корзину</button>
+                            </li>
+                            <div class="vanaBtn" style="justify-content: start;">
+                                <button> <i class="fa fa-angle-left" aria-hidden="true"></i>Тележки</button>
+                            </div>
+                        </div>
                     </ul>
-                    <p class="mt-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur
-                        ratione laudantium,</p>
-                    <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
-                        laudantium,</p>
-                    <p class="mt-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur
-                        ratione laudantium,</p>
-                    <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
-                        laudantium,</p>
-                    <p class="mt-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur
-                        ratione laudantium,</p>
                 </div>
-                <footer>
-                    <div class="col-1">
-                        <h2>О магазине</h2>
-                        <a href="">Частые вопросы</a>
-                        <a href="">Возврат и обмен</a>
-                        <a href="">Карта сайта</a>
-                        <a href="">Поиск по сайту</a>
+            </main>
+            <!------------------------------------------ Новинки --------------------------------->
+            <!-------------------------------------------------------------- О компании -------------------------------------------------------------->
+            <div class="content2 new">
+                <div class="contBox2">
+                    <div class="box2">
+                        <h1>О компании</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, ut voluptas
+                            voluptatem enim
+                            tempora exercitationem
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis ullam rem
+                            nostrum qui
+                            neque tempore architecto possimus at adipisci labore officiis accusantium asperiores
+                            voluptate
+                            dicta quos. Accusamus, voluptatum sequi.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deleniti numquam
+                            eum
+                            quisquam ipsa ipsam doloribus provident necessitatibus odio! Quam perspiciatis beatae
+                            magnam, a
+                            ea voluptate sequi corrupti corporis debitis.
+                        </p>
+                        <br>
+                        <a href="page/okomp.html">Подробнее</a>
                     </div>
-                    <div class="col-2">
-                        <h2>Информация</h2>
-                        <a href="">Оплата</a>
-                        <a href="">Доставка</a>
-                        <a href="">Возврат и обмен</a>
-                        <a href="">Мои заказы</a>
+                    <div class="box2_img">
+                        <img src="img/o.jpg" style="width: 100%;" alt="Error">
                     </div>
-                    <div class="col-3">
-                        <h2>Контакты</h2>
-                        <a href="">г. Москва, ул. Ленинская, дом 0, корп 0, офис 0</a>
-                        <a href="">Доставка</a>
-                        <a href="">Возврат и обмен</a>
-                        <a href="">Мои заказы</a>
-                        <h3>+998(94)320 94 99</h3>
-                        <h3>+998(94)320 94 99</h3>
-                        <a style="text-decoration: underline; color: blue;" href="">molsi1994@mail.ru</a>
-                        <p>Без выходных с 09:00-22:00</p>
-                        <p>Мы в соцсетях:</p>
-                    </div>
-                </footer>
+                </div>
             </div>
+            <!-------------------------------------------------------------- О компании -------------------------------------------------------------->
+            <!------------------------------------------ Идеи интерьеров --------------------------------->
+            <div class="content3 new">
+                <h1>Идеи интерьеров</h1>
+                <div class="contBox3">
+                    <div class="box3">
+                        <div class="imgBox1" style="background-image: url(img/slide_1.jpg);"></div>
+                        <div class="imgBox2">
+                            <div class="img3" style="background-image: url(img/slide_2.jpg);"></div>
+                            <div class="img3" style="background-image: url(img/slide_3.jpg);"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btnBox">
+                    <button class="btn3">Все Идеи</button>
+                </div>
+            </div>
+            <!------------------------------------------ Идеи интерьеров --------------------------------->
+            <!------------------------------------------ Отвечаем, опережая ваши вопросы --------------------------------->
+            <div class="content4 new">
+                <div class="contBox4">
+                    <div class="box4_1">
+                        <h1>Отвечаем, опережая ваши вопросы</h1>
+                        <div class="linkBox">
+                            <div>
+                                <h2>+(998)91 409-34-74</h2>
+                                <h2>+(998)91 829-76-37</h2>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="img/telegram.png" alt="Error">
+                                </a>
+                                <a href="">
+                                    <img class="insta" src="img/instagram.png" alt="Error">
+                                </a>
+                                <a href="">
+                                    <img src="img/email.png" alt="Error">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="btnBox">
+                            <h4>или задайте вопрос на сайте и мы Вам перезвоним</h4>
+                            <button class="btn3">Задать вопрос</button>
+                        </div>
+                    </div>
+                    <div class="box4_2">
+                        <div class="dr drop">Какие данные нужны для расчета стоимости перевозки?</div>
+                        <div class="dw down">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
+                                mollitia
+                                ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
+                                voluptate
+                                beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                        </div>
+                        <div class="dr drop-1">Как рассчитать объем груза?</div>
+                        <div class="dw down-1">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
+                                mollitia
+                                ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
+                                voluptate
+                                beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                        </div>
+                        <div class="dr drop-2">Как и когда осуществляется оплата?</div>
+                        <div class="dw down-2">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
+                                mollitia
+                                ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
+                                voluptate
+                                beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                        </div>
+                        <div class="dr drop-3">Можем ли мы получить разовую консультацию?</div>
+                        <div class="dw down-3">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
+                                mollitia
+                                ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
+                                voluptate
+                                beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                        </div>
+                        <div class="dr drop-4">Какие документы требуются для таможенного оформления?</div>
+                        <div class="dw down-4">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
+                                mollitia
+                                ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
+                                voluptate
+                                beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                        </div>
+                        <div class="dr drop-5">Есть ли у вас собственные склады консолидации?</div>
+                        <div class="dw down-5">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
+                                mollitia
+                                ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
+                                voluptate
+                                beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                        </div>
+                        <div class="dr drop-6"></div>
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------------ Отвечаем, опережая ваши вопросы --------------------------------->
+            <!---------------------------------------------------- Ассортимент ------------------------------------------------>
+            <div class="content5 new">
+                <div class="contBox5">
+                    <h3>Ассортимент</h3>
+                    <p>Более 10 000 товаров и 100 брендов</p>
+                </div>
+                <div class="contBox5">
+                    <h3>Клиентский сервис</h3>
+                    <p>оперативно отвечаем на вопросы покупателей</p>
+                </div>
+                <div class="contBox5">
+                    <h3>Качественные материалы</h3>
+                    <p>Сответствует требованиям и мировым стандартам</p>
+                </div>
+            </div>
+            <!---------------------------------------------------- Ассортимент ------------------------------------------------>
+            <!-- -------------------------------------------------- Интернет магазин ------------------------------------------------>
+            <div class="content6 new">
+                <h1>Интернет магазин Нержавейки</h1>
+                <p class="mt-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur
+                    ratione laudantium,</p>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
+                        laudantium,</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
+                        laudantium,</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
+                        laudantium,</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
+                        laudantium,</li>
+                </ul>
+                <p class="mt-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur
+                    ratione laudantium,</p>
+                <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
+                    laudantium,</p>
+                <p class="mt-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur
+                    ratione laudantium,</p>
+                <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
+                    laudantium,</p>
+                <p class="mt-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur
+                    ratione laudantium,</p>
+            </div>
+            <!-- -------------------------------------------------- Интернет магазин ------------------------------------------------>
+            <!------------------------------------------ footer --------------------------------->
+            <!-- </div> -->
+            <!-- <div class="vana">
+                <h1>Ванна моечная</h1>
+                
+            </div> -->
+            <footer>
+                <div class="col-1">
+                    <h2>О магазине</h2>
+                    <a href="">Частые вопросы</a>
+                    <a href="">Возврат и обмен</a>
+                    <a href="">Карта сайта</a>
+                    <a href="">Поиск по сайту</a>
+                </div>
+                <div class="col-2">
+                    <h2>Информация</h2>
+                    <a href="">Оплата</a>
+                    <a href="">Доставка</a>
+                    <a href="">Возврат и обмен</a>
+                    <a href="">Мои заказы</a>
+                </div>
+                <div class="col-3">
+                    <h2>Контакты</h2>
+                    <a href="">г. Москва, ул. Ленинская, дом 0, корп 0, офис 0</a>
+                    <a href="">Доставка</a>
+                    <a href="">Возврат и обмен</a>
+                    <a href="">Мои заказы</a>
+                    <h3>+998(94)320 94 99</h3>
+                    <h3>+998(94)320 94 99</h3>
+                    <a style="text-decoration: underline; color: blue;" href="">molsi1994@mail.ru</a>
+                    <p>Без выходных с 09:00-22:00</p>
+                    <p>Мы в соцсетях:</p>
+                </div>
+            </footer>
         </div>
     </div>
-    <script src="js/script.js"></script>
+    <!------------------------------------------ right-content --------------------------------->
+
     <script>
         $(document).ready(function () {
             $(".down").hide();
@@ -517,7 +2079,347 @@
             });
         });
     </script>
-    <script type="module" src=""></script>
+    <script type="module" src="js/main.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('uy').addEventListener('click', () => {
+            let newElement = document.querySelectorAll('.new');
+            for (let i = 0; i < newElement.length; i++) {
+                newElement[i].style.display = '';
+            };
+            document.querySelector('.vana').style.display = 'none';
+            document.querySelector('.veshilka').style.display = 'none';
+            document.querySelector('.plita').style.display = 'none';
+            document.querySelector('.zont').style.display = 'none';
+            document.querySelector('.kreslo').style.display = 'none';
+            document.querySelector('.lesnitsa').style.display = 'none';
+            document.querySelector('.marmit').style.display = 'none';
+            document.querySelector('.perila').style.display = 'none';
+            document.querySelector('.skameyka').style.display = 'none';
+            document.querySelector('.stelaji').style.display = 'none';
+            document.querySelector('.stoyka').style.display = 'none';
+            document.querySelector('.stol_steklo').style.display = 'none';
+            document.querySelector('.stol').style.display = 'none';
+            document.querySelector('.telejki').style.display = 'none';
+            document.querySelector('.shkaf').style.display = 'none';
+            
+        });
+        document.getElementById('vana').addEventListener('click', () => {
+            let newElement = document.querySelectorAll('.new');
+            for (let i = 0; i < newElement.length; i++) {
+                newElement[i].style.display = 'none';
+            };
+            document.querySelector('.vana').style.display = 'flex';
+            document.querySelector('.veshilka').style.display = 'none';
+            document.querySelector('.plita').style.display = 'none';
+            document.querySelector('.zont').style.display = 'none';
+            document.querySelector('.kreslo').style.display = 'none';
+            document.querySelector('.lesnitsa').style.display = 'none';
+            document.querySelector('.marmit').style.display = 'none';
+            document.querySelector('.perila').style.display = 'none';
+            document.querySelector('.skameyka').style.display = 'none';
+            document.querySelector('.stelaji').style.display = 'none';
+            document.querySelector('.stoyka').style.display = 'none';
+            document.querySelector('.stol_steklo').style.display = 'none';
+            document.querySelector('.stol').style.display = 'none';
+            document.querySelector('.telejki').style.display = 'none';
+            document.querySelector('.shkaf').style.display = 'none';
+        });
+        document.getElementById('veshilka').addEventListener('click', () => {
+            let newElement = document.querySelectorAll('.new');
+            for (let i = 0; i < newElement.length; i++) {
+                newElement[i].style.display = 'none';
+            };
+            document.querySelector('.vana').style.display = 'none';
+            document.querySelector('.veshilka').style.display = 'flex';
+            document.querySelector('.plita').style.display = 'none';
+            document.querySelector('.zont').style.display = 'none';
+            document.querySelector('.kreslo').style.display = 'none';
+            document.querySelector('.lesnitsa').style.display = 'none';
+            document.querySelector('.marmit').style.display = 'none';
+            document.querySelector('.perila').style.display = 'none';
+            document.querySelector('.skameyka').style.display = 'none';
+            document.querySelector('.stelaji').style.display = 'none';
+            document.querySelector('.stoyka').style.display = 'none';
+            document.querySelector('.stol_steklo').style.display = 'none';
+            document.querySelector('.stol').style.display = 'none';
+            document.querySelector('.telejki').style.display = 'none';
+            document.querySelector('.shkaf').style.display = 'none';
+        });
+        document.getElementById('plita').addEventListener('click', () => {
+            let newElement = document.querySelectorAll('.new');
+            for (let i = 0; i < newElement.length; i++) {
+                newElement[i].style.display = 'none';
+            };
+            document.querySelector('.vana').style.display = 'none';
+            document.querySelector('.veshilka').style.display = 'none';
+            document.querySelector('.plita').style.display = 'flex';
+            document.querySelector('.zont').style.display = 'none';
+            document.querySelector('.kreslo').style.display = 'none';
+            document.querySelector('.lesnitsa').style.display = 'none';
+            document.querySelector('.marmit').style.display = 'none';
+            document.querySelector('.perila').style.display = 'none';
+            document.querySelector('.skameyka').style.display = 'none';
+            document.querySelector('.stelaji').style.display = 'none';
+            document.querySelector('.stoyka').style.display = 'none';
+            document.querySelector('.stol_steklo').style.display = 'none';
+            document.querySelector('.stol').style.display = 'none';
+            document.querySelector('.telejki').style.display = 'none';
+            document.querySelector('.shkaf').style.display = 'none';
+        });
+        document.getElementById('zont').addEventListener('click', () => {
+            let newElement = document.querySelectorAll('.new');
+            for (let i = 0; i < newElement.length; i++) {
+                newElement[i].style.display = 'none';
+            };
+            document.querySelector('.vana').style.display = 'none';
+            document.querySelector('.veshilka').style.display = 'none';
+            document.querySelector('.plita').style.display = 'none';
+            document.querySelector('.zont').style.display = 'flex';
+            document.querySelector('.kreslo').style.display = 'none';
+            document.querySelector('.lesnitsa').style.display = 'none';
+            document.querySelector('.marmit').style.display = 'none';
+            document.querySelector('.perila').style.display = 'none';
+            document.querySelector('.skameyka').style.display = 'none';
+            document.querySelector('.stelaji').style.display = 'none';
+            document.querySelector('.stoyka').style.display = 'none';
+            document.querySelector('.stol_steklo').style.display = 'none';
+            document.querySelector('.stol').style.display = 'none';
+            document.querySelector('.telejki').style.display = 'none';
+            document.querySelector('.shkaf').style.display = 'none';
+        });
+        document.getElementById('kreslo').addEventListener('click', () => {
+            let newElement = document.querySelectorAll('.new');
+            for (let i = 0; i < newElement.length; i++) {
+                newElement[i].style.display = 'none';
+            };
+            document.querySelector('.vana').style.display = 'none';
+            document.querySelector('.veshilka').style.display = 'none';
+            document.querySelector('.plita').style.display = 'none';
+            document.querySelector('.zont').style.display = 'none';
+            document.querySelector('.kreslo').style.display = 'flex';
+            document.querySelector('.lesnitsa').style.display = 'none';
+            document.querySelector('.marmit').style.display = 'none';
+            document.querySelector('.perila').style.display = 'none';
+            document.querySelector('.skameyka').style.display = 'none';
+            document.querySelector('.stelaji').style.display = 'none';
+            document.querySelector('.stoyka').style.display = 'none';
+            document.querySelector('.stol_steklo').style.display = 'none';
+            document.querySelector('.stol').style.display = 'none';
+            document.querySelector('.telejki').style.display = 'none';
+            document.querySelector('.shkaf').style.display = 'none';
+        });
+        document.getElementById('lesnitsa').addEventListener('click', () => {
+            let newElement = document.querySelectorAll('.new');
+            for (let i = 0; i < newElement.length; i++) {
+                newElement[i].style.display = 'none';
+            };
+            document.querySelector('.vana').style.display = 'none';
+            document.querySelector('.veshilka').style.display = 'none';
+            document.querySelector('.plita').style.display = 'none';
+            document.querySelector('.zont').style.display = 'none';
+            document.querySelector('.kreslo').style.display = 'none';
+            document.querySelector('.lesnitsa').style.display = 'flex';
+            document.querySelector('.marmit').style.display = 'none';
+            document.querySelector('.perila').style.display = 'none';
+            document.querySelector('.skameyka').style.display = 'none';
+            document.querySelector('.stelaji').style.display = 'none';
+            document.querySelector('.stoyka').style.display = 'none';
+            document.querySelector('.stol_steklo').style.display = 'none';
+            document.querySelector('.stol').style.display = 'none';
+            document.querySelector('.telejki').style.display = 'none';
+            document.querySelector('.shkaf').style.display = 'none';
+        });
+        document.getElementById('marmit').addEventListener('click', () => {
+            let newElement = document.querySelectorAll('.new');
+            for (let i = 0; i < newElement.length; i++) {
+                newElement[i].style.display = 'none';
+            };
+            document.querySelector('.vana').style.display = 'none';
+            document.querySelector('.veshilka').style.display = 'none';
+            document.querySelector('.plita').style.display = 'none';
+            document.querySelector('.zont').style.display = 'none';
+            document.querySelector('.kreslo').style.display = 'none';
+            document.querySelector('.lesnitsa').style.display = 'none';
+            document.querySelector('.marmit').style.display = 'flex';
+            document.querySelector('.perila').style.display = 'none';
+            document.querySelector('.skameyka').style.display = 'none';
+            document.querySelector('.stelaji').style.display = 'none';
+            document.querySelector('.stoyka').style.display = 'none';
+            document.querySelector('.stol_steklo').style.display = 'none';
+            document.querySelector('.stol').style.display = 'none';
+            document.querySelector('.telejki').style.display = 'none';
+            document.querySelector('.shkaf').style.display = 'none';
+        });
+        document.getElementById('perila').addEventListener('click', () => {
+            let newElement = document.querySelectorAll('.new');
+            for (let i = 0; i < newElement.length; i++) {
+                newElement[i].style.display = 'none';
+            };
+            document.querySelector('.vana').style.display = 'none';
+            document.querySelector('.veshilka').style.display = 'none';
+            document.querySelector('.plita').style.display = 'none';
+            document.querySelector('.zont').style.display = 'none';
+            document.querySelector('.kreslo').style.display = 'none';
+            document.querySelector('.lesnitsa').style.display = 'none';
+            document.querySelector('.marmit').style.display = 'none';
+            document.querySelector('.perila').style.display = 'flex';
+            document.querySelector('.skameyka').style.display = 'none';
+            document.querySelector('.stelaji').style.display = 'none';
+            document.querySelector('.stoyka').style.display = 'none';
+            document.querySelector('.stol_steklo').style.display = 'none';
+            document.querySelector('.stol').style.display = 'none';
+            document.querySelector('.telejki').style.display = 'none';
+            document.querySelector('.shkaf').style.display = 'none';
+        });
+        document.getElementById('skameyka').addEventListener('click', () => {
+            let newElement = document.querySelectorAll('.new');
+            for (let i = 0; i < newElement.length; i++) {
+                newElement[i].style.display = 'none';
+            };
+            document.querySelector('.vana').style.display = 'none';
+            document.querySelector('.veshilka').style.display = 'none';
+            document.querySelector('.plita').style.display = 'none';
+            document.querySelector('.zont').style.display = 'none';
+            document.querySelector('.kreslo').style.display = 'none';
+            document.querySelector('.lesnitsa').style.display = 'none';
+            document.querySelector('.marmit').style.display = 'none';
+            document.querySelector('.perila').style.display = 'none';
+            document.querySelector('.skameyka').style.display = 'flex';
+            document.querySelector('.stelaji').style.display = 'none';
+            document.querySelector('.stoyka').style.display = 'none';
+            document.querySelector('.stol_steklo').style.display = 'none';
+            document.querySelector('.stol').style.display = 'none';
+            document.querySelector('.telejki').style.display = 'none';
+            document.querySelector('.shkaf').style.display = 'none';
+        });
+        document.getElementById('stelaji').addEventListener('click', () => {
+            let newElement = document.querySelectorAll('.new');
+            for (let i = 0; i < newElement.length; i++) {
+                newElement[i].style.display = 'none';
+            };
+            document.querySelector('.vana').style.display = 'none';
+            document.querySelector('.veshilka').style.display = 'none';
+            document.querySelector('.plita').style.display = 'none';
+            document.querySelector('.zont').style.display = 'none';
+            document.querySelector('.kreslo').style.display = 'none';
+            document.querySelector('.lesnitsa').style.display = 'none';
+            document.querySelector('.marmit').style.display = 'none';
+            document.querySelector('.perila').style.display = 'none';
+            document.querySelector('.skameyka').style.display = 'none';
+            document.querySelector('.stelaji').style.display = 'flex';
+            document.querySelector('.stoyka').style.display = 'none';
+            document.querySelector('.stol_steklo').style.display = 'none';
+            document.querySelector('.stol').style.display = 'none';
+            document.querySelector('.telejki').style.display = 'none';
+            document.querySelector('.shkaf').style.display = 'none';
+        });
+        document.getElementById('stoyka').addEventListener('click', () => {
+            let newElement = document.querySelectorAll('.new');
+            for (let i = 0; i < newElement.length; i++) {
+                newElement[i].style.display = 'none';
+            };
+            document.querySelector('.vana').style.display = 'none';
+            document.querySelector('.veshilka').style.display = 'none';
+            document.querySelector('.plita').style.display = 'none';
+            document.querySelector('.zont').style.display = 'none';
+            document.querySelector('.kreslo').style.display = 'none';
+            document.querySelector('.lesnitsa').style.display = 'none';
+            document.querySelector('.marmit').style.display = 'none';
+            document.querySelector('.perila').style.display = 'none';
+            document.querySelector('.skameyka').style.display = 'none';
+            document.querySelector('.stelaji').style.display = 'none';
+            document.querySelector('.stoyka').style.display = 'flex';
+            document.querySelector('.stol_steklo').style.display = 'none';
+            document.querySelector('.stol').style.display = 'none';
+            document.querySelector('.telejki').style.display = 'none';
+            document.querySelector('.shkaf').style.display = 'none';
+        });
+        document.getElementById('stol_steklo').addEventListener('click', () => {
+            let newElement = document.querySelectorAll('.new');
+            for (let i = 0; i < newElement.length; i++) {
+                newElement[i].style.display = 'none';
+            };
+            document.querySelector('.vana').style.display = 'none';
+            document.querySelector('.veshilka').style.display = 'none';
+            document.querySelector('.plita').style.display = 'none';
+            document.querySelector('.zont').style.display = 'none';
+            document.querySelector('.kreslo').style.display = 'none';
+            document.querySelector('.lesnitsa').style.display = 'none';
+            document.querySelector('.marmit').style.display = 'none';
+            document.querySelector('.perila').style.display = 'none';
+            document.querySelector('.skameyka').style.display = 'none';
+            document.querySelector('.stelaji').style.display = 'none';
+            document.querySelector('.stoyka').style.display = 'none';
+            document.querySelector('.stol_steklo').style.display = 'flex';
+            document.querySelector('.stol').style.display = 'none';
+            document.querySelector('.telejki').style.display = 'none';
+            document.querySelector('.shkaf').style.display = 'none';
+        });
+        document.getElementById('stol').addEventListener('click', () => {
+            let newElement = document.querySelectorAll('.new');
+            for (let i = 0; i < newElement.length; i++) {
+                newElement[i].style.display = 'none';
+            };
+            document.querySelector('.vana').style.display = 'none';
+            document.querySelector('.veshilka').style.display = 'none';
+            document.querySelector('.plita').style.display = 'none';
+            document.querySelector('.zont').style.display = 'none';
+            document.querySelector('.kreslo').style.display = 'none';
+            document.querySelector('.lesnitsa').style.display = 'none';
+            document.querySelector('.marmit').style.display = 'none';
+            document.querySelector('.perila').style.display = 'none';
+            document.querySelector('.skameyka').style.display = 'none';
+            document.querySelector('.stelaji').style.display = 'none';
+            document.querySelector('.stoyka').style.display = 'none';
+            document.querySelector('.stol_steklo').style.display = 'none';
+            document.querySelector('.stol').style.display = 'flex';
+            document.querySelector('.telejki').style.display = 'none';
+            document.querySelector('.shkaf').style.display = 'none';
+        });
+        document.getElementById('telejki').addEventListener('click', () => {
+            let newElement = document.querySelectorAll('.new');
+            for (let i = 0; i < newElement.length; i++) {
+                newElement[i].style.display = 'none';
+            };
+            document.querySelector('.vana').style.display = 'none';
+            document.querySelector('.veshilka').style.display = 'none';
+            document.querySelector('.plita').style.display = 'none';
+            document.querySelector('.zont').style.display = 'none';
+            document.querySelector('.kreslo').style.display = 'none';
+            document.querySelector('.lesnitsa').style.display = 'none';
+            document.querySelector('.marmit').style.display = 'none';
+            document.querySelector('.perila').style.display = 'none';
+            document.querySelector('.skameyka').style.display = 'none';
+            document.querySelector('.stelaji').style.display = 'none';
+            document.querySelector('.stoyka').style.display = 'none';
+            document.querySelector('.stol_steklo').style.display = 'none';
+            document.querySelector('.stol').style.display = 'none';
+            document.querySelector('.telejki').style.display = 'flex';
+            document.querySelector('.shkaf').style.display = 'none';
+        });
+        document.getElementById('shkaf').addEventListener('click', () => {
+            let newElement = document.querySelectorAll('.new');
+            for (let i = 0; i < newElement.length; i++) {
+                newElement[i].style.display = 'none';
+            };
+            document.querySelector('.vana').style.display = 'none';
+            document.querySelector('.veshilka').style.display = 'none';
+            document.querySelector('.plita').style.display = 'none';
+            document.querySelector('.zont').style.display = 'none';
+            document.querySelector('.kreslo').style.display = 'none';
+            document.querySelector('.lesnitsa').style.display = 'none';
+            document.querySelector('.marmit').style.display = 'none';
+            document.querySelector('.perila').style.display = 'none';
+            document.querySelector('.skameyka').style.display = 'none';
+            document.querySelector('.stelaji').style.display = 'none';
+            document.querySelector('.stoyka').style.display = 'none';
+            document.querySelector('.stol_steklo').style.display = 'none';
+            document.querySelector('.stol').style.display = 'none';
+            document.querySelector('.telejki').style.display = 'none';
+            document.querySelector('.shkaf').style.display = 'flex';
+        });
+    </script>
 </body>
 
 </html>
