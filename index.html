@@ -11,11 +11,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <script src="jquery.js"></script>
 </head>
 
 <body>
+    <div class="preloader" id="pageLoader">
+            <svg>
+                <text x="4%" y="65%">Decoroom steel</text>
+              </svg>
+    </div>
+    <div class="dobavleno">
+        <h3>Добавлено в корзину</h3>
+        <h4>X</h4>
+    </div>
     <!------------------------------------------ Menyu --------------------------------->
     <div class="menyu">
         <ul class="ul-1">
@@ -26,20 +36,48 @@
             <li><button>Доставка</button></li>
             <li><button>Контакты</button></li>
         </ul>
+        <span class="spanchik" onclick="openNav()">&#9776;</span>
+        <div class="nameKomp2">
+            <div>
+                <h1><b style="color: rgb(42, 183, 217);">Decoroom </b> Steel</h1>
+            </div>
+        </div>
         <ul class="ul-2">
             <li class="js-cart-btn">
                 <button>
+                    <span class="counter0"></span>
                     <span class="shopping-cart">
-                        <!-- <span class="counter row jcc aic js-cart-current-count">1</span> -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 20">
                             <path
-                                d="M4.258 0c.45 0 .842.31.944.738l.749 2.649h15.132a.972.972 0 01.945 1.207L20.21 11.94a.973.973 0 01-.945.74H7.643a.973.973 0 01-.947-.748l.005.017L3.503 1.947H.973A.973.973 0 01.973 0h3.285zM19.84 5.334H6.497l1.895 5.398h10.113l1.335-5.398zM8.857 13.699a2.719 2.719 0 012.715 2.717 2.719 2.719 0 01-2.715 2.716 2.719 2.719 0 01-2.716-2.716 2.719 2.719 0 012.716-2.717zm0 1.491a1.225 1.225 0 100 2.45 1.225 1.225 0 000-2.45zM17.901 13.699a2.719 2.719 0 012.715 2.717 2.719 2.719 0 01-2.715 2.716 2.719 2.719 0 01-2.715-2.716 2.719 2.719 0 012.715-2.717zm0 1.491a1.225 1.225 0 100 2.45 1.225 1.225 0 000-2.45z" />
+                            d="M4.258 0c.45 0 .842.31.944.738l.749 2.649h15.132a.972.972 0 01.945 1.207L20.21 11.94a.973.973 0 01-.945.74H7.643a.973.973 0 01-.947-.748l.005.017L3.503 1.947H.973A.973.973 0 01.973 0h3.285zM19.84 5.334H6.497l1.895 5.398h10.113l1.335-5.398zM8.857 13.699a2.719 2.719 0 012.715 2.717 2.719 2.719 0 01-2.715 2.716 2.719 2.719 0 01-2.716-2.716 2.719 2.719 0 012.716-2.717zm0 1.491a1.225 1.225 0 100 2.45 1.225 1.225 0 000-2.45zM17.901 13.699a2.719 2.719 0 012.715 2.717 2.719 2.719 0 01-2.715 2.716 2.719 2.719 0 01-2.715-2.716 2.719 2.719 0 012.715-2.717zm0 1.491a1.225 1.225 0 100 2.45 1.225 1.225 0 000-2.45z" />
                         </svg>
                     </span>
-                    Корзина
+                    <b class="corNon">Корзина</b>
                 </button>
             </li>
         </ul>
+            <!-- -------------------------------------------- Menyu left drop ------------------------------------------------ -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a id="uy">Главная</a>
+        <a>О компании</a>
+        <a>Акции и бонусы</a>
+        <a>Оплата</a>
+        <a>Доставка</a>
+        <a>Контакты</a>
+        <div class="leftContact">
+            <h3><a href="tel: +998973001331">+998(97) 300-13-31</a></h3>
+            <h3><a href="tel: +998882243000">+998(88) 224-30-00</a></h3>
+            <a
+                href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=Ab5oB3r-rJghrWGuz03u9j6XMf7U-lSop2vs3NJ1QD2L0iydOPBZwTJqAUHCqXv94T_qJgJRqV-NQA&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-987721400%3A1723878073996051&ddm=0">decoroomgroup@gmail.com</a>
+            <div class="leftContact2">
+                <i class="fa fa-telegram fa-lg" aria-hidden="true"></i>
+                <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+                <p id="lan4_1" style="margin-top: 20px;">Адрес офиса:</p>
+                <h4 id="lan5_1">Узбекистан, P9XV+JV8, Buxoro, Buxoro Viloyati</h4>
+            </div>
+        </div>
+    </div>
     </div>
     <!------------------------------------------ Menyu --------------------------------->
     <!------------------------------------------ Header --------------------------------->
@@ -55,29 +93,18 @@
             <input class="serchInput" type="text" placeholder="что ищем ?">
             <button class="serchButton">Найти</button>
         </div>
-        <!-- <div class="contact">
-            <a href="">
-                <img src="img/telegram.png" alt="Error">
-            </a>
-            <a href="">
-                <img class="insta" src="img/instagram.png" alt="Error">
-            </a>
-            <a href="">
-                <img src="img/email.png" alt="Error">
-            </a>
-        </div> -->
         <div class="contact1">
             <h4><a href="tel: +998973001331">+998(97) 300-13-31</a></h4>
             <h4><a href="tel: +998882243000">+998(88) 224-30-00</a></h4>
         </div>
         <div class="contact2">
-            <button onclick="document.getElementById('colbak').style.display = 'block'"><i class="fa fa-phone"
-                    aria-hidden="true"></i> Заказать звонок</button>
+            <button><i class="fa fa-phone" aria-hidden="true"></i> Заказать звонок</button>
         </div>
     </header>
     <!------------------------------------------ Header --------------------------------->
     <!------------------------------------------ Bar --------------------------------->
     <div class="content-box">
+        <div class="catigoryLeft"><i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
         <div class="sidebar">
             <ul>
                 <li class="blu1" id="vana"><button>Ванна моечная</button></li>
@@ -100,14 +127,13 @@
         <!------------------------------------------ Bar --------------------------------->
         <!------------------------------------------ right-content --------------------------------->
         <div class="right-content">
-            <!-- <div class="hiden"> -->
             <!------------------------------------------ slide --------------------------------->
             <div class="slide new">
                 <div class="slideshow-container">
                     <div class="mySlides fade" style="background-image: url(img/2.jpg);">
                         <div class="numbertext">1 / 3</div>
                         <div class="text">
-                            <h5>НОВИНКА</h5>
+                            <h4>НОВИНКА</h4>
                             <h2>Перила для лестницы:</h2>
                             <p>
                                 Любая лестница в целях безопасности должна быть ограждена !
@@ -118,12 +144,27 @@
 
                     <div class="mySlides fade" style="background-image: url(img/ac1db3c5388192c7aac922d6ebf6f05c.jpg);">
                         <div class="numbertext">2 / 3</div>
-                        <div class="text">Caption Two</div>
+                        <div class="text">
+                            <h4>СКИДКА -10%</h4>
+                            <h2>Столешница :</h2>
+                            <p>
+                                столешницы из нержавеющей стали. Ничто так не противостоит нагреву, воде и образованию
+                                пятен, как металл.
+                            </p>
+                            <button id="stol">Узнать больше!</button>
+                        </div>
                     </div>
 
                     <div class="mySlides fade" style="background-image: url(img/maxresdefault.jpg);">
                         <div class="numbertext">3 / 3</div>
-                        <div class="text">Caption Three</div>
+                        <div class="text">
+                            <h2>Стеллажи :</h2>
+                            <p>
+                                Стеллаж из нержавеющей стали используют для хранения продукции складские предприятия,
+                                аптеки, магазины..
+                            </p>
+                            <button id="stelaji">Узнать больше!</button>
+                        </div>
                     </div>
 
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -142,69 +183,57 @@
                 <h1>Популярные категории</h1>
                 <div class="contBox">
                     <div class="box">
-                        <div class="img i1"></div>
-                        <h3>Угловая защита стены из нержавеющей стали</h3>
+                        <div class="img i5"></div>
+                        <h3>Кресло для интерьера</h3>
                         <p>
-                            Угловое ограждение стены, калибр № 4, матовое — стандартные и изготовленные на заказ
-                            угловые ограждения защищают зоны с интенсивным движением людей.
-                            Нержавеющая сталь 304 легко вписывается в любое пространство, сохраняя при этом углы.
-                            Угловые ограждения, изготовленные по индивидуальному заказу, быстрая установка и
-                            простота обслуживания.
+                            Зргономичный, дышащий и полностью перерабатываемый стул, консольный стул с подлокотниками,
+                            металлическая конструкция.
                         </p>
                     </div>
                     <div class="box">
                         <div class="img i2"></div>
-                        <h3>Дверная пластина из нержавеющей стали</h3>
+                        <h3>Стеллажи кухонные</h3>
                         <p>
-                            Шагните в царство повышенной прочности и вневременной эстетической привлекательности для
-                            ваших дверей с нашей необычной дверной пластиной из нержавеющей стали.
-                            Тщательно спроектированная с предельной точностью, эта исключительная пластина
-                            изготовлена ​​из коммерческой нержавеющей стали 304.
-                            Ее цель выходит за рамки простого визуального улучшения, она служит внушительным
-                            барьером, который обеспечивает непревзойденную защиту,
+                            Идеальный порядок на кухне или в торговом зале – это не только санитарные требования, но и
+                            основное условие четкой и слаженной работы каждого заведения общепита или пищевого
+                            предприятия.
                         </p>
                     </div>
                     <div class="box">
                         <div class="img i3"></div>
-                        <h3>Столешница из нержавеющей стали | Металл коммерческого класса</h3>
+                        <h3>Стол производственный</h3>
                         <p>
-                            Изготовлен из нержавеющей стали 304 калибра 16 № 4, обеспечивающей исключительную
-                            долговечность и устойчивость к коррозии.
-                            Прочная конструкция и основа из МДФ гарантируют долгосрочную инвестицию, идеально
-                            подходят для мест с высокой проходимостью.
-                            Легкоочищаемая поверхность сохраняет блеск и качество даже при ежедневном использовании.
+                            Столы из нержавеющей стали необходимы в производстве для нарезки фруктов, подготовки мяса,
+                            рыбы и других продуктов.
                         </p>
                     </div>
                     <div class="box">
                         <div class="img i4"></div>
-                        <h3>Sarlavha</h3>
+                        <h3>Ванна моечная</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid temporibus libero
-                            officiis totam cum tempora, fuga ipsum quae repellendus corporis, tenetur dolores
-                            beatae, assumenda suscipit blanditiis illum praesentium eaque? Possimus.
+                            На кухне каждого ресторана (и не только) самой важной проблемой является чистота и гигиена,
+                            В каталоге представлены
+                            качественные моечные ванны для мытья посуды из нержавеющей стали,
                         </p>
                     </div>
                     <div class="box">
-                        <div class="img i5"></div>
-                        <h3>Sarlavha</h3>
+                        <div class="img i1"></div>
+                        <h3>Перила из нержавеющей стали </h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid temporibus libero
-                            officiis totam cum tempora, fuga ipsum quae repellendus corporis, tenetur dolores
-                            beatae, assumenda suscipit blanditiis illum praesentium eaque? Possimus.
+                            Ограждения лестниц – обязательное условие для обеспечения безопасности. Среди большого
+                            ассортимента ограждающих конструкций широко востребованы лестничные перила и поручни из
+                            нержавеющей стали.
                         </p>
                     </div>
                     <div class="box">
                         <div class="img i6"></div>
-                        <h3>Sarlavha</h3>
+                        <h3>Стеклянный стол</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid temporibus libero
-                            officiis totam cum tempora, fuga ipsum quae repellendus corporis, tenetur dolores
-                            beatae, assumenda suscipit blanditiis illum praesentium eaque? Possimus.
+                            Опоры из нержавеющей стали приводят к очень большому удорожанию модели, но это того стоит.
+                            Такие опоры стильные, красивые и почти вечные, не теряют свой внешний вид в процессе
+                            эксплуатации неограниченно долго.
                         </p>
                     </div>
-                </div>
-                <div class="btnBox">
-                    <button class="btn2">Все товары</button>
                 </div>
             </div>
             <!----------------------------------------------------- Популярные товары --------------------------------------------------------->
@@ -230,7 +259,6 @@
                             <div class="cart-order  row jcfs aic">Ваш заказ</div>
                             <form action="server.php" method="POST" class="column aic">
                                 <ul class="cart-list column jcc aic js-cart-list">
-                                    <!-- Cart drop-->
                                 </ul>
                                 <div class="cart-total-container row jcsb aic">
                                     <h3 class="title">Итого</h3>
@@ -247,8 +275,7 @@
                     </div>
                 </div>
                 <div class="container column aic">
-                    <!-- Card -->
-                    <ul class="products list js-products-list row jcfs ">
+                    <ul id="novinki" class="products js-products-list row">
                         <div class="new row vrap">
                             <h1 class="newH1">Новинки</h1>
                             <li class="product column aic js-product">
@@ -256,6 +283,7 @@
 
                                     <div class="newImg">
                                         <div class="newNew">Новинка</div>
+                                        <div class="foiz">-5%</div>
                                         <img src="img/new/new4.jpg" alt="Error" class="image js-image-card">
                                     </div>
                                     <div>
@@ -288,6 +316,7 @@
 
                                     <div class="newImg">
                                         <div class="newNew">Новинка</div>
+                                        <div class="sale">Акция</div>
                                         <img src="img/new/new8.jpg" alt="Error" class="image js-image-card">
                                     </div>
                                     <div>
@@ -337,6 +366,7 @@
 
                                     <div class="newImg">
                                         <div class="newNew">Новинка</div>
+                                        <div class="sale">Акция</div>
                                         <img src="img/new/new6.jpg" alt="Error" class="image js-image-card">
                                     </div>
                                     <div>
@@ -1885,130 +1915,170 @@
             </main>
             <!------------------------------------------ Новинки --------------------------------->
             <!-------------------------------------------------------------- О компании -------------------------------------------------------------->
-            <div class="content2 new">
+            <div id="okomp" class="content2 new">
                 <div class="contBox2">
                     <div class="box2">
                         <h1>О компании</h1>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, ut voluptas
-                            voluptatem enim
-                            tempora exercitationem
+                            Главным направлением деятельности компании, является: разработка, производство и реализация
+                            оборудования для предприятий общественного питания и корпуса пищевой промышленности.
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis ullam rem
-                            nostrum qui
-                            neque tempore architecto possimus at adipisci labore officiis accusantium asperiores
-                            voluptate
-                            dicta quos. Accusamus, voluptatum sequi.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deleniti numquam
-                            eum
-                            quisquam ipsa ipsam doloribus provident necessitatibus odio! Quam perspiciatis beatae
-                            magnam, a
-                            ea voluptate sequi corrupti corporis debitis.
+                            ООО"Decoroom steel" предлагает продукцию собственного производства как по стандартным размерам так и
+                            по чертежам и эскизам клиента, используя в основном марки стали соответствующие стандартам в
+                            пищевой промышленности - AISI 430,AISI 304.
                         </p>
                         <br>
-                        <a href="page/okomp.html">Подробнее</a>
+                        <a>Подробнее</a>
                     </div>
-                    <div class="box2_img">
-                        <img src="img/o.jpg" style="width: 100%;" alt="Error">
-                    </div>
+                    <div class="box2_img"></div>
                 </div>
             </div>
             <!-------------------------------------------------------------- О компании -------------------------------------------------------------->
             <!------------------------------------------ Идеи интерьеров --------------------------------->
-            <div class="content3 new">
-                <h1>Идеи интерьеров</h1>
-                <div class="contBox3">
-                    <div class="box3">
-                        <div class="imgBox1" style="background-image: url(img/slide_1.jpg);"></div>
-                        <div class="imgBox2">
-                            <div class="img3" style="background-image: url(img/slide_2.jpg);"></div>
-                            <div class="img3" style="background-image: url(img/slide_3.jpg);"></div>
-                        </div>
+            <h1 class="swiperH1 new">Идеи интерьеров</h1>
+            <div class="swiper mySwiper new">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/interyer/inter5.jpg" alt="Error">
+                    <div class="imgBox1" style="background-image: url(img/interyer/inter5.jpg);"></div>
+                    <div class="imgBox2">
+                        <div class="img3" style="background-image: url(img/interyer/inter4.webp);"></div>
+                        <div class="img3" style="background-image: url(img/interyer/inter6.webp);"></div>
                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/interyer/inter9.jpg" alt="Error">
+                    <div class="imgBox1" style="background-image: url(img/interyer/inter9.jpg);"></div>
+                    <div class="imgBox2">
+                        <div class="img3" style="background-image: url(img/interyer/inter7.webp);"></div>
+                        <div class="img3" style="background-image: url(img/interyer/inter8.webp);"></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/interyer/inter1.jpg" alt="Error">
+                    <div class="imgBox1" style="background-image: url(img/interyer/inter1.jpg);"></div>
+                    <div class="imgBox2">
+                        <div class="img3" style="background-image: url(img/interyer/inter2.jpg);"></div>
+                        <div class="img3" style="background-image: url(img/interyer/inter3.jpg);"></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/interyer/inter10.png" alt="Error">
+                    <div class="imgBox1" style="background-image: url(img/interyer/inter10.png);"></div>
+                    <div class="imgBox2">
+                        <div class="img3" style="background-image: url(img/interyer/inter11.jpg);"></div>
+                        <div class="img3" style="background-image: url(img/interyer/inter12.jpg);"></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/interyer/inter13.jpg" alt="Error">
+                    <div class="imgBox1" style="background-image: url(img/interyer/inter13.jpg);"></div>
+                    <div class="imgBox2">
+                        <div class="img3" style="background-image: url(img/interyer/inter14.webp);"></div>
+                        <div class="img3" style="background-image: url(img/interyer/inter15.webp);"></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="btnBox">
-                    <button class="btn3">Все Идеи</button>
-                </div>
-            </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
             <!------------------------------------------ Идеи интерьеров --------------------------------->
             <!------------------------------------------ Отвечаем, опережая ваши вопросы --------------------------------->
-            <div class="content4 new">
+            <div id="vopros" class="content4 new">
                 <div class="contBox4">
                     <div class="box4_1">
                         <h1>Отвечаем, опережая ваши вопросы</h1>
-                        <div class="linkBox">
                             <div>
-                                <h2>+(998)91 409-34-74</h2>
-                                <h2>+(998)91 829-76-37</h2>
+                                <p>Звоните нам 24/7:</p>
+                                <h2><a href="tel: +998973001331">+998(97) 300-13-31</a></h2>
+                                <h2><a href="tel: +998882243000">+998(88) 224-30-00</a> <i class="fa fa-telegram" aria-hidden="true"></i></h2>
                             </div>
-                            <div>
-                                <a href="">
-                                    <img src="img/telegram.png" alt="Error">
-                                </a>
-                                <a href="">
-                                    <img class="insta" src="img/instagram.png" alt="Error">
-                                </a>
-                                <a href="">
-                                    <img src="img/email.png" alt="Error">
-                                </a>
-                            </div>
-                        </div>
                         <div class="btnBox">
-                            <h4>или задайте вопрос на сайте и мы Вам перезвоним</h4>
+                            <h3>Или задайте вопрос на сайте и мы Вам перезвоним</h3>
                             <button class="btn3">Задать вопрос</button>
                         </div>
                     </div>
                     <div class="box4_2">
-                        <div class="dr drop">Какие данные нужны для расчета стоимости перевозки?</div>
+                        <div class="dr drop">Что такое нержавеющая сталь? <i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
                         <div class="dw down">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
-                                mollitia
-                                ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
-                                voluptate
-                                beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                            <p>
+                                Нержавеющая сталь — это сплав железа, который содержит как минимум 10,5% хрома и может также содержать другие элементы, такие как никель и молибден. Эти добавки делают сталь устойчива к коррозии и ржавчине.
+                            </p>
                         </div>
-                        <div class="dr drop-1">Как рассчитать объем груза?</div>
+                        <div class="dr drop-1">Какие типы нержавеющей стали существуют? <i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
                         <div class="dw down-1">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
-                                mollitia
-                                ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
-                                voluptate
-                                beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                            <p>
+                                Существуют несколько типов нержавеющей стали, включая:
+                                <ul>
+                                    <li>Аустенитную (300 серия): обладает отличной коррозионной стойкостью и хорошей обрабатываемостью. Примеры: AISI 304, AISI 316.</li>
+                                    <li>Ферритную (400 серия): отличается хорошей стойкостью к коррозии, но менее пластична. Примеры: AISI 430.</li>
+                                    <li>Мартенситную (400 серия): обладает высокой прочностью и твердостью, но меньшей стойкостью к коррозии. Примеры: AISI 410.</li>
+                                    <li>Дуплексную: сочетает свойства аустенитной и ферритной стали. Пример: AISI 2205.</li>
+                                </ul>
+                            </p>
                         </div>
-                        <div class="dr drop-2">Как и когда осуществляется оплата?</div>
+                        <div class="dr drop-2">Как выбрать подходящий тип нержавеющей стали для моего проекта? <i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
                         <div class="dw down-2">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
-                                mollitia
-                                ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
-                                voluptate
-                                beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                            <p>
+                                Выбор зависит от требований к коррозионной стойкости, прочности, пластичности и обработки. Например, для пищевой промышленности обычно выбирают аустенитную сталь, такую как AISI 304, из-за ее отличной стойкости к коррозии и легкости в уходе.
+                            </p>
                         </div>
-                        <div class="dr drop-3">Можем ли мы получить разовую консультацию?</div>
+                        <div class="dr drop-3">Как чистить и поддерживать нержавеющую сталь? <i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
                         <div class="dw down-3">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
-                                mollitia
-                                ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
-                                voluptate
-                                beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                            <p>
+                                Чистить нержавеющую сталь лучше всего мягким моющим средством и теплой водой. Избегайте использования абразивных средств и сильных кислот, так как они могут повредить защитный слой стали. Для удаления стойких пятен можно использовать специальные чистящие средства для нержавеющей стали.
+                            </p>
                         </div>
-                        <div class="dr drop-4">Какие документы требуются для таможенного оформления?</div>
+                        <div class="dr drop-4">Каковы основные преимущества нержавеющей стали? <i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
                         <div class="dw down-4">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
-                                mollitia
-                                ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
-                                voluptate
-                                beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                            <p>
+                                Основные преимущества включают:
+                                <ul>
+                                    <li>Высокую коррозионную стойкость</li>
+                                    <li>Долговечность и прочность</li>
+                                    <li>Легкость в уходе и чистке</li>
+                                    <li>Эстетичный внешний вид</li>
+                                </ul>
+                            </p>
                         </div>
-                        <div class="dr drop-5">Есть ли у вас собственные склады консолидации?</div>
+                        <div class="dr drop-5">Можно ли сваривать нержавеющую сталь? <i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
                         <div class="dw down-5">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fugit, magnam
-                                mollitia
-                                ducimus nesciunt temporibus dignissimos maxime voluptatem inventore repellendus a
-                                voluptate
-                                beatae harum exercitationem rerum, perspiciatis deleniti. Ut, consectetur!</p>
+                            <p>
+                                Да, нержавеющую сталь можно сваривать, но для этого нужны специальные навыки и оборудование. Используйте сварочные проволоки и электроды, которые соответствуют типу нержавеющей стали, чтобы сохранить ее коррозионные свойства.
+                            </p>
                         </div>
-                        <div class="dr drop-6"></div>
+                        <div class="dr drop-6">Чем отличается нержавеющая сталь от обычной стали? <i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
+                        <div class="dw down-6">
+                            <p>
+                                Нержавеющая сталь содержит хром, который образует защитный оксидный слой на поверхности, предотвращая коррозию. Обычная сталь не имеет такой защиты и подвержена ржавчине при контакте с влагой и кислородом.
+                            </p>
+                        </div>
+                        <div class="dr drop-7">Как нержавеющая сталь реагирует на высокие температуры? <i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
+                        <div class="dw down-7">
+                            <p>
+                                Нержавеющая сталь сохраняет свои свойства при высоких температурах лучше, чем обычная сталь, но для длительного использования при очень высоких температурах (свыше 800°C) может потребоваться специальная сталь с повышенной термостойкостью.
+                            </p>
+                        </div>
+                        <div class="dr drop-8">Где используется нержавеющая сталь? <i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
+                        <div class="dw down-8">
+                            <p>
+                                Нержавеющая сталь используется в различных областях, включая:
+                                <ul>
+                                    <li>Пищевая промышленность (емкости, столовые приборы)</li>
+                                    <li>Строительство (отделка зданий, архитектурные элементы)</li>
+                                    <li>Химическая и нефтехимическая промышленность (трубопроводы, резервуары)</li>
+                                    <li>Медицинская техника (инструменты, оборудование)</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="dr drop-9">Каковы ограничения нержавеющей стали? <i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
+                        <div class="dw down-9">
+                            <p>
+                                Нержавеющая сталь может быть дорогой по сравнению с обычной сталью, а также имеет ограниченную стойкость к определенным агрессивным химическим веществам. В некоторых случаях, при сильном загрязнении, может потребоваться специальная обработка. Если у вас есть другие вопросы или вам нужно более конкретное объяснение, дайте знать!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2016,84 +2086,137 @@
             <!---------------------------------------------------- Ассортимент ------------------------------------------------>
             <div class="content5 new">
                 <div class="contBox5">
-                    <h3>Ассортимент</h3>
-                    <p>Более 10 000 товаров и 100 брендов</p>
+                    <div class="svgBox5">
+                        <svg width="61" height="60" viewBox="0 0 61 60" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M44.25 12.5V7.5H16.25V12.5H44.25ZM14.25 13.0299V5.5H46.25V12.9641L56.25 20.7V22.5V24.5V29.5C56.25 31.9916 54.4918 34.2408 52.25 35.1144V52.5H55.25V54.5H52.25H24.25H8.25H5.25V52.5H8.25V35.103C6.00819 34.2063 4.25 31.9138 4.25 29.5V24.5V22.5V20.6L14.25 13.0299ZM45.25 32.7C46.35 34.3 48.25 35.5 50.25 35.5V52.5H24.25V33.8882C24.6286 33.5379 24.966 33.1389 25.25 32.7C26.35 34.3 28.25 35.5 30.25 35.5C32.25 35.5 34.15 34.4 35.25 32.7C36.35 34.3 38.25 35.5 40.25 35.5C42.25 35.5 44.15 34.4 45.25 32.7ZM20.25 35.5C20.938 35.5 21.6142 35.3698 22.25 35.1298V52.5H10.25V35.5C12.25 35.5 14.15 34.4 15.25 32.7C16.35 34.3 18.25 35.5 20.25 35.5ZM15.55 14.5L6.25 21.6V22.5H14.25V21.2L19.25 15.2V14.5H15.55ZM21.25 14.5V15.9L16.25 21.9V22.5H24.25V21.4L26.25 15.4V14.5H21.25ZM28.25 14.5V15.7L26.25 21.7V22.5H34.25V21.7L32.25 15.7V14.5H28.25ZM34.25 14.5V15.4L36.25 21.4V22.5H44.25V21.9L39.25 15.9V14.5H34.25ZM41.25 14.5V15.2L46.25 21.2V22.5H54.25V21.6L44.95 14.5H41.25ZM54.25 24.5H6.25V29.5C6.25 31.6 8.15 33.5 10.25 33.5C12.35 33.5 14.25 31.6 14.25 29.5V27.5H16.25V29.5C16.25 31.6 18.15 33.5 20.25 33.5C22.35 33.5 24.25 31.6 24.25 29.5V27.5H26.25V29.5C26.25 31.6 28.15 33.5 30.25 33.5C32.35 33.5 34.25 31.6 34.25 29.5V27.5H36.25V29.5C36.25 31.6 38.15 33.5 40.25 33.5C42.35 33.5 44.25 31.6 44.25 29.5V27.5H46.25V29.5C46.25 31.6 48.15 33.5 50.25 33.5C52.35 33.5 54.25 31.6 54.25 29.5V24.5ZM38.9039 49.3795L47.0356 41.2478L48.4498 42.662L40.3181 50.7937L38.9039 49.3795ZM43.7042 49.3851L47.0275 46.0618L48.4417 47.476L45.1184 50.7993L43.7042 49.3851ZM18.25 41.5V45.5H20.25V41.5H18.25ZM3.25 52.5H0.25V54.5H3.25V52.5ZM60.25 52.5H57.25V54.5H60.25V52.5Z"></path>
+                        </svg>
+                    </div>
+                    <div class="svgBox5_2">
+                        <h3>Ассортимент</h3>
+                        <p>Более 10 000 товаров и 100 брендов</p>
+                    </div>
                 </div>
                 <div class="contBox5">
-                    <h3>Клиентский сервис</h3>
-                    <p>оперативно отвечаем на вопросы покупателей</p>
+                    <div class="svgBox5">
+                        <svg width="61" height="60" viewBox="0 0 61 60" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M47.7654 22V29V30C49.4654 29.9 50.7654 28.5 50.7654 26.7V25.3C50.7654 23.6 49.4654 22.2 47.7654 22ZM52.7654 26.7C52.7654 29.4994 50.529 31.8329 47.7654 31.9915V32C47.7654 35.5 44.5654 38 41.7654 38H40.8856C40.5388 38.5632 40.1647 39.1052 39.7654 39.6222V42.6L40.7654 41.6L45.2245 46.0591L50.6654 47.3C56.4376 48.5719 57.4241 52.9066 58.6814 58.4313L58.7654 58.8C58.8654 59.3 58.5654 59.9 57.9654 60H57.7654C57.2654 60 56.8654 59.7001 56.7654 59.2001C55.4654 53.1001 54.6654 50.2001 50.2654 49.2001L45.061 48.1044L34.7654 58.4L30.2654 53.9L25.7654 58.4L15.4769 48.1115L10.2654 49.3C5.86541 50.3 5.06542 53.2001 3.6654 59.3C3.6654 59.7001 3.26544 60 2.76544 60H2.56542C2.06542 59.9 1.6654 59.4 1.76544 58.8C2.96545 53.1 3.96545 48.6 9.86541 47.3L15.3063 46.0591L19.7654 41.6L20.7654 42.6V39.6176C18.2195 36.396 16.6654 32.198 16.6654 28V20.7C17.5239 17.7812 20.8882 14.1991 24.0376 13.2437C23.231 11.8252 22.7654 10.3909 22.7654 9C22.7654 8.40002 23.1655 8 23.7654 8C24.3654 8 24.7654 8.40002 24.7654 9C24.7654 14.9 37.0654 23.5 44.2654 24C44.8654 24 45.2654 24.5 45.1655 25.1C45.1655 25.6 44.7654 26 44.1655 26C44.0804 25.9943 43.9946 25.9875 43.908 25.9797C43.8607 25.9755 43.8132 25.9709 43.7654 25.9661V28C43.7654 30.7567 43.1144 33.5133 41.9633 35.9934C43.6383 35.8835 45.7654 34.4042 45.7654 32V30V29V20V16.3C45.7654 9.69995 38.9654 2 30.2654 2C21.5654 2 14.7654 9.69995 14.7654 16.3V20V27V32H13.0654C10.2654 32 7.76544 29.5 7.76544 26.7V25.3C7.76544 22.6005 10.0893 20.1797 12.7654 20.0095V16.3C12.7654 8.59998 20.2654 0 30.2654 0C40.2654 0 47.7654 8.59998 47.7654 16.3V20.0085C50.529 20.1671 52.7654 22.5006 52.7654 25.3V26.7ZM34.1654 41.8C35.8093 40.8708 37.2488 39.5585 38.4202 38H34.605C34.2078 39.1842 33.1121 40 31.7654 40H28.7654C27.0654 40 25.7654 38.7 25.7654 37V36C25.7654 34.3 27.0654 33 28.7654 33H31.7654C33.4654 33 34.7654 34.3 34.7654 36H39.704C41.0205 33.5808 41.7654 30.7904 41.7654 28V25.6129C36.2732 24.286 28.9792 19.9041 25.2269 15.0203C22.7518 15.3087 19.4299 18.6196 18.6654 21.2V28C18.6654 33.6 21.7654 39.1 26.2654 41.8L26.5654 41.9C28.8654 43.3 31.7654 43.3 34.0654 41.9L34.1654 41.8ZM9.76544 25.3C9.76544 23.8 11.2654 22.2 12.7654 22V27V30C11.1655 29.8 9.76544 28.2 9.76544 26.7V25.3ZM22.7654 41.7578V44.6L30.2654 52.1L37.7654 44.6V41.8022C37.0174 42.4858 36.2145 43.0906 35.3654 43.6C35.3654 43.6 35.2654 43.7 35.1654 43.7C33.6654 44.6 32.0654 45 30.3654 45C28.7654 45 27.0654 44.6 25.5654 43.7C25.545 43.6796 25.5246 43.6633 25.5041 43.6504C25.4904 43.6417 25.4767 43.6345 25.4629 43.6285C25.4447 43.6207 25.4264 43.615 25.4082 43.6108C25.3606 43.6 25.313 43.6 25.2654 43.6C24.3806 43.0795 23.544 42.4597 22.7654 41.7578ZM32.1654 53L34.7654 55.6L43.3654 47L40.7654 44.4L32.1654 53ZM25.7654 55.6L17.1654 47L19.7654 44.4L28.3654 53L25.7654 55.6ZM27.7654 36C27.7654 35.4 28.1655 35 28.7654 35H31.7654C32.3654 35 32.7654 35.4 32.7654 36V37C32.7654 37.6 32.3654 38 31.7654 38H28.7654C28.1655 38 27.7654 37.6 27.7654 37V36Z"></path>
+                        </svg>
+                    </div>
+                    <div class="svgBox5_2">
+                        <h3>Клиентский сервис</h3>
+                        <p>оперативно отвечаем на вопросы покупателей</p>
+                    </div>
                 </div>
                 <div class="contBox5">
-                    <h3>Качественные материалы</h3>
-                    <p>Сответствует требованиям и мировым стандартам</p>
+                    <div class="svgBox5">
+                        <svg width="61" height="60" viewBox="0 0 61 60" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.0397 12.8787C19.9299 14.7568 18.0447 16.1697 15.525 16.9764C13.9068 18.6117 12.5853 20.4523 11.5824 22.4385C11.3606 23.0786 11.074 23.7228 10.7259 24.3677C9.78183 26.8162 9.29192 29.4415 9.29192 32.1452C9.29192 40.9795 14.5549 48.7801 22.8254 52.1634C23.2953 52.3514 23.5773 52.9153 23.2953 53.3852C23.2013 53.7611 22.8254 54.0431 22.4495 54.0431C22.3555 54.0431 22.1675 54.0431 22.0735 53.9491C20.7133 53.3907 19.4273 52.7189 18.2244 51.9472C16.4717 53.2192 14.8069 53.8552 13.0512 53.8552C10.5137 53.8552 8.07012 52.3514 5.81454 49.438C5.62658 49.25 5.62658 48.9681 5.62658 48.7801C5.62658 48.5921 5.81454 48.3102 6.00251 48.1222C7.95291 46.6708 10.1441 46.1387 12.2697 46.4838C11.8437 45.9299 11.443 45.3574 11.0685 44.7682C10.9868 44.8083 10.8974 44.8328 10.7956 44.8328L10.7955 44.8328C10.1377 44.9268 9.47983 45.0208 8.91596 45.0208C4.49879 45.0208 1.77329 42.2013 0.92745 36.8443C0.92745 36.5624 0.92745 36.3744 1.11541 36.1864C1.30338 35.9985 1.49134 35.8105 1.77329 35.8105C4.14637 35.4589 6.27286 35.9704 7.95098 37.1816C7.75753 36.2911 7.61471 35.3841 7.52492 34.4641C5.02476 34.1489 3.14193 33.2193 1.96125 31.6753C0.551507 29.8896 -0.0123877 27.4461 0.363542 24.2507C0.457525 23.7808 0.833455 23.3108 1.39735 23.4048C3.74691 23.6868 5.72055 24.6266 7.0363 26.3183C7.34732 26.7071 7.62216 27.124 7.85915 27.5666C8.04421 26.6323 8.28554 25.715 8.58088 24.8184C6.58645 23.4768 5.40798 21.9604 4.9687 20.1154C4.4048 17.9538 5.06268 15.4162 6.75437 12.6907C7.03631 12.2208 7.60021 12.1269 8.07012 12.4088C10.0438 13.6306 11.4535 15.4162 11.9234 17.4839C11.9771 17.7075 12.0205 17.9328 12.0539 18.1597C12.5245 17.5306 13.0281 16.9228 13.5635 16.3386C12.968 13.8897 13.1732 11.7991 14.179 10.1532C15.3068 8.17961 17.4684 6.86385 20.6638 6.01801C21.1337 5.92402 21.6976 6.20597 21.7916 6.67588C22.3555 8.93147 22.0735 11.0931 21.0397 12.8787ZM19.442 11.9389C18.6528 13.3419 17.3728 14.3358 15.6019 14.997C15.4693 14.9504 15.3299 14.9359 15.193 14.9537C15.0396 13.4372 15.2342 12.1816 15.7767 11.187C16.6225 9.87129 18.0323 8.83748 20.1939 8.17961C20.3818 9.58934 20.0999 10.9051 19.442 11.9389ZM44.6293 11.187C45.2751 12.2018 45.4681 13.4883 45.2972 15.0465C45.2147 15.0367 45.1314 15.0386 45.0492 15.0521C43.1998 14.3917 41.8694 13.3853 41.058 12.0329C40.4001 10.9051 40.1182 9.58931 40.3061 8.17957C42.3738 8.83745 43.8775 9.87126 44.6293 11.187ZM39.4603 12.9727C40.5701 14.8508 42.4553 16.2636 44.9751 17.0703C49.0176 21.1557 51.2081 26.5222 51.2081 32.2391C51.2081 41.0735 45.8511 48.874 37.6746 52.2574C37.2047 52.4454 37.0168 53.0093 37.2047 53.4792C37.2987 53.8551 37.6746 54.0431 38.0506 54.0431C38.079 54.0431 38.1161 54.0344 38.1566 54.025C38.2497 54.0034 38.361 53.9775 38.4265 54.0431C39.8127 53.474 41.1219 52.7871 42.3446 51.9968C44.0772 53.2357 45.8073 53.8552 47.4488 53.8552C49.9863 53.8552 52.4299 52.3514 54.6855 49.438C54.8734 49.25 54.8734 49.062 54.8734 48.7801C54.8734 48.4981 54.6855 48.3102 54.4975 48.1222C52.5721 46.6893 50.4119 46.1525 48.3119 46.471C48.7251 45.9273 49.1141 45.3661 49.4779 44.7889C49.5469 44.8166 49.6216 44.8328 49.7044 44.8328L49.7045 44.8328C50.3623 44.9268 51.0202 45.0208 51.584 45.0208C56.0012 45.0208 58.7267 42.2013 59.5725 36.8443C59.5725 36.6563 59.5725 36.3744 59.3846 36.1864C59.1966 35.9985 59.0086 35.8105 58.7267 35.8105C56.3649 35.4606 54.2473 35.9656 52.5729 37.1644C52.7609 36.2785 52.8988 35.3764 52.9843 34.4617C55.3909 34.1441 57.2705 33.2153 58.5388 31.6753C59.9485 29.9836 60.5124 27.4461 60.1365 24.2507C60.0425 23.6868 59.5726 23.3108 59.1026 23.4048C56.7531 23.6868 54.7795 24.6266 53.4637 26.3183C53.1442 26.7176 52.8672 27.1466 52.6317 27.6027C52.4368 26.6283 52.1804 25.6703 51.8638 24.7334C53.8674 23.444 55.176 21.8146 55.6253 19.9274C56.0952 17.7658 55.5313 15.2283 53.8396 12.5028C53.5577 12.1269 52.9938 11.9389 52.5239 12.2209C50.4562 13.4426 49.1405 15.2283 48.6706 17.2959C48.5896 17.6332 48.5319 17.9744 48.4969 18.3188C48.0131 17.6685 47.4927 17.039 46.9365 16.4325C47.532 13.9836 47.3268 11.893 46.321 10.2472C45.1932 8.27355 43.0316 6.9578 39.8362 6.11196C39.3663 5.92399 38.8024 6.29992 38.7084 6.76983C38.1445 9.02541 38.3325 11.187 39.4603 12.9727ZM50.5502 17.7658C50.8322 16.5441 51.584 15.4163 52.7118 14.4764C53.7456 16.4501 54.1216 18.1418 53.8396 19.6455C53.5577 20.8673 52.7118 21.9951 51.3961 22.9349C50.4562 21.0552 50.1743 19.3635 50.5502 17.7658ZM51.0201 43.1411C54.5915 43.3291 56.6591 41.5434 57.5989 37.5962C54.3095 37.5022 51.866 39.4758 51.0201 43.1411ZM44.0654 50.9417C47.0729 52.8213 49.7984 52.2575 52.5239 49.156C49.7044 47.4643 46.603 48.1222 44.0654 50.9417ZM58.4448 25.4724C57.035 25.7544 55.8133 26.5063 54.9674 27.5401C53.9336 28.7618 53.4637 30.4535 53.4637 32.5211C55.0614 32.2392 56.2832 31.5813 57.129 30.5475C58.0688 29.3257 58.5388 27.634 58.4448 25.4724ZM2.90108 37.5962C3.74693 41.6374 5.90852 43.4231 9.47986 43.1411C8.63402 39.4758 6.19047 37.5022 2.90108 37.5962ZM7.97614 49.062C10.6076 52.1635 13.3331 52.7274 16.4346 50.8477C13.897 48.1222 10.7956 47.4643 7.97614 49.062ZM2.05523 25.4724C1.96125 27.634 2.43116 29.3257 3.37098 30.5475C4.21683 31.5813 5.34462 32.2392 7.0363 32.5211C7.0363 30.5475 6.56639 28.8558 5.53258 27.5401C4.68674 26.5063 3.46497 25.7544 2.05523 25.4724ZM6.75437 19.6455C6.37844 18.1417 6.75437 16.45 7.78818 14.4764C8.91597 15.4162 9.66783 16.544 10.0438 17.7658C10.4197 19.3635 10.1377 21.1492 9.19791 22.9348C7.88216 21.995 7.03631 20.8672 6.75437 19.6455ZM17.5624 46.6185C17.7503 46.8065 18.0323 46.9004 18.2202 46.9004C18.5022 46.9004 18.6902 46.8065 18.9721 46.5245C19.2541 46.1486 19.2541 45.5847 18.8781 45.2088C15.3068 42.0134 13.3332 37.4082 13.3332 32.7091C13.3332 26.3183 16.9045 20.5853 22.5434 17.6719C23.0134 17.4839 23.2013 16.92 22.9194 16.4501C22.7314 15.9802 22.1675 15.7922 21.6976 16.0742C15.4008 19.2696 11.4535 25.7544 11.4535 32.8031C11.4535 37.9721 13.7091 43.0472 17.5624 46.6185ZM42.2798 46.9004C41.9978 46.9004 41.8098 46.8064 41.6219 46.6184C41.2459 46.2425 41.3399 45.6786 41.7159 45.3027C45.1932 42.1073 47.2608 37.5961 47.2608 32.803C47.2608 26.3182 43.5955 20.4913 37.7686 17.5778C37.2987 17.3899 37.1107 16.826 37.2987 16.3561C37.4866 15.8862 38.0505 15.6982 38.5205 15.8862C45.0052 19.0816 49.0465 25.5664 49.0465 32.803C49.0465 38.066 46.7909 43.0471 42.9376 46.6184C42.7497 46.8064 42.4677 46.9004 42.2798 46.9004ZM23.2953 42.9531C23.4832 43.0471 23.6712 43.1411 23.8592 43.1411C23.9531 43.1411 24.1411 43.1411 24.2351 43.0471L30.25 40.2277L36.2649 43.0471C36.5468 43.2351 36.9227 43.2351 37.2047 42.9531C37.4866 42.6712 37.6746 42.3892 37.5806 42.0133L36.4528 35.6225L41.2459 30.5475C41.4339 30.3595 41.5279 29.9836 41.4339 29.6076C41.3399 29.3257 41.058 29.0437 40.682 29.0437L34.1033 28.3859L31.0958 22.089C30.9079 21.7131 30.6259 21.5251 30.25 21.5251C29.874 21.5251 29.5921 21.7131 29.4041 22.089L26.3967 28.3859L19.8179 29.0437C19.536 29.0437 19.16 29.2317 19.0661 29.6076C18.9721 29.8896 18.9721 30.2655 19.254 30.5475L24.0471 35.6225L22.9193 42.0133C22.9193 42.3892 23.0133 42.7652 23.2953 42.9531ZM25.7388 34.7767L21.8855 30.7354L27.1486 30.1715C27.4305 30.0775 27.8064 29.8896 27.9004 29.6076L30.25 24.6266L32.5056 29.7016C32.5995 29.9836 32.9755 30.2655 33.2574 30.2655L38.5204 30.8294L34.6672 34.8706C34.3852 35.1526 34.2912 35.4345 34.3852 35.7165L35.325 40.6976L30.6259 38.442C30.344 38.348 30.062 38.348 29.7801 38.442L25.0809 40.6976L26.0208 35.6225C26.0208 35.3406 25.9268 34.9646 25.7388 34.7767Z"></path>
+                        </svg>
+                    </div>
+                    <div class="svgBox5_2">
+                        <h3>Качественные материалы</h3>
+                        <p>Сответствует требованиям и мировым стандартам</p>
+                    </div>
                 </div>
             </div>
             <!---------------------------------------------------- Ассортимент ------------------------------------------------>
             <!-- -------------------------------------------------- Интернет магазин ------------------------------------------------>
             <div class="content6 new">
                 <h1>Интернет магазин Нержавейки</h1>
-                <p class="mt-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur
-                    ratione laudantium,</p>
+                <p class="mt-30">В нашем каталоге представлен широкий выбор продукции из нержавеющей стали, включающий следующие ключевые категории:</p>
                 <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
-                        laudantium,</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
-                        laudantium,</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
-                        laudantium,</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
-                        laudantium,</li>
+                    <li><b>Трубы и фитинги</b> - высококачественные изделия для различных строительных и промышленных нужд.</li>
+                    <li><b>Листы и рулоны</b> - прочные и надежные материалы для изготовления и ремонта.</li>
+                    <li><b>Метизы</b> - разнообразные крепежные элементы и компоненты для любых конструкций.</li>
+                    <li><b>Профили и уголки</b> - универсальные элементы для создания прочных и долговечных конструкций.</li>
+                    <li><b>Кухонная утварь</b> - элегантные и практичные решения для вашей кухни, от кастрюль до столовых приборов.</li>
                 </ul>
-                <p class="mt-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur
-                    ratione laudantium,</p>
-                <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
-                    laudantium,</p>
-                <p class="mt-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur
-                    ratione laudantium,</p>
-                <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur ratione
-                    laudantium,</p>
-                <p class="mt-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consectetur
-                    ratione laudantium,</p>
+                <p class="mt-30">Каждая категория в нашем ассортименте отвечает самым высоким стандартам качества, что гарантирует долговечность и надежность вашей покупки.</p>
+                <p class="mt-5">Мы стремимся предоставить нашим клиентам только лучшее, поэтому все товары тщательно отбираются и проверяются. Приятных покупок!</p>
             </div>
             <!-- -------------------------------------------------- Интернет магазин ------------------------------------------------>
             <!------------------------------------------ footer --------------------------------->
-            <!-- </div> -->
-            <!-- <div class="vana">
-                <h1>Ванна моечная</h1>
-                
-            </div> -->
             <footer>
                 <div class="col-1">
                     <h2>О магазине</h2>
-                    <a href="">Частые вопросы</a>
-                    <a href="">Возврат и обмен</a>
-                    <a href="">Карта сайта</a>
-                    <a href="">Поиск по сайту</a>
+                    <p><a href="#vopros">Частые вопросы</a></p>
+                    <p><a>Акции и бонусы</a></p>
+                    <p><a href="#novinki">Новинки</a></p>
+                    <p><a>Товары со скидкой</a></p>
                 </div>
                 <div class="col-2">
                     <h2>Информация</h2>
-                    <a href="">Оплата</a>
-                    <a href="">Доставка</a>
-                    <a href="">Возврат и обмен</a>
-                    <a href="">Мои заказы</a>
+                    <p><a href="#okomp">О компании</a></p>
+                    <p><a>Оплата</a></p>
+                    <p><a>Доставка</a></p>
+                    <p><a>Мои заказы</a></p>
                 </div>
                 <div class="col-3">
                     <h2>Контакты</h2>
-                    <a href="">г. Москва, ул. Ленинская, дом 0, корп 0, офис 0</a>
-                    <a href="">Доставка</a>
-                    <a href="">Возврат и обмен</a>
-                    <a href="">Мои заказы</a>
-                    <h3>+998(94)320 94 99</h3>
-                    <h3>+998(94)320 94 99</h3>
-                    <a style="text-decoration: underline; color: blue;" href="">molsi1994@mail.ru</a>
+                    <p>Узбекистан, P9XV+JV8, Buxoro, Buxoro Viloyati</p>
+                    <p><a>Доставка</a></p>
+                    <h3><a href="tel: +998973001331">+998(97) 300-13-31</a></h3>
+                    <h3><a href="tel: +998882243000">+998(88) 224-30-00</a></h3>
+                    <p><a style="color: rgb(42, 183, 217);">molsi1994@mail.ru</a></p>
                     <p>Без выходных с 09:00-22:00</p>
-                    <p>Мы в соцсетях:</p>
+                    <p>Мы в соцсетях: <i class="fa fa-telegram" aria-hidden="true"></i></p>
                 </div>
             </footer>
         </div>
     </div>
     <!------------------------------------------ right-content --------------------------------->
-
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      document.querySelector('.catigoryLeft').addEventListener('click',()=>{
+        document.querySelector('.sidebar').classList.toggle('sidebarRight');
+      });
+      document.querySelector('.sidebar').addEventListener('click',()=>{
+        document.querySelector('.sidebar').classList.toggle('sidebarRight');
+      });
+      // /////////////////////////////////////////////////// Preloader //////////////////////////////////////////////////
+      document.body.onload = () => {
+          setTimeout(() => {
+              var preloader = document.getElementById('pageLoader');
+              if (!preloader.classList.contains('done')) {
+                  preloader.classList.add('done');
+                }
+            }, 6000)
+        }
+        // /////////////////////////////////////////////////// schot //////////////////////////////////////////////////
+        let counterBTN = document.querySelectorAll('.buy-button');
+        let minus = document.querySelectorAll('.minus');
+        let counterEl = document.querySelector('.counter0');
+        let counter = 0;
+        
+        for(let i = 0; i < counterBTN.length; i++){
+            counterBTN[i].addEventListener('click',()=>{
+                setTimeout(() => {
+                    var dobavleno = document.querySelector('.dobavleno');
+                    if (!dobavleno.classList.contains('dobavlenoFlex')) {
+                        dobavleno.classList.add('dobavlenoFlex');
+                    }
+                },10);
+                counter ++; 
+                counterEl.innerHTML = counter; 
+            });
+        };
+        document.querySelector('.dobavleno').addEventListener('click',()=>{
+            document.querySelector('.dobavleno').classList.remove('dobavlenoFlex');
+        });
+        /*for(let i = 0; i < minus.length; i++){
+            minus[i].addEventListener('click',()=>{
+                counter --; 
+                counterEl.innerHTML = counter; 
+            })
+        }*/
+        counterEl.innerHTML = counter; 
+</script>
     <script>
         $(document).ready(function () {
             $(".down").hide();
@@ -2120,6 +2243,22 @@
             $(".drop-5").click(function () {
                 $(".down-5").slideToggle(1000);
             });
+            $(".down-6").hide();
+            $(".drop-6").click(function () {
+                $(".down-6").slideToggle(1000);
+            });
+            $(".down-7").hide();
+            $(".drop-7").click(function () {
+                $(".down-7").slideToggle(1000);
+            });
+            $(".down-8").hide();
+            $(".drop-8").click(function () {
+                $(".down-8").slideToggle(1000);
+            });
+            $(".down-9").hide();
+            $(".drop-9").click(function () {
+                $(".down-9").slideToggle(1000);
+            });
         });
     </script>
     <script type="module" src="js/main.js"></script>
@@ -2141,6 +2280,7 @@
         let blu14 = document.querySelector('.blu14');
         let blu15 = document.querySelector('.blu15');
 
+        let uy = document.querySelectorAll('#uy');
         let vana = document.querySelectorAll('#vana');
         let veshilka = document.querySelectorAll('#veshilka');
         let plita = document.querySelectorAll('#plita');
@@ -2157,8 +2297,9 @@
         let telejki = document.querySelectorAll('#telejki');
         let shkaf = document.querySelectorAll('#shkaf');
 
-        document.getElementById('uy').addEventListener('click', () => {
-            let newElement = document.querySelectorAll('.new');
+        for (let i = 0; i < uy.length; i++) {
+            uy[i].addEventListener('click', () => {
+                let newElement = document.querySelectorAll('.new');
             for (let i = 0; i < newElement.length; i++) {
                 newElement[i].style.display = '';
             };
@@ -2178,8 +2319,8 @@
             document.querySelector('.telejki').style.display = 'none';
             document.querySelector('.shkaf').style.display = 'none';
 
-        });
-
+            });
+        };
         for (let i = 0; i < vana.length; i++) {
             vana[i].addEventListener('click', () => {
                 let newElement = document.querySelectorAll('.new');
@@ -2530,6 +2671,23 @@
 
 
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            rewind: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
 </body>
 
 </html>
