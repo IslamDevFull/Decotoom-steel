@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Admin</title>
+    <style>
+        body {
+            color: white;
+            background-image: url(../img/406.jpg);
+            background-blend-mode: multiply;
+            background-color: rgb(39, 40, 52);
+        }
+
+        table {
+            border: 2px solid lightskyblue;
+        }
+
+        th {
+            border: 2px solid lightskyblue;
+        }
+
+        tr:hover {
+            background-color: black;
+            cursor: pointer;
+        }
+
+        td {
+            border: 2px solid lightskyblue;
+            text-align: center;
+            padding: 0px 15px;
+        }
+
+        img {
+            width: 100px;
+            background-color: white;
+        }
+
+        .num {
+            text-align: center;
+        }
+
+        a {
+            color: lightskyblue;
+        }
+
+        .fa-trash {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .fa-trash:hover {
+            color: red;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            height: 500px;
+            font-size: 40px;
+        }
+
+        .cont {
+            display: none;
+        }
+
+        .form {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            box-shadow: 0px 0px 10px 3px red;
+            margin: auto;
+            margin-top: 100px;
+            background-color: rgb(39, 40, 52, 0.5);
+            transition: all 1s;
+        }
+
+        .form:hover {
+            background-color: rgb(39, 40, 52, 1);
+
+        }
+
+        .form h3 {
+            width: 100%;
+            text-align: center;
+        }
+
+        .form input {
+            width: 51%;
+            padding: 10px;
+            font-size: 18px;
+            border: 0px;
+        }
+
+        .form button {
+            width: 51%;
+            padding: 10px;
+            font-size: 18px;
+            margin-top: 30px;
+            border: 0px;
+            background-color: black;
+            color: white;
+        }
+
+        .form h2 {
+            text-shadow: 2px 2px 2px red;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .non {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <h2>Админ панель</h2>
+        <h3>Логин</h3>
+        <input type="text" id="login">
+        <h3>Парол</h3>
+        <input type="password" id="parol">
+        <button id="ok">OK</button>
+    </div>
+    <div id="cont" class="cont">
+        <table>
+            <thead>
+                <tr>
+                    <th>Фото</th>
+                    <th>Имя Продукта</th>
+                    <th>Кол-во</th>
+                    <th>Цина</th>
+                    <th>Имя Клиента</th>
+                    <th>Тел номер Клиента</th>
+                    <th>Удалить</th>
+                </tr>
+            </thead>
+            <tbody id="app">
+
+            </tbody>
+        </table>
+    </div>
+    <script type="module" src="dbAdmin.js"></script>
+    <script src="../js/sweetalert2.js"></script>
+</body>
+
+</html>

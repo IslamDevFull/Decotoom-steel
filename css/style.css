@@ -15,6 +15,8 @@
 body {
     font-family: 'Roboto';
     background-color: rgb(39, 40, 52);
+    /* border: 2px solid red; */
+    width: 100%;
 }
 
 .page {
@@ -101,39 +103,6 @@ body {
     }
 }
 /* ********************************************** Preloader ***********************************************************/
-/* ********************************************** dobavleno ***********************************************************/
-.dobavleno{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    /* border: 2px solid red; */
-    z-index: 5;
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-.dobavleno h3{
-    background-color: rgb(39, 40, 52);
-    color: white;
-    border: 2px solid rgb(117, 190, 246);
-    padding: 30px 100px;
-}
-.dobavleno h4{
-    
-    color: white;
-    text-shadow: 1px 1px 5px red,-1px -1px 5px red;
-    transform: translate(-15px, -30px);
-}
-.dobavlenoFlex{
-    display: flex;
-}
-@media screen and (max-width: 400px) {
-    .dobavleno h3{
-        padding: 30px 50px;
-    }
-
-}
-/* ********************************************** dobavleno ***********************************************************/
 /* ****************************************************** Menyu ************************************************** */
 .menyu {
     background-color: rgb(67, 68, 92);
@@ -293,6 +262,16 @@ body {
     margin-left: 10px;
     margin-top: 20px;
 }
+.sidenav .formSentLeftBTN{
+    border: 0px;
+    padding: 10px;
+    background-color: rgb(117, 190, 246);
+    color: white;
+    margin-left: 20px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
 @media screen and (max-width: 400px) {
     .menyu{
         justify-content: space-between;
@@ -1183,7 +1162,7 @@ a {
 }
 
 .img3 {
-    height: 46%;
+    height: 50%;
     width: 100%;
     background-size: 100% 100%;
 }
@@ -1674,8 +1653,60 @@ main .overlay.active {
 
 .cart .cart-btn {
     width: 350px;
+    /* border: 2px solid red; */
+}
+.cart .cart-btn h1{
+    text-align: center;
+}
+.cart .cart-btn input{
+    padding: 10px;
+    width: 50%;
+    font-size: 18px;
+    transition: all 1s;
+}
+.cart .cart-btn input:focus{
+    width: 100%;
+    outline: 0px;
+
+}
+.cart .cart-btn h4{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #222;
 }
 
+.red{
+    color: red;
+}
+.orderNameBorder{
+    animation: bord 1s forwards;
+    border: 2px solid red;
+    border: 0px;
+}
+@keyframes bord {
+    0%{
+        border: 2px solid black;
+    }
+    20%{
+        border: 2px solid red;
+    }
+    40%{
+        border: 2px solid black;
+    }
+    60%{
+        border: 2px solid red;
+    }
+    80%{
+        border: 2px solid black;
+    }
+    100%{
+        border: 2px solid red;
+    }
+}
+.orderNameAdd{
+    border: 2px solid green;
+
+}
 .cart .cart-btn .btn-order {
     background-color: var(--color-second);
     letter-spacing: 1px;
@@ -1683,12 +1714,13 @@ main .overlay.active {
     border-radius: 2px;
     font-size: 14px;
     font-weight: 500;
-    width: 250px;
+    width: 100%;
     height: 50px;
     text-transform: uppercase;
     margin-bottom: 25px;
     cursor: pointer;
     border: none;
+    margin-top: 20px;
 }
 @media screen and (max-width: 400px) {
     .cart {
@@ -1827,3 +1859,133 @@ main .overlay.active {
 .shkaf {
     display: none;
 }
+
+/* ****************************************************** BTN ************************************************** */
+/* ****************************************************** formSent ************************************************** */
+.formSent{
+    /* border: 2px solid red; */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background-color: rgb(39, 40, 52,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 3;
+}
+.formSentBox{
+    /* border: 2px solid blue; */
+    width: 1100px;
+    height: 650px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.formSentInput{
+    /* border: 2px solid red; */
+    width: 45%;
+    padding: 15px;
+    text-align: center;
+}
+.formSentInput h1{
+    margin-bottom: 5px;
+    text-align: left;
+    transform: translateX(45px);
+}
+.formSentInput p{
+    text-align: left;
+    transform: translateX(45px);
+    font-size: 18px;
+    margin-bottom: 20px;
+    
+}
+.formSentInput h3{
+    text-align: left;
+    margin: 0px;
+    color: #333;
+    transform: translateX(45px);
+}
+.formSentInput h3 b{
+    color: red;
+    font-style: italic;
+}
+.formSentInput input{
+    margin-bottom: 20px;
+    width: 80%;
+    padding: 15px;
+    font-size: 15px;
+}
+.formSentInput textarea{
+    margin-bottom: 20px;
+    width: 80%;
+    height: 200px;
+    padding: 15px;
+    font-size: 15px;
+}
+.formSentInput .formSentSubmit{
+    width: 80%;
+    padding: 15px;
+    font-size: 20px;
+    border: 0px;
+    background-color: rgb(85, 149, 194);
+    color: white;
+}
+.formSentInput .formSentSubmit:hover{
+    background-color: rgb(117, 190, 246);
+    
+}
+.formSentImg{
+    width: 55%;
+    /* border: 2px solid green; */
+    background-image: url(../img/operator1.png);
+    background-size: 100% 100%;
+    background-color: #f5f4f4;
+    border-radius: 10px;
+}
+.formSentImg button{
+    border: 0px;
+    font-size: 40px;
+    padding: 5px 15px;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    transform: translate(540px,10px);
+    transition: all 1s;
+    cursor: pointer;
+}
+.formSentImg button:hover{
+    color: red;
+}
+.formSentInput .formSentDropX{
+    border: 0px;
+    font-size: 20px;
+    padding: 5px 15px;
+    background-color: #e8e8e84b;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(130px,-10px);
+    transition: all 1s;
+    cursor: pointer;
+    /* border: 2px solid red; */
+    display: none;
+    z-index: 3;
+}
+
+.formSentShow{
+    display: flex;
+}
+@media screen and (max-width: 400px) {
+    .formSentImg{
+        display: none;
+    }
+    .formSentInput{
+        width: 100%;
+    }
+    .formSentInput .formSentDropX{
+        display: inline-block;
+    }
+    
+}
+
+/* ****************************************************** formSent ************************************************** */

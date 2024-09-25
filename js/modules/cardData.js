@@ -80,6 +80,18 @@ const cartData = () => {
                 toggleCartStatus();
                 calculateTotalCartValue();
                 // console.log(productInfo)
+
+                // const senLocal = document.querySelectorAll('.js-buy-button');
+                // for(let i = 0; i < senLocal.length; i++){
+                //     senLocal[i].addEventListener('click',()=>{
+                //         localStorage.setItem(productInfo.id,JSON.stringify({
+                //             model: productInfo.model,
+                //             price: productInfo.price,
+                //             photo: productInfo.photo,
+                //         }));
+                //     });
+                
+                // };
             };
         });
     };
@@ -173,6 +185,30 @@ const cartData = () => {
     calculateTotalCartValue();
 
 };
+
+
+// document.querySelector('.btn-order').addEventListener('click',()=>{
+//     var islam = document.querySelectorAll('.cart-model');
+//     var islamLink = document.querySelectorAll('.js-link-card');
+//     var islamPrice = document.querySelectorAll('.js-cart-price');
+//     var islamPhoto = document.querySelectorAll('.cart-img');
+//     var islamNum = document.querySelectorAll('.js-current-items');
+//     var orderName = document.querySelector('.orderName');
+//     var orderTelefon = document.querySelector('.orderTelefon');
+
+//     for(let i = 0; i < islam.length; i++){
+//         let adminInfo = {
+//             userName: orderName.value,
+//             userTelefon: orderTelefon.value,
+//             productName: islam[i].textContent,
+//             price: islamPrice[i].textContent,
+//             photo: islamPhoto[i].src,
+//             num: islamNum[i].textContent,
+//         }
+//         let adminIslam = JSON.stringify(adminInfo);
+//         localStorage.setItem(islamLink[i].getAttribute('id'),adminIslam);
+//     }
+// });
 
 
 export {

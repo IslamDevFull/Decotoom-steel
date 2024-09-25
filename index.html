@@ -17,15 +17,11 @@
 </head>
 
 <body>
-    <div class="preloader" id="pageLoader">
+    <!-- <div class="preloader" id="pageLoader">
             <svg>
                 <text x="4%" y="65%">Decoroom steel</text>
               </svg>
-    </div>
-    <div class="dobavleno">
-        <h3>Добавлено в корзину</h3>
-        <h4>X</h4>
-    </div>
+    </div> -->
     <!------------------------------------------ Menyu --------------------------------->
     <div class="menyu">
         <ul class="ul-1">
@@ -45,7 +41,7 @@
         <ul class="ul-2">
             <li class="js-cart-btn">
                 <button>
-                    <span class="counter0"></span>
+                    <span class="counter0">0</span>
                     <span class="shopping-cart">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 20">
                             <path
@@ -54,6 +50,9 @@
                     </span>
                     <b class="corNon">Корзина</b>
                 </button>
+            </li>
+            <li>
+                <a href="admin/index.html"><button>Admin</button></a>
             </li>
         </ul>
             <!-- -------------------------------------------- Menyu left drop ------------------------------------------------ -->
@@ -65,6 +64,7 @@
         <a>Оплата</a>
         <a>Доставка</a>
         <a>Контакты</a>
+        <button onclick="formSentBTN()" class="formSentLeftBTN"><i class="fa fa-phone" aria-hidden="true"></i> Заказать звонок</button>
         <div class="leftContact">
             <h3><a href="tel: +998973001331">+998(97) 300-13-31</a></h3>
             <h3><a href="tel: +998882243000">+998(88) 224-30-00</a></h3>
@@ -98,7 +98,7 @@
             <h4><a href="tel: +998882243000">+998(88) 224-30-00</a></h4>
         </div>
         <div class="contact2">
-            <button><i class="fa fa-phone" aria-hidden="true"></i> Заказать звонок</button>
+            <button onclick="formSentBTN()"><i class="fa fa-phone" aria-hidden="true"></i> Заказать звонок</button>
         </div>
     </header>
     <!------------------------------------------ Header --------------------------------->
@@ -257,8 +257,9 @@
 
                         <div class="cart-order-container    column js-cart-order-container">
                             <div class="cart-order  row jcfs aic">Ваш заказ</div>
-                            <form action="server.php" method="POST" class="column aic">
+                            <!-- <form action="server.php" method="POST" class="column aic"> -->
                                 <ul class="cart-list column jcc aic js-cart-list">
+                                    
                                 </ul>
                                 <div class="cart-total-container row jcsb aic">
                                     <h3 class="title">Итого</h3>
@@ -267,14 +268,19 @@
                                         <span class="rouble">sum</span>
                                     </div>
                                 </div>
-                                <div class="cart-btn row jcfs">
+                                <div class="cart-btn jcfs">
+                                    <h1>Форма заказа</h1>
+                                    <h4>ФИО<b class="red">*</b></h4>
+                                    <input type="text" class="orderName">
+                                    <h4>Телефон<b class="red">*</b></h4>
+                                    <input type="tel" class="orderTelefon">
                                     <button type="submit" class="btn-order">Оформить заказ</button>
                                 </div>
-                            </form>
+                            <!-- </form> -->
                         </div>
                     </div>
                 </div>
-                <div class="container column aic">
+                <div class="container column aic contJs">
                     <ul id="novinki" class="products js-products-list row">
                         <div class="new row vrap">
                             <h1 class="newH1">Новинки</h1>
@@ -1997,7 +2003,7 @@
                             </div>
                         <div class="btnBox">
                             <h3>Или задайте вопрос на сайте и мы Вам перезвоним</h3>
-                            <button class="btn3">Задать вопрос</button>
+                            <button onclick="formSentBTN()" class="btn3">Задать вопрос</button>
                         </div>
                     </div>
                     <div class="box4_2">
@@ -2164,7 +2170,32 @@
             </footer>
         </div>
     </div>
+    <!------------------------------------------ formSent --------------------------------->
+    <div class="formSent">
+        <div class="formSentBox">
+            <div class="formSentInput">
+                <button onclick="formSentX()" class="formSentDropX">X</button>
+                <h1>Заказать звонок</h1>
+                <p>Наш менеджер свяжется с вами в <br> удобное для вас время</p>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="3d81deba-4cbf-4052-8555-10536750ed25">
+                    <h3>Ваше имя<b>*</b></h3>
+                    <input type="text" name="Имя" placeholder="Ваше имя*">
+                    <h3>Телефон:<b>*</b></h3>
+                    <input type="tel" name="Телефон" placeholder="+998(___)___ __ __*">
+                    <h3>Комментарий:</h3>
+                    <textarea name="Комментарий" placeholder="Напишите ваш комментарий"></textarea>
+                    <button class="formSentSubmit" type="submit">Отправить</button>
+                </form>
+            </div>
+            <div class="formSentImg">
+                <button onclick="formSentX()" class="formSentX">X</button>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------ formSent --------------------------------->
     <!------------------------------------------ right-content --------------------------------->
+    <script src="js/sweetalert2.js"></script>
 <script>
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
@@ -2180,14 +2211,14 @@
         document.querySelector('.sidebar').classList.toggle('sidebarRight');
       });
       // /////////////////////////////////////////////////// Preloader //////////////////////////////////////////////////
-      document.body.onload = () => {
+      /*document.body.onload = () => {
           setTimeout(() => {
               var preloader = document.getElementById('pageLoader');
               if (!preloader.classList.contains('done')) {
                   preloader.classList.add('done');
                 }
-            }, 6000)
-        }
+            }, 4000)
+        }*/
         // /////////////////////////////////////////////////// schot //////////////////////////////////////////////////
         let counterBTN = document.querySelectorAll('.buy-button');
         let minus = document.querySelectorAll('.minus');
@@ -2196,26 +2227,40 @@
         
         for(let i = 0; i < counterBTN.length; i++){
             counterBTN[i].addEventListener('click',()=>{
-                setTimeout(() => {
-                    var dobavleno = document.querySelector('.dobavleno');
-                    if (!dobavleno.classList.contains('dobavlenoFlex')) {
-                        dobavleno.classList.add('dobavlenoFlex');
-                    }
-                },10);
                 counter ++; 
                 counterEl.innerHTML = counter; 
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-center",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.onmouseenter = Swal.stopTimer;
+                      toast.onmouseleave = Swal.resumeTimer;
+                    }
+                  });
+                  Toast.fire({
+                    icon: "success",
+                    title: "Добавлено в корзину"
+                  });
             });
         };
-        document.querySelector('.dobavleno').addEventListener('click',()=>{
-            document.querySelector('.dobavleno').classList.remove('dobavlenoFlex');
-        });
         /*for(let i = 0; i < minus.length; i++){
             minus[i].addEventListener('click',()=>{
                 counter --; 
                 counterEl.innerHTML = counter; 
             })
         }*/
-        counterEl.innerHTML = counter; 
+        counterEl.innerHTML = counter;
+        function formSentBTN(){
+            document.querySelector('.formSent').classList.add('formSentShow')
+            document.getElementById("mySidenav").style.width = "0";
+        } 
+            function formSentX(){
+                document.querySelector('.formSent').classList.remove('formSentShow')
+            }
+
 </script>
     <script>
         $(document).ready(function () {
@@ -2672,7 +2717,7 @@
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
+    <!-- <script>
         var swiper = new Swiper(".mySwiper", {
             rewind: true,
           pagination: {
@@ -2687,7 +2732,8 @@
             prevEl: ".swiper-button-prev",
           },
         });
-      </script>
+      </script> -->
+      <script src="js/modules/firebase.js" type="module"></script>
 </body>
 
 </html>
