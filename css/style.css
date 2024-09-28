@@ -128,7 +128,7 @@ body {
 .ul-2 {
     width: 17%;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: end;
     list-style: none;
     padding-right: 5px;
@@ -144,10 +144,14 @@ body {
 }
 
 .ul-2 li button{
-    border: 2px solid red;
     display: flex;
 }
-
+.ul-2 li a{
+    display: block;
+}
+.fa-address-card{
+    margin-right: 5px;
+}
 .menyu ul li {
     color: rgb(138, 154, 153);
 }
@@ -288,6 +292,9 @@ body {
         /* border: 2px solid red; */
         margin-left: 10px;
     }
+    .admin{
+        display: none;
+    }
 }
 /* ********************************************** Menyu left drop ***********************************************************/
 /* ****************************************************** Menyu ************************************************** */
@@ -306,9 +313,9 @@ header {
     height: 80px;
     text-align: center;
     background-color: gray;
-    background-image: url(../img/Logo.png);
-    background-size: 170% 170%;
-    background-position: -25px -25px;
+    background-image: url(../img/logotip.jpg);
+    background-size: 110% 110%;
+    background-position: -4px -4px;
     border-radius: 50%;
     margin: 0px 20px;
 }
