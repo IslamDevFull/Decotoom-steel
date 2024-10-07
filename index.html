@@ -11,8 +11,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
     <script src="jquery.js"></script>
 </head>
 <body>
@@ -72,8 +73,8 @@
             <a
                 href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=Ab5oB3r-rJghrWGuz03u9j6XMf7U-lSop2vs3NJ1QD2L0iydOPBZwTJqAUHCqXv94T_qJgJRqV-NQA&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-987721400%3A1723878073996051&ddm=0">decoroomgroup@gmail.com</a>
             <div class="leftContact2">
-                <i class="fa fa-telegram fa-lg" aria-hidden="true"></i>
-                <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+                <a href="https://t.me/decoroom_steell"><i class="fa fa-telegram fa-lg" aria-hidden="true"></i></a>
+                <a><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
                 <p id="lan4_1" style="margin-top: 20px;">Адрес офиса:</p>
                 <h4 id="lan5_1">Узбекистан, P9XV+JV8, Buxoro, Buxoro Viloyati</h4>
             </div>
@@ -86,13 +87,13 @@
         <div class="nameKomp">
             <div class="logo"></div>
             <div>
-                <h1><b style="color: rgb(42, 183, 217);">Decoroom</b> Steel</h1>
+                <h1 class="stainless-steel-text">Decoroom Steel</h1>
                 <p style="color: rgb(138, 154, 153);">Магазин нержавейка</p>
             </div>
         </div>
         <div class="serch">
-            <input class="serchInput" type="text" placeholder="что ищем ?">
-            <button class="serchButton">Найти</button>
+            <input id="myInput" class="serchInput" type="text" placeholder="что ищем ?">
+            <button id="mySerchButton" class="serchButton">Найти</button>
         </div>
         <div class="contact1">
             <h4><a href="tel: +998973001331">+998(97) 300-13-31</a></h4>
@@ -418,7 +419,7 @@
                                 <button type="button" class="buy-button js-buy-button">В корзину</button>
                             </li>
                         </div>
-                        <div class="vana row vrap">
+                        <div data-serch="Ванна моечная" class="vana row vrap">
                             <h1 class="newH1">Ванна моечная</h1>
                             <li class="product column aic js-product">
                                 <a id="vana1" class="link column aic js-link-card">
@@ -516,7 +517,7 @@
                                         aria-hidden="true"></i></button>
                             </div>
                         </div>
-                        <div class="veshilka row vrap">
+                        <div data-serch="Вешалки" class="veshilka row vrap">
                             <h1 class="newH1">Вешалки</h1>
                             <li class="product column aic js-product">
                                 <a id="veshilka1" class="link column aic js-link-card">
@@ -583,7 +584,7 @@
                                         aria-hidden="true"></i></button>
                             </div>
                         </div>
-                        <div class="plita row vrap">
+                        <div data-serch="Газовая плита" class="plita row vrap">
                             <h1 class="newH1">Газовая плита</h1>
                             <li class="product column aic js-product">
                                 <a id="plita1" class="link column aic js-link-card">
@@ -2000,7 +2001,7 @@
                             <div>
                                 <p>Звоните нам 24/7:</p>
                                 <h2><a href="tel: +998973001331">+998(97) 300-13-31</a></h2>
-                                <h2><a href="tel: +998882243000">+998(88) 224-30-00</a> <i class="fa fa-telegram" aria-hidden="true"></i></h2>
+                                <h2><a href="tel: +998882243000">+998(88) 224-30-00</a> <a href="https://t.me/decoroom_steell"><i class="fa fa-telegram" aria-hidden="true"></i></a></h2>
                             </div>
                         <div class="btnBox">
                             <h3>Или задайте вопрос на сайте и мы Вам перезвоним</h3>
@@ -2142,6 +2143,8 @@
                 <p class="mt-5">Мы стремимся предоставить нашим клиентам только лучшее, поэтому все товары тщательно отбираются и проверяются. Приятных покупок!</p>
             </div>
             <!-- -------------------------------------------------- Интернет магазин ------------------------------------------------>
+            <!------------------------------------------ Karta --------------------------------->
+                <div class="map" id="map"></div>
             <!------------------------------------------ footer --------------------------------->
             <footer>
                 <div class="col-1">
@@ -2160,13 +2163,13 @@
                 </div>
                 <div class="col-3">
                     <h2>Контакты</h2>
-                    <p>Узбекистан, P9XV+JV8, Buxoro, Buxoro Viloyati</p>
+                    <p>город Бухара X.A.G`Ijduvoniy Ko`Chasi, 2-Uy</p>
                     <p><a>Доставка</a></p>
                     <h3><a href="tel: +998973001331">+998(97) 300-13-31</a></h3>
                     <h3><a href="tel: +998882243000">+998(88) 224-30-00</a></h3>
                     <p><a style="color: rgb(42, 183, 217);" href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=Ab5oB3r-rJghrWGuz03u9j6XMf7U-lSop2vs3NJ1QD2L0iydOPBZwTJqAUHCqXv94T_qJgJRqV-NQA&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-987721400%3A1723878073996051&ddm=0">decoroomgroup@gmail.com</a></p>
                     <p>Без выходных с 09:00-22:00</p>
-                    <p>Мы в соцсетях: <i class="fa fa-telegram" aria-hidden="true"></i></p>
+                    <p>Мы в соцсетях: <a href="https://t.me/decoroom_steell"><i class="fa fa-telegram" aria-hidden="true"></i></a></p>
                 </div>
             </footer>
         </div>
@@ -2735,6 +2738,43 @@
         });
       </script>
       <script src="js/modules/firebase.js" type="module"></script>
-</body>
+      <script src="https://maps.api.2gis.ru/2.0/loader.js"></script>
+      <script>
+        var map;
+        DG.then(function () {
+            map = DG.map('map', {
+                center: [39.7489282877098, 64.3948090459716],
+                zoom: 20 // Уровень масштаба карты
+            });
+    
+            // Добавление маркера
+            DG.marker([39.7489282877098, 64.3948090459716]).addTo(map).bindPopup('город Бухара X.A.G`Ijduvoniy Ko`Chasi, 2-Uy');
+        });
+    </script>
+    <!-- <script>
 
+        document.getElementById('mySerchButton').addEventListener('click',myFunction)
+        
+function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("novinki");
+    li = ul.getAttribute('data-serch');
+  console.log(li)
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+  
+    </script> -->
+</body>
 </html>

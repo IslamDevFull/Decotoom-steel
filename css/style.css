@@ -237,6 +237,11 @@ body {
 .leftContact2 {
     text-align: center;
 }
+.leftContact2 a{
+    padding: 0px;
+    /* border: 2px solid red; */
+    display: inline;
+}
 
 .leftContact p {
     color: #818181;
@@ -247,6 +252,7 @@ body {
     color: #999;
     font-size: 20px;
     text-decoration: none;
+    display: block;
 }
 
 .leftContact h4 {
@@ -256,7 +262,6 @@ body {
 .leftContact a {
     font-size: 15px;
     color: rgb(42, 188, 98);
-    display: block;
     text-decoration: underline;
 }
 
@@ -326,6 +331,15 @@ header {
     align-items: center;
     flex-wrap: wrap;
 }
+.stainless-steel-text {
+    font-size: 48px; /* Размер текста */
+    font-weight: bold; /* Жирный текст */
+    background: linear-gradient(90deg, #e0e0e0, #b8b8b8, #e0e0e0);
+    -webkit-background-clip: text; /* Обрезка фона для текста */
+    -webkit-text-fill-color: transparent; /* Прозрачный цвет текста */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 255, 255, 0.6); /* Тень для текста */
+  }
+
 .serch {
     display: flex;
     gap: 5px;
@@ -1437,8 +1451,12 @@ a {
     }
 }
 
-/* ****************************************************** Интернет магазин ************************************************** */
-/* ****************************************************** Footer ************************************************** */
+/* map */
+    .map{
+        width: 100%;
+        height: 400px;
+    }
+/* Footer */
 footer {
     background-color: rgb(39, 40, 52);
     /* height: 610px; */
