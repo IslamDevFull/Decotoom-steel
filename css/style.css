@@ -334,10 +334,10 @@ header {
 .stainless-steel-text {
     font-size: 48px; /* Размер текста */
     font-weight: bold; /* Жирный текст */
-    background: linear-gradient(90deg, #e0e0e0, #b8b8b8, #e0e0e0);
+    background-image: linear-gradient(315deg, #787A91, #FFFFFF, #787A91);
     -webkit-background-clip: text; /* Обрезка фона для текста */
     -webkit-text-fill-color: transparent; /* Прозрачный цвет текста */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 255, 255, 0.6); /* Тень для текста */
+    /*text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 255, 255, 0.6); /* Тень для текста */
   }
 
 .serch {
